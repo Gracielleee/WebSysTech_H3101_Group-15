@@ -2,7 +2,7 @@
 
 This low-fidelity wireframes represent five core sections of a restaurant & hotel booking system: **Booking, Suites, Dining, Experience, and Access**. The goal was to create a clean, intuitive, and visually consistent interface that supports user goals with minimal friction.
 
-To view the low-fidelity design for this project in Figma, please check [this link](https://www.figma.com/design/wj9fK6lv6n5cOtYsxOWSgP/Untitled?node-id=0-1&t=2GQattjbFdNBKcOP-1).
+To view the low-fidelity design for this project in Figma, please check [this link]([https://www.figma.com/design/wj9fK6lv6n5cOtYsxOWSgP/Untitled?node-id=0-1&t=2GQattjbFdNBKcOP-1](https://www.figma.com/proto/wj9fK6lv6n5cOtYsxOWSgP/WireFrame?node-id=1002-5&p=f&t=6sPopmy8lsfG47cA-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1002%3A5)).
 
 ### Alignment with HCI Principles
 
