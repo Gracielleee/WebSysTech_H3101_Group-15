@@ -15,35 +15,65 @@
   <link rel="stylesheet" href="./css/access.css" />
 </head>
 <body>
-  <header class="main-header" role="banner">
+  <!-- Main Page Header Block -->
+  <header class="header" role="banner">
+    <!-- Navbar Block -->
     <nav class="navbar" role="navigation" aria-label="Main Navigation">
-      <div class="navbar-container">
+      <div class="navbar__container">
+        <!-- Dropdown Block inside Navbar -->
         <div class="dropdown" tabindex="0" aria-haspopup="true" aria-expanded="false">
-          <button class="menu-btn" aria-controls="menu-list" aria-expanded="false">MENU</button>
-          <ul class="dropdown-menu" id="menu-list" role="menu" aria-label="Main Menu">
-            <li role="none"><a role="menuitem" href="index.html"><i class="material-icons" aria-hidden="true">home</i> Home</a></li>
-            <li role="none"><a role="menuitem" href="suites.html"><i class="material-icons" aria-hidden="true">hotel</i> Suites</a></li>
-            <li role="none"><a role="menuitem" href="dining.html"><i class="material-icons" aria-hidden="true">local_dining</i> Dining</a></li>
-            <li role="none"><a role="menuitem" href="experience.html"><i class="material-icons" aria-hidden="true">spa</i> Experience</a></li>
-            <li role="none"><a role="menuitem" href="access.html"><i class="material-icons" aria-hidden="true">info</i> Access</a></li>
+          <button class="dropdown__button" aria-controls="dropdown-menu" aria-expanded="false">MENU</button>
+          <ul class="dropdown__menu" id="dropdown-menu" role="menu" aria-label="Main Menu">
+            <li class="dropdown__menu-item" role="none">
+              <a class="dropdown__menu-link" role="menuitem" href="index.html">
+                <i class="material-icons dropdown__icon" aria-hidden="true">home</i> Home
+              </a>
+            </li>
+            <li class="dropdown__menu-item" role="none">
+              <a class="dropdown__menu-link" role="menuitem" href="suites.html">
+                <i class="material-icons dropdown__icon" aria-hidden="true">hotel</i> Suites
+              </a>
+            </li>
+            <li class="dropdown__menu-item" role="none">
+              <a class="dropdown__menu-link" role="menuitem" href="dining.html">
+                <i class="material-icons dropdown__icon" aria-hidden="true">local_dining</i> Dining
+              </a>
+            </li>
+            <li class="dropdown__menu-item" role="none">
+              <a class="dropdown__menu-link" role="menuitem" href="experience.html">
+                <i class="material-icons dropdown__icon" aria-hidden="true">spa</i> Experience
+              </a>
+            </li>
+            <li class="dropdown__menu-item" role="none">
+              <a class="dropdown__menu-link" role="menuitem" href="access.html">
+                <i class="material-icons dropdown__icon" aria-hidden="true">info</i> Access
+              </a>
+            </li>
           </ul>
         </div>
-        <button class="book-btn" type="button">BOOK NOW</button>
+        <!-- Call-to-action book button -->
+        <button class="button button--primary navbar__book-button" type="button">BOOK NOW</button>
       </div>
     </nav>
 
+    <!-- Showcase Block -->
     <div class="showcase" role="banner">
-      <h1>ACCESS</h1>
+      <h1 class="showcase__title">ACCESS</h1>
     </div>
   </header>
 
+  <!-- Main Content Section Block -->
   <main class="section" role="main">
-    <div class="section-container">
-      <div class="column left">
-        <h2><em>Getting Here</em></h2>
-        <p>Check in 3:00 PM | Check-out 11:00 AM</p>
-        <div class="map-container">
+    <div class="section__container">
+      <!-- Left Column Element -->
+      <div class="section__column section__column--left">
+        <h2 class="section__heading"><em>Getting Here</em></h2>
+        <p class="section__info">Check in 3:00 PM | Check-out 11:00 AM</p>
+
+        <!-- Map Container Element -->
+        <div class="map">
           <iframe 
+            class="map__iframe"
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d989848.3750780706!2d121.122367!3d14.276813!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc0d5f5c815a2e35c!2sLa%20Serena%20Restaurant!5e0!3m2!1sen!2sph!4v1669728948171!5m2!1sen!2sph"
             title="Location of La Serena Restaurant"
             loading="lazy"
@@ -53,66 +83,75 @@
         </div>
       </div>
 
-      <div class="column right">
-        <p><em>Let's get in touch</em></p>
-        <form id="contact-form" novalidate>
-          <div class="input-group">
-            <label for="title">Subject</label>
-            <input type="text" name="title" id="title" required autocomplete="off" />
+      <!-- Right Column Element -->
+      <div class="section__column section__column--right">
+        <p class="section__intro"><em>Let's get in touch</em></p>
+
+        <!-- Contact Form Block -->
+        <form class="form form--contact" id="contact-form" novalidate>
+          <div class="form__group">
+            <label class="form__label" for="title">Subject</label>
+            <input class="form__input" type="text" name="title" id="title" required autocomplete="off" />
           </div>
-          <div class="input-group">
-            <label for="first_name">First Name</label>
-            <input type="text" name="firstName" id="first_name" required autocomplete="given-name" />
+          <div class="form__group">
+            <label class="form__label" for="first_name">First Name</label>
+            <input class="form__input" type="text" name="firstName" id="first_name" required autocomplete="given-name" />
           </div>
-          <div class="input-group">
-            <label for="last_name">Last Name</label>
-            <input type="text" name="lastName" id="last_name" required autocomplete="family-name" />
+          <div class="form__group">
+            <label class="form__label" for="last_name">Last Name</label>
+            <input class="form__input" type="text" name="lastName" id="last_name" required autocomplete="family-name" />
           </div>
-          <div class="input-group">
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" required autocomplete="email" />
+          <div class="form__group">
+            <label class="form__label" for="email">Email</label>
+            <input class="form__input" type="email" name="email" id="email" required autocomplete="email" />
           </div>
-          <div class="input-group">
-            <label for="message">Message</label>
-            <textarea name="message" id="message" rows="4" required></textarea>
+          <div class="form__group">
+            <label class="form__label" for="message">Message</label>
+            <textarea class="form__textarea" name="message" id="message" rows="4" required></textarea>
           </div>
-          <div class="form-footer">
-            <button type="submit" class="submit-btn">SEND</button>
+          <div class="form__footer">
+            <button class="button button--primary form__submit" type="submit">SEND</button>
           </div>
         </form>
       </div>
     </div>
   </main>
 
-  <footer class="page-footer" role="contentinfo">
-    <div class="footer-container">
-      <section class="footer-column">
-        <h3>Contact Us</h3>
-        <ul>
-          <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i> 631 Douglas Mountains<br />New Mireilleshire, Indiana, USA</li>
-          <li><i class="fa-solid fa-phone" aria-hidden="true"></i> 204-663-3258</li>
-          <li><i class="fa-solid fa-envelope" aria-hidden="true"></i> info@skyesuiteshotel.com</li>
+  <!-- Footer Block -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__container">
+      <!-- Footer Contact Column Element -->
+      <section class="footer__column">
+        <h3 class="footer__heading">Contact Us</h3>
+        <ul class="footer__list">
+          <li class="footer__list-item">
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i> Suite 1202, Tower 3, Bonifacio High Street, Bonifacio Global City, Taguig, Metro Manila, Philippines
+          </li>
+          <li class="footer__list-item"><i class="fa-solid fa-phone" aria-hidden="true"></i> +63 917 987 6543 / +63 2 888 2345</li>
+          <li class="footer__list-item"><i class="fa-solid fa-envelope" aria-hidden="true"></i> info@skyesuiteshotel.com</li>
         </ul>
       </section>
 
-      <section class="footer-column">
-        <h3>Follow Us</h3>
-        <nav aria-label="Social media links" class="social-icons">
-          <a href="#" aria-label="Facebook" class="social-link"><i class="fa-brands fa-facebook"></i></a>
-          <a href="#" aria-label="Instagram" class="social-link"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#" aria-label="Pinterest" class="social-link"><i class="fa-brands fa-pinterest"></i></a>
-          <a href="#" aria-label="YouTube" class="social-link"><i class="fa-brands fa-youtube"></i></a>
+      <!-- Footer Social Media Column -->
+      <section class="footer__column">
+        <h3 class="footer__heading">Follow Us</h3>
+        <nav aria-label="Social media links" class="footer__socials">
+          <a href="#" aria-label="Facebook" class="footer__social-link"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" aria-label="Instagram" class="footer__social-link"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Pinterest" class="footer__social-link"><i class="fa-brands fa-pinterest"></i></a>
+          <a href="#" aria-label="YouTube" class="footer__social-link"><i class="fa-brands fa-youtube"></i></a>
         </nav>
       </section>
 
-      <section class="footer-column">
-        <h3>Subscribe to our newsletter</h3>
-        <form class="newsletter-form" novalidate>
-          <div class="input-group newsletter-input-group">
+      <!-- Footer Newsletter Column -->
+      <section class="footer__column">
+        <h3 class="footer__heading">Subscribe to our newsletter</h3>
+        <form class="form form--newsletter" novalidate>
+          <div class="form__group form__group--newsletter">
             <label for="newsletter-email" class="visually-hidden">Email address</label>
-            <input type="email" id="newsletter-email" name="newsletter-email" placeholder="Email address" required />
+            <input class="form__input" type="email" id="newsletter-email" name="newsletter-email" placeholder="Email address" required />
           </div>
-          <button type="submit" class="subscribe-btn">Subscribe</button>
+          <button class="button button--primary form__subscribe" type="submit">Subscribe</button>
         </form>
       </section>
     </div>

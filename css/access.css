@@ -1,15 +1,17 @@
+/*=============== Root Variables for Color, Fonts, and Measurements ===============*/
 :root {
-  --color-primary: #e63946; /* Red accent */
-  --color-primary-dark: #b12229;
-  --color-bg-dark: #000;
-  --color-bg-light: #fff;
-  --color-text-light: #f0f0f0;
-  --color-text-dark: #333;
+  --color-primary: #e63946; /* Primary Red Accent */
+  --color-primary-dark: #b12229; /* Darker shade used on hover/focus */
+  --color-bg-dark: #000; /* Dark Background */
+  --color-bg-light: #fff; /* Light Background */
+  --color-text-light: #f0f0f0; /* Light Text Color */
+  --color-text-dark: #333; /* Dark Text Color */
   --font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --border-radius: 0.5rem;
   --transition: 0.3s ease;
 }
 
+/*=============== Global Resets and Box Sizing ===============*/
 *,
 *::before,
 *::after {
@@ -28,18 +30,19 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/*=============== Link Base Styles ===============*/
 a {
   color: inherit;
   text-decoration: none;
   transition: color var(--transition);
 }
-
 a:hover,
 a:focus {
   color: var(--color-primary);
   outline: none;
 }
 
+/*=============== Accessibility Utility Class ===============*/
 .visually-hidden {
   position: absolute !important;
   width: 1px; 
@@ -52,14 +55,15 @@ a:focus {
   border: 0;
 }
 
-.main-header {
+/*=============== Header Block ===============*/
+.header {
   background-color: var(--color-bg-dark);
   color: var(--color-text-light);
   padding-bottom: 2rem;
 }
 
-/* Navbar */
-nav.navbar {
+/*======= Navbar Block =======*/
+.navbar {
   background-color: var(--color-bg-dark);
   padding: 1rem 2rem;
   position: sticky;
@@ -71,7 +75,7 @@ nav.navbar {
   align-items: center;
 }
 
-.navbar-container {
+.navbar__container {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
@@ -82,8 +86,13 @@ nav.navbar {
   justify-content: space-between;
 }
 
-.menu-btn,
-.book-btn {
+/*======= Dropdown Block and its Elements =======*/
+.dropdown {
+  position: relative;
+}
+
+.dropdown__button {
+  /* Same styles as old .menu-btn */
   border: none;
   cursor: pointer;
   padding: 0.75rem 2rem;
@@ -92,44 +101,23 @@ nav.navbar {
   font-size: clamp(1rem, 1.2vw, 1.125rem);
   transition: background-color var(--transition);
   user-select: none;
+  background-color: var(--color-bg-light);
+  color: var(--color-bg-dark);
   box-shadow: 0 2px 8px rgb(230 57 70 / 0.2);
   filter: drop-shadow(0 1px 1px rgb(230 57 70 / 0.3));
 }
-
-.menu-btn {
-  background-color: var(--color-bg-light);
-  color: var(--color-bg-dark);
-}
-
-.menu-btn:hover,
-.menu-btn:focus-visible {
+.dropdown__button:hover,
+.dropdown__button:focus-visible {
   background-color: #f2f2f2;
   outline: none;
 }
 
-.book-btn {
-  background-color: var(--color-primary);
-  color: var(--color-bg-light);
-  box-shadow: 0 3px 8px var(--color-primary);
-}
-
-.book-btn:hover,
-.book-btn:focus-visible {
-  background-color: var(--color-primary-dark);
-  outline: none;
-}
-
-/* Dropdown */
-.dropdown {
-  position: relative;
-}
-
-.dropdown-menu {
+.dropdown__menu {
   position: absolute;
   top: calc(100% + 0.5rem);
   left: 0;
   background: var(--color-bg-dark);
-  box-shadow: 0 8px 16px rgb(0 0 0 / 0.8);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.8);
   border-radius: var(--border-radius);
   min-width: 180px;
   list-style: none;
@@ -142,18 +130,18 @@ nav.navbar {
   z-index: 200;
 }
 
-.dropdown:focus-within .dropdown-menu,
-.dropdown:hover .dropdown-menu {
+.dropdown:focus-within .dropdown__menu,
+.dropdown:hover .dropdown__menu {
   opacity: 1;
   pointer-events: auto;
   transform: scaleY(1);
 }
 
-.dropdown-menu li {
+.dropdown__menu-item {
   padding: 0;
 }
 
-.dropdown-menu a {
+.dropdown__menu-link {
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -162,26 +150,57 @@ nav.navbar {
   font-weight: 600;
   transition: background-color var(--transition);
 }
-
-.dropdown-menu a:hover,
-.dropdown-menu a:focus {
+.dropdown__menu-link:hover,
+.dropdown__menu-link:focus {
   background-color: var(--color-primary);
   outline: none;
   color: var(--color-bg-light);
 }
 
-.material-icons {
+.dropdown__icon {
   font-size: 1.25rem;
 }
 
-/* Showcase */
+/*======= CTA Button (used in Navbar and form) =======*/
+.button {
+  border: none;
+  cursor: pointer;
+  padding: 0.75rem 2rem;
+  border-radius: var(--border-radius);
+  font-weight: 700;
+  font-size: 1.125rem;
+  transition: background-color var(--transition), box-shadow var(--transition);
+  user-select: none;
+  text-align: center;
+  display: inline-block;
+  box-shadow: 0 4px 14px rgba(230 57 70 / 0.5);
+  background-color: var(--color-primary);
+  color: var(--color-bg-light);
+}
+
+.button:hover,
+.button:focus-visible {
+  background-color: var(--color-primary-dark);
+  outline-offset: 2px;
+  outline: 2px solid var(--color-primary-dark);
+  box-shadow: 0 0 16px var(--color-primary-dark);
+}
+
+/* Specific modifier button for navbar booking */
+.navbar__book-button {
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  box-shadow: 0 3px 8px var(--color-primary);
+}
+
+/*=============== Showcase Block ===============*/
 .showcase {
   text-align: center;
   padding: 8rem 1rem 6rem;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('/path/to/background-image.jpg') center/cover no-repeat;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('/images/lobby.jpg') center/cover no-repeat;
 }
 
-.showcase h1 {
+.showcase__title {
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 900;
   color: var(--color-bg-light);
@@ -190,7 +209,7 @@ nav.navbar {
   letter-spacing: 0.12em;
 }
 
-/* Section */
+/*=============== Main Section Block ===============*/
 .section {
   max-width: 1200px;
   margin: auto;
@@ -198,26 +217,39 @@ nav.navbar {
   color: var(--color-text-dark);
 }
 
-.section-container {
+.section__container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 3rem;
 }
 
-/* Left Column */
-.column.left h2 {
+/*------- Section Columns -------*/
+
+/* shared styles for column */
+/* .section__column {
+  
+} */
+
+.section__column--left h2 {
   font-weight: 700;
   font-size: clamp(1.5rem, 2.5vw, 2rem);
   margin-bottom: 0.5rem;
   font-style: italic;
 }
 
-.column.left p {
+.section__column--left p {
   font-size: 1rem;
   margin-bottom: 1rem;
 }
 
-.map-container iframe {
+/* Map block inside left column */
+/* Container for map iframe */
+
+/* .map {
+  
+} */
+
+.map__iframe {
   width: 100%;
   height: 320px;
   border: 0;
@@ -225,33 +257,53 @@ nav.navbar {
   box-shadow: 0 4px 12px rgb(0 0 0 / 0.15);
 }
 
-/* Right Column */
-.column.right p {
+/* Right column typography */
+.section__column--right p.section__intro {
   font-style: italic;
   font-weight: 600;
   margin-bottom: 1.25rem;
   font-size: 1.125rem;
 }
 
-form#contact-form {
+/*=============== Form Block and Elements ===============*/
+.form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.input-group {
+/* Contact form specific */
+/* additional form contact specific styles if needed */
+/* .form--contact {
+  
+} */
+
+/* Newsletter form specific */
+.form--newsletter {
+  /* additional newsletter specific styling */
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form__group {
   display: flex;
   flex-direction: column;
 }
 
-.input-group label {
+/* Special modifier for newsletter input */
+/* Can extend or override .form__group */
+/* .form__group--newsletter {
+  
+} */
+
+.form__label {
   font-weight: 700;
   margin-bottom: 0.375rem;
   font-size: 1rem;
 }
 
-.input-group input,
-.input-group textarea {
+.form__input,
+.form__textarea {
   padding: 0.75rem 1rem;
   border: 1.8px solid #ccc;
   border-radius: var(--border-radius);
@@ -261,47 +313,37 @@ form#contact-form {
   resize: vertical;
 }
 
-.input-group input:focus,
-.input-group textarea:focus {
+.form__input:focus,
+.form__textarea:focus {
   border-color: var(--color-primary);
   outline: none;
   box-shadow: 0 0 5px var(--color-primary);
 }
 
-.form-footer {
+.form__textarea {
+  min-height: 80px; /* ensure height for textarea */
+}
+
+.form__footer {
   display: flex;
   justify-content: flex-end;
 }
 
-.submit-btn {
-  background-color: var(--color-primary);
-  border: none;
-  border-radius: var(--border-radius);
-  color: var(--color-bg-light);
-  padding: 0.75rem 2rem;
-  font-weight: 700;
-  font-size: 1.125rem;
+/* Form submit and subscribe buttons use .button base styles */
+.form__submit,
+.form__subscribe {
   cursor: pointer;
-  box-shadow: 0 4px 18px rgb(230 57 70 / 0.5);
-  transition: background-color var(--transition), box-shadow var(--transition);
 }
 
-.submit-btn:hover,
-.submit-btn:focus-visible {
-  background-color: var(--color-primary-dark);
-  box-shadow: 0 0 18px var(--color-primary-dark);
-  outline-offset: 2px;
-  outline: 2px solid var(--color-primary-dark);
-}
-
-/* Footer */
-.page-footer {
+/*=============== Footer Block and Elements ===============*/
+.footer {
   background-color: var(--color-bg-dark);
   color: var(--color-text-light);
   padding: 3.5rem 1.5rem;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('/images/hotel.jpg') center/cover no-repeat;
 }
 
-.footer-container {
+.footer__container {
   max-width: 1200px;
   margin: auto;
   display: grid;
@@ -310,107 +352,72 @@ form#contact-form {
   align-items: start;
 }
 
-.footer-column h3 {
+/* layout for each footer section */
+/* .footer__column {
+  
+} */
+
+.footer__heading {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
-.footer-column ul {
+.footer__list {
   padding: 0;
   list-style: none;
   line-height: 1.8;
   font-size: 1rem;
 }
 
-.footer-column ul li {
+.footer__list-item {
   margin-bottom: 0.85rem;
 }
 
-.social-icons {
+.footer__socials {
   display: flex;
   gap: 1.25rem;
 }
 
-.social-link {
+.footer__social-link {
   color: var(--color-text-light);
   font-size: 1.5rem;
   transition: color var(--transition);
 }
 
-.social-link:hover,
-.social-link:focus-visible {
+.footer__social-link:hover,
+.footer__social-link:focus-visible {
   color: var(--color-primary);
   outline: none;
 }
 
-/* Newsletter Form */
-.newsletter-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.newsletter-input-group input {
-  border-radius: var(--border-radius);
-  padding: 0.75rem 1rem;
-  font-size: 1rem;
-  border: 1.8px solid #ccc;
-  transition: border-color var(--transition), box-shadow var(--transition);
-}
-
-.newsletter-input-group input:focus {
-  border-color: var(--color-primary);
-  box-shadow: 0 0 6px var(--color-primary);
-  outline: none;
-}
-
-.subscribe-btn {
-  background-color: var(--color-primary);
-  border: none;
-  border-radius: var(--border-radius);
-  color: var(--color-bg-light);
-  padding: 0.8rem 1.5rem;
-  font-weight: 700;
-  font-size: 1.125rem;
-  cursor: pointer;
-  box-shadow: 0 4px 14px rgb(230 57 70 / 0.5);
-  transition: background-color var(--transition), box-shadow var(--transition);
-}
-
-.subscribe-btn:hover,
-.subscribe-btn:focus-visible {
-  background-color: var(--color-primary-dark);
-  outline-offset: 2px;
-  outline: 2px solid var(--color-primary-dark);
-  box-shadow: 0 0 16px var(--color-primary-dark);
-}
-
-/* Responsive Typography */
+/*=============== Responsive Typography and Layout Adjustments ===============*/
 @media (max-width: 600px) {
-  .menu-btn,
-  .book-btn {
+  .dropdown__button,
+  .navbar__book-button,
+  .form__submit,
+  .form__subscribe {
     padding: 0.6rem 1.2rem;
     font-size: 1rem;
   }
 
-  .showcase h1 {
+  .showcase__title {
     font-size: 2.5rem;
   }
 
-  .submit-btn,
-  .subscribe-btn {
+  .form__submit,
+  .form__subscribe {
     width: 100%;
   }
 }
 
 @media (max-width: 400px) {
-  .footer-container,
-  .section-container {
+  .footer__container,
+  .section__container {
     grid-template-columns: 1fr !important;
   }
 
-  .dropdown-menu {
+  .dropdown__menu {
     position: static;
     transform: none !important;
     opacity: 1 !important;
@@ -419,8 +426,7 @@ form#contact-form {
     background: transparent !important;
   }
 
-  .dropdown:hover .dropdown-menu {
+  .dropdown:hover .dropdown__menu {
     display: block;
   }
 }
-
