@@ -1,25 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skye Suites - Home</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="index.css">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="css/index.css">
 </head>
-<body>
-    <header>
 
+<body>
+    <header class="header">
+
+        <nav class="header__nav">
+
+            <ul class="nav__list">
+                <li class="nav__list-item"><a href="index.html">Home</a></li>
+                <li class="nav__list-item"><a href="suites.html">Suites</a></li>
+                <li class="nav__list-item"><a href="dining.html">Dining</a></li>
+                <li class="nav__list-item"><a href="experience.html">Experience</a></li>
+                <li class="nav__list-item"><a href="access.html">Access</a></li>
+            </ul>
+
+
+            <button class="nav__btn book__btn">Book Now</button>
+
+        </nav>
+        
+
+
+        <section class="header__hero">
+
+            <div class="hero__headline">
+                <h1>SKYE SUITES</h1>
+            </div>
+
+            <div class="hero__subheadline">
+                <h2>Hotel & Restaurant</h2>
+            </div>  
+
+        </section>
+       
     </header>
 
-    <main>
-        <section>
-            
+    <main class="main">
+        <!-- Section: 
+            Each section is wrapped, containing the image and the text wrap. 
+            There is an additional wrap for the texts.  
+
+            Visual structure:
+            <section-wrap>
+
+                <text-wrap>
+                    <texts>
+                </text-wrap>
+
+                <img>
+
+            </section-wrap>
+        -->
+
+
+        <!-- Suites Section -->
+        <section class="main__section">
+
+            <div class="section__wrap">
+
+                <div class="section__wrap-texts">
+                    <h3 class="section__heading">Suites</h3>
+                    <p class="section__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quod voluptatem, neque delectus dicta, facilis soluta ipsam saepe asperiores porro quasi assumenda sit. Tempore dolore quidem, ipsam aliquid reprehenderit debitis.</p>
+                    <h4 class="section__internal-link"><a href="suites.html">VIEW SUITES</a></h4>
+                </div>
+
+                <img class="section__img" src="images/bed.jpg" alt="bed image">
+
+            </div>
+
         </section>
+
+        
+
+        <!-- Dining Section -->
+        <section class="main__section section--black">
+
+            <div class="section__wrap">
+
+                <div class="section__texts">
+                    <h3 class="section__heading">Dining</h3>
+                    <p class="section__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quod voluptatem, neque delectus dicta, facilis soluta ipsam saepe asperiores porro quasi assumenda sit. Tempore dolore quidem, ipsam aliquid reprehenderit debitis.</p>
+                    <h4 class="section__internal-link"><a href="dining.html">VIEW SUITES</a></h4>
+                </div>
+
+                <img class="section__img" src="images/restaurant.jpg" alt="restuarant image">
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Experience Section -->
+        <section class="main__section">
+
+            <div class="section__wrap">
+
+                <div class="section__texts">
+                    <h3 class="section__heading">Experience</h3>
+                    <p class="section__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quod voluptatem, neque delectus dicta, facilis soluta ipsam saepe asperiores porro quasi assumenda sit. Tempore dolore quidem, ipsam aliquid reprehenderit debitis.</p>
+                    <h4 class="section__internal-link"><a href="experience.html">VIEW SUITES</a></h4>
+                </div>
+
+                <img class="section__img" src="images/wellness.jpg" alt="wellness image">
+
+            </div>
+
+
     </main>
 
-    <footer>
-        
-    </footer>
+    <footer class="footer">
+        <section class="footer__section">
+            <h5 class="footer__heading">Contact Us</h5>
+            <ul class="footer__list-contact">
+                <li class="list-contact__item">Address: 631 Douglas Mountains New Mireilleshire Indiana USA </li>
+                <li class="list-contact__item">Phone: +1 234 567 890</li>
+                <li class="list-contact__item">Email: info@skyesuiteshotel.com </li>
+            </ul>
+        </section>
 
+        <section class="footer__section">
+            <h5 class="footer__heading">Follow Us</h5>
+            <ul class="footer__list-socials">
+                <li class="list-socials__item"><a href="https://www.facebook.com/people/SKYE-Suites/100063500826422/">Facebook</a></li>
+                <li class="list-socials__item"><a href="https://www.instagram.com/skye_suites ">Instagram</a></li>
+                <li class="list-socials__item"><a href="#">Pinterest</a></li>
+                <li class="list-socials__item"><a href="#">YouTube</a></li>
+            </ul>
+        </section>
+
+        <section class="footer__section">
+            <h5 class="footer__heading">Subscribe to our newsletter</h5>
+            <form class="footer__form">
+                <input class="footer__input-email" type="email" placeholder="Email address">
+                <button class="footer__btn subscribe__btn" type="submit">Subscribe</button>
+            </form>
+        </section>
+
+    </footer>
 </body>
+
 </html>
