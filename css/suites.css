@@ -1,4 +1,4 @@
-/* Structure */
+* Structure */
 
 /* Header section */
 
@@ -30,32 +30,6 @@
         padding: 1rem;
     }
 
-
-/* Main section */
-
-.section__wrap {
-    display: flex; /* Enables flexbox */
-    flex-direction: row; /* Aligns items in a row */
-    flex-wrap: wrap; /* Allows wrapping on smaller screens */
-    justify-content: space-around;
-    padding: 2.5rem; /* Adds padding */
-}
-
-.section__wrap-texts {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 5rem; /* Adds padding */
-}
-
-img {
-    width: 50%; /* Sets a fixed width */
-    height: auto; /* Maintains aspect ratio */
-    object-fit: contain; /* Ensures the image fits within its container without stretching */
-    margin: 1rem; /* Adds space around the image */
-}
-
 .footer{
     background-color: black;
     display: flex;
@@ -68,38 +42,12 @@ img {
     color:white;
 }
 
-
 /* Skin */
 body{
     margin: 0; /* Removes default margin */
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
     line-height: 1.6; /* Improves readability */
     color: #000000; /* Sets a default text color */
-}
-
-
-h3 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-}
-
-p {
-    font-size: 1.15rem;
-}
-
-ul, li{
-    list-style: none; /* Removes default list styling */
-    padding: 0;
-    margin: 0;
-}
-
-h5, a{
-    text-decoration:none;
-    color:black;
-    font-size: 1.25rem;
-    font-weight: bold;
 }
 
 .header__nav{
@@ -111,38 +59,22 @@ h5, a{
     font-size: 1.25rem; /* Sets font size */
 }
 
+ul, li{
+    list-style: none; /* Removes default list styling */
+    padding: 0;
+    margin: 0;
+}
+
 .header__hero{
-    width: 100%;
-    height: 100vh;
-    background-image: url("../images/hotel.jpg"); /* Replace with your image path */
-    background-size: cover; /* Ensures the image covers the entire section */
-    background-position: center; /* Centers the image */
-    color: white; /* Sets text color to white */
+    background-color: black;
 }
 
 .header__hero h1{
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: white;
     font-size: 3.5rem;
-    font-weight: bold;
-    text-shadow: #424242 2px 2px 4px;
-    
-}
-
-img{
-    border-style: solid;
-    border-width: 25px;
-}
-
-.section--black {
-    background-color: black;
-    color: white;
-}
-
-.section--black a{
-    color: white;
-}
-
-.section--black img {
-    order: -1; /* Moves the image to the left */
+    font-weight: bold;    
 }
 
 .footer{
