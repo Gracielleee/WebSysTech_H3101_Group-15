@@ -1,160 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Skye Suites | Access</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Skye Suites | Access</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="stylesheet" href="./css/access.css" />
 
-  <!-- Google Material Icons -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!-- Google Material Icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
 
-  <!-- FontAwesome -->
-  <script src="https://kit.fontawesome.com/62d08c9dc3.js" crossorigin="anonymous" defer></script>
+    <!-- FontAwesome -->
+    <script
+      src="https://kit.fontawesome.com/62d08c9dc3.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+  </head>
+  <body>
+    <!-- Main Page Header Block -->
+    <header class="header" role="banner">
+      <!-- Navbar Block -->
+      <nav class="navbar" role="navigation" aria-label="Main Navigation">
+        <div class="navbar__container">
+          <!-- Dropdown for tablet/mobile -->
+          <div
+            class="dropdown"
+            tabindex="0"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <button
+              class="dropdown__button"
+              aria-controls="dropdown-menu"
+              aria-expanded="false"
+            >
+              MENU
+            </button>
+            <ul
+              class="dropdown__menu"
+              id="dropdown-menu"
+              role="menu"
+              aria-label="Main Menu"
+            >
+              <li class="dropdown__menu-item" role="none">
+                <a
+                  class="dropdown__menu-link"
+                  role="menuitem"
+                  href="index.html"
+                >
+                  <i class="material-icons dropdown__icon" aria-hidden="true"
+                    >home</i
+                  >
+                  Home
+                </a>
+              </li>
+              <li class="dropdown__menu-item" role="none">
+                <a
+                  class="dropdown__menu-link"
+                  role="menuitem"
+                  href="suites.html"
+                >
+                  <i class="material-icons dropdown__icon" aria-hidden="true"
+                    >hotel</i
+                  >
+                  Suites
+                </a>
+              </li>
+              <li class="dropdown__menu-item" role="none">
+                <a
+                  class="dropdown__menu-link"
+                  role="menuitem"
+                  href="dining.html"
+                >
+                  <i class="material-icons dropdown__icon" aria-hidden="true"
+                    >local_dining</i
+                  >
+                  Dining
+                </a>
+              </li>
+              <li class="dropdown__menu-item" role="none">
+                <a
+                  class="dropdown__menu-link"
+                  role="menuitem"
+                  href="experience.html"
+                >
+                  <i class="material-icons dropdown__icon" aria-hidden="true"
+                    >spa</i
+                  >
+                  Experience
+                </a>
+              </li>
+              <li class="dropdown__menu-item" role="none">
+                <a
+                  class="dropdown__menu-link"
+                  role="menuitem"
+                  href="access.html"
+                >
+                  <i class="material-icons dropdown__icon" aria-hidden="true"
+                    >info</i
+                  >
+                  Access
+                </a>
+              </li>
+            </ul>
+          </div>
 
-  <link rel="stylesheet" href="./css/access.css" />
-</head>
-<body>
-  <!-- Main Page Header Block -->
-  <header class="header" role="banner">
-    <!-- Navbar Block -->
-    <nav class="navbar" role="navigation" aria-label="Main Navigation">
-      <div class="navbar__container">
-        <!-- Dropdown Block inside Navbar -->
-        <div class="dropdown" tabindex="0" aria-haspopup="true" aria-expanded="false">
-          <button class="dropdown__button" aria-controls="dropdown-menu" aria-expanded="false">MENU</button>
-          <ul class="dropdown__menu" id="dropdown-menu" role="menu" aria-label="Main Menu">
-            <li class="dropdown__menu-item" role="none">
-              <a class="dropdown__menu-link" role="menuitem" href="index.html">
-                <i class="material-icons dropdown__icon" aria-hidden="true">home</i> Home
-              </a>
+          <!-- Horizontal menu for large screens -->
+          <ul class="navbar__menu" role="menubar" aria-label="Main Menu">
+            <li role="none">
+              <a href="index.html" role="menuitem" class="navbar__menu-link"
+                >Home</a
+              >
             </li>
-            <li class="dropdown__menu-item" role="none">
-              <a class="dropdown__menu-link" role="menuitem" href="suites.html">
-                <i class="material-icons dropdown__icon" aria-hidden="true">hotel</i> Suites
-              </a>
+            <li role="none">
+              <a href="suites.html" role="menuitem" class="navbar__menu-link"
+                >Suites</a
+              >
             </li>
-            <li class="dropdown__menu-item" role="none">
-              <a class="dropdown__menu-link" role="menuitem" href="dining.html">
-                <i class="material-icons dropdown__icon" aria-hidden="true">local_dining</i> Dining
-              </a>
+            <li role="none">
+              <a href="dining.html" role="menuitem" class="navbar__menu-link"
+                >Dining</a
+              >
             </li>
-            <li class="dropdown__menu-item" role="none">
-              <a class="dropdown__menu-link" role="menuitem" href="experience.html">
-                <i class="material-icons dropdown__icon" aria-hidden="true">spa</i> Experience
-              </a>
+            <li role="none">
+              <a
+                href="experience.html"
+                role="menuitem"
+                class="navbar__menu-link"
+                >Experience</a
+              >
             </li>
-            <li class="dropdown__menu-item" role="none">
-              <a class="dropdown__menu-link" role="menuitem" href="access.html">
-                <i class="material-icons dropdown__icon" aria-hidden="true">info</i> Access
-              </a>
+            <li role="none">
+              <a href="access.html" role="menuitem" class="navbar__menu-link"
+                >Access</a
+              >
             </li>
           </ul>
+
+          <!-- Call-to-action book button -->
+          <button
+            class="button button--primary navbar__book-button"
+            type="button"
+          >
+            BOOK NOW
+          </button>
         </div>
-        <!-- Call-to-action book button -->
-        <button class="button button--primary navbar__book-button" type="button">BOOK NOW</button>
+      </nav>
+
+      <!-- Showcase Block -->
+      <div class="showcase" role="banner">
+        <h1 class="showcase__title">ACCESS</h1>
       </div>
-    </nav>
+    </header>
 
-    <!-- Showcase Block -->
-    <div class="showcase" role="banner">
-      <h1 class="showcase__title">ACCESS</h1>
-    </div>
-  </header>
+    <!-- Main Content Section Block -->
+    <main class="section" role="main">
+      <div class="section__container">
+        <!-- Left Column Element -->
+        <div class="section__column section__column--left">
+          <h2 class="section__heading"><em>Getting Here</em></h2>
+          <p class="section__info">Check in 3:00 PM | Check-out 11:00 AM</p>
 
-  <!-- Main Content Section Block -->
-  <main class="section" role="main">
-    <div class="section__container">
-      <!-- Left Column Element -->
-      <div class="section__column section__column--left">
-        <h2 class="section__heading"><em>Getting Here</em></h2>
-        <p class="section__info">Check in 3:00 PM | Check-out 11:00 AM</p>
+          <!-- Map Container Element -->
+          <div class="map">
+            <iframe
+              class="map__iframe"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d989848.3750780706!2d121.122367!3d14.276813!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc0d5f5c815a2e35c!2sLa%20Serena%20Restaurant!5e0!3m2!1sen!2sph!4v1669728948171!5m2!1sen!2sph"
+              title="Location of La Serena Restaurant"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
 
-        <!-- Map Container Element -->
-        <div class="map">
-          <iframe 
-            class="map__iframe"
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d989848.3750780706!2d121.122367!3d14.276813!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc0d5f5c815a2e35c!2sLa%20Serena%20Restaurant!5e0!3m2!1sen!2sph!4v1669728948171!5m2!1sen!2sph"
-            title="Location of La Serena Restaurant"
-            loading="lazy"
-            allowfullscreen
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
+        <!-- Right Column Element -->
+        <div class="section__column section__column--right">
+          <p class="section__intro"><em>Let's get in touch</em></p>
+
+          <!-- Contact Form Block -->
+          <form class="form form--contact" id="contact-form" novalidate>
+            <div class="form__group">
+              <label class="form__label" for="title">Subject</label>
+              <input
+                class="form__input"
+                type="text"
+                name="title"
+                id="title"
+                required
+                autocomplete="off"
+              />
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="first_name">First Name</label>
+              <input
+                class="form__input"
+                type="text"
+                name="firstName"
+                id="first_name"
+                required
+                autocomplete="given-name"
+              />
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="last_name">Last Name</label>
+              <input
+                class="form__input"
+                type="text"
+                name="lastName"
+                id="last_name"
+                required
+                autocomplete="family-name"
+              />
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="email">Email</label>
+              <input
+                class="form__input"
+                type="email"
+                name="email"
+                id="email"
+                required
+                autocomplete="email"
+              />
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="message">Message</label>
+              <textarea
+                class="form__textarea"
+                name="message"
+                id="message"
+                rows="4"
+                required
+              ></textarea>
+            </div>
+            <div class="form__footer">
+              <button class="button button--primary form__submit" type="submit">
+                SEND
+              </button>
+            </div>
+          </form>
         </div>
       </div>
+    </main>
 
-      <!-- Right Column Element -->
-      <div class="section__column section__column--right">
-        <p class="section__intro"><em>Let's get in touch</em></p>
+    <!-- Footer Block -->
+    <footer class="footer" role="contentinfo">
+      <div class="footer__container">
+        <!-- Footer Contact Column Element -->
+        <section class="footer__column">
+          <h3 class="footer__heading">Contact Us</h3>
+          <ul class="footer__list">
+            <li class="footer__list-item">
+              <i class="fa-solid fa-location-dot" aria-hidden="true"></i> Suite
+              1202, Tower 3, Bonifacio High Street, Bonifacio Global City,
+              Taguig, Metro Manila, Philippines
+            </li>
+            <li class="footer__list-item">
+              <i class="fa-solid fa-phone" aria-hidden="true"></i> +63 917 987
+              6543 / +63 2 888 2345
+            </li>
+            <li class="footer__list-item">
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              info@skyesuiteshotel.com
+            </li>
+          </ul>
+        </section>
 
-        <!-- Contact Form Block -->
-        <form class="form form--contact" id="contact-form" novalidate>
-          <div class="form__group">
-            <label class="form__label" for="title">Subject</label>
-            <input class="form__input" type="text" name="title" id="title" required autocomplete="off" />
-          </div>
-          <div class="form__group">
-            <label class="form__label" for="first_name">First Name</label>
-            <input class="form__input" type="text" name="firstName" id="first_name" required autocomplete="given-name" />
-          </div>
-          <div class="form__group">
-            <label class="form__label" for="last_name">Last Name</label>
-            <input class="form__input" type="text" name="lastName" id="last_name" required autocomplete="family-name" />
-          </div>
-          <div class="form__group">
-            <label class="form__label" for="email">Email</label>
-            <input class="form__input" type="email" name="email" id="email" required autocomplete="email" />
-          </div>
-          <div class="form__group">
-            <label class="form__label" for="message">Message</label>
-            <textarea class="form__textarea" name="message" id="message" rows="4" required></textarea>
-          </div>
-          <div class="form__footer">
-            <button class="button button--primary form__submit" type="submit">SEND</button>
-          </div>
-        </form>
+        <!-- Footer Social Media Column -->
+        <section class="footer__column">
+          <h3 class="footer__heading">Follow Us</h3>
+          <nav aria-label="Social media links" class="footer__socials">
+            <a href="#" aria-label="Facebook" class="footer__social-link"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a href="#" aria-label="Instagram" class="footer__social-link"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="#" aria-label="Pinterest" class="footer__social-link"
+              ><i class="fa-brands fa-pinterest"></i
+            ></a>
+            <a href="#" aria-label="YouTube" class="footer__social-link"
+              ><i class="fa-brands fa-youtube"></i
+            ></a>
+          </nav>
+        </section>
+
+        <!-- Footer Newsletter Column -->
+        <section class="footer__column">
+          <h3 class="footer__heading">Subscribe to our newsletter</h3>
+          <form class="form form--newsletter" novalidate>
+            <div class="form__group form__group--newsletter">
+              <label for="newsletter-email" class="visually-hidden"
+                >Email address</label
+              >
+              <input
+                class="form__input"
+                type="email"
+                id="newsletter-email"
+                name="newsletter-email"
+                placeholder="Email address"
+                required
+              />
+            </div>
+            <button
+              class="button button--primary form__subscribe"
+              type="submit"
+            >
+              Subscribe
+            </button>
+          </form>
+        </section>
       </div>
-    </div>
-  </main>
-
-  <!-- Footer Block -->
-  <footer class="footer" role="contentinfo">
-    <div class="footer__container">
-      <!-- Footer Contact Column Element -->
-      <section class="footer__column">
-        <h3 class="footer__heading">Contact Us</h3>
-        <ul class="footer__list">
-          <li class="footer__list-item">
-            <i class="fa-solid fa-location-dot" aria-hidden="true"></i> Suite 1202, Tower 3, Bonifacio High Street, Bonifacio Global City, Taguig, Metro Manila, Philippines
-          </li>
-          <li class="footer__list-item"><i class="fa-solid fa-phone" aria-hidden="true"></i> +63 917 987 6543 / +63 2 888 2345</li>
-          <li class="footer__list-item"><i class="fa-solid fa-envelope" aria-hidden="true"></i> info@skyesuiteshotel.com</li>
-        </ul>
-      </section>
-
-      <!-- Footer Social Media Column -->
-      <section class="footer__column">
-        <h3 class="footer__heading">Follow Us</h3>
-        <nav aria-label="Social media links" class="footer__socials">
-          <a href="#" aria-label="Facebook" class="footer__social-link"><i class="fa-brands fa-facebook"></i></a>
-          <a href="#" aria-label="Instagram" class="footer__social-link"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#" aria-label="Pinterest" class="footer__social-link"><i class="fa-brands fa-pinterest"></i></a>
-          <a href="#" aria-label="YouTube" class="footer__social-link"><i class="fa-brands fa-youtube"></i></a>
-        </nav>
-      </section>
-
-      <!-- Footer Newsletter Column -->
-      <section class="footer__column">
-        <h3 class="footer__heading">Subscribe to our newsletter</h3>
-        <form class="form form--newsletter" novalidate>
-          <div class="form__group form__group--newsletter">
-            <label for="newsletter-email" class="visually-hidden">Email address</label>
-            <input class="form__input" type="email" id="newsletter-email" name="newsletter-email" placeholder="Email address" required />
-          </div>
-          <button class="button button--primary form__subscribe" type="submit">Subscribe</button>
-        </form>
-      </section>
-    </div>
-  </footer>
-</body>
+    </footer>
+  </body>
 </html>
