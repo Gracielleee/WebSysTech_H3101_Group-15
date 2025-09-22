@@ -30,6 +30,69 @@
         padding: 1rem;
     }
 
+    /* Main section */
+    .section__suites {
+        display: flex; /* Enables flexbox */
+        flex-direction: column; /* Aligns items in a column */
+        justify-content: center; /* Centers items horizontally */
+        align-items: center; /* Centers items vertically */
+        padding: 1.5rem; /* Adds padding */
+    }
+
+    .suites__intro {
+        text-align: center; /* Centers text */
+        margin-bottom: 2rem; /* Adds space below the intro */
+    }
+
+    .section__suites{
+        padding-top: 5rem; /* Adds padding */
+        padding-right: 8rem; /* Adds padding */
+        padding-left: 8rem; /* Adds padding */
+    }
+
+    .suites__card {
+        display: flex; /* Enables flexbox */
+        flex-direction: column; /* Aligns items in a column */
+        gap: 1.5rem; /* Adds space between cards */
+        width: 100%; /* Full width */
+        max-width: 1200px; /* Limits maximum width */
+        padding: 5rem;
+    }
+
+    .tabs {
+        display: flex; /* Enables flexbox */
+        gap: 1rem; /* Adds space between tabs */
+        padding: 0.5rem;
+        margin: 0; /* Removes default margin */
+        border-bottom: 3px solid #a86060; /* Adds a bottom border */
+        justify-content: space-evenly;
+    }
+
+    .room__info{
+        display: flex; /* Enables flexbox */
+        flex-direction: row; /* Aligns items in a row */
+        align-items: top;
+        gap: 1rem; /* Adds space between items */
+        margin: 0;
+        padding: 1rem; /* Adds padding */
+    }
+
+    img{
+        width: 50%; /* Sets a fixed width */
+        height: auto; /* Maintains aspect ratio */
+        object-fit: contain; /* Ensures the image fits within its container without stretching */
+    }
+
+    .room__features{
+        display: flex; /* Enables flexbox */
+        flex-direction: column; /* Aligns items in a column */
+        align-items: flex-start; /* Aligns items to the start */
+        gap: 1rem; /* Adds space between items */
+        margin-left: 1.5rem;
+    }
+
+    
+
 .footer{
     background-color: black;
     display: flex;
@@ -41,6 +104,7 @@
     padding-bottom: 5em;
     color:white;
 }
+
 
 /* Skin */
 body{
@@ -65,6 +129,11 @@ ul, li{
     margin: 0;
 }
 
+.tabs{
+    background-color: #000000;
+    color: white;
+}
+
 .header__hero{
     background-color: black;
 }
@@ -75,6 +144,21 @@ ul, li{
     color: white;
     font-size: 3.5rem;
     font-weight: bold;    
+}
+
+.suites__heading {
+    font-size: 2.5rem; /* Sets font size */
+    margin-bottom: 0.5rem; /* Adds space below the heading */
+}
+
+.suites__subheading {
+    font-size: 1.25rem; /* Sets font size */
+    color: #555; /* Sets a lighter text color */
+}
+
+.suites__card {
+    box-shadow: #b2b5c6 0px 2px 4px; /* Adds a shadow effect */
+    padding: 1rem; /* Adds padding */
 }
 
 .footer{
