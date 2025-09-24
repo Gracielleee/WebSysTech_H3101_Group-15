@@ -4,27 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skye Suites - Home</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="">
+    <title>Skye Suites | Home</title>
+
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/normalize.css@8.0.1/normalize.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
     <header class="header">
 
-        <nav class="header__nav">
+        <nav class="navbar">
 
-            <ul class="nav__list">
-                <li class="nav__list-item"><a href="index.html">Home</a></li>
-                <li class="nav__list-item"><a href="suites.html">Suites</a></li>
-                <li class="nav__list-item"><a href="dining.html">Dining</a></li>
-                <li class="nav__list-item"><a href="experience.html">Experience</a></li>
-                <li class="nav__list-item"><a href="access.html">Access</a></li>
-            </ul>
+            <div class="navbar__container">
 
+                <ul class="navbar__menu">
+                    <li class="nav__menu-item"><a class="navbar__menu-link" href="index.html">Home</a></li>
+                    <li class="nav__menu-item"><a class="navbar__menu-link" href="suites.html">Suites</a></li>
+                    <li class="nav__menu-item"><a class="navbar__menu-link" href="dining.html">Dining</a></li>
+                    <li class="nav__menu-item"><a class="navbar__menu-link" href="experience.html">Experience</a></li>
+                    <li class="nav__menu-item"><a class="navbar__menu-link" href="access.html">Access</a></li>
+                </ul>
 
-            <button class="nav__btn book__btn">Book Now</button>
+                <button class="button button--primary navbar__book-btn">Book Now</button>
+
+            </div>
 
         </nav>
         
@@ -73,13 +83,13 @@
                     <h4 class="section__internal-link"><a href="suites.html">VIEW SUITES</a></h4>
                 </div>
 
-                <img class="section__img" src="images/bed.jpg" alt="bed image">
+                    <img class="section__img" src="images/bed.jpg" alt="bed image">
 
             </div>
 
         </section>
 
-        
+
 
         <!-- Dining Section -->
         <section class="main__section section--black">
@@ -89,10 +99,10 @@
                 <div class="section__wrap-texts">
                     <h3 class="section__heading">Dining</h3>
                     <p class="section__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quod voluptatem, neque delectus dicta, facilis soluta ipsam saepe asperiores porro quasi assumenda sit. Tempore dolore quidem, ipsam aliquid reprehenderit debitis.</p>
-                    <h4 class="section__internal-link"><a href="dining.html">VIEW SUITES</a></h4>
+                    <h4 class="section__internal-link"><a href="dining.html">SEE DETAILS</a></h4>
                 </div>
 
-                <img class="section__img" src="images/restaurant.jpg" alt="restuarant image">
+                    <img class="section__img" src="images/restaurant.jpg" alt="restuarant image">
 
             </div>
 
@@ -108,10 +118,11 @@
                 <div class="section__wrap-texts">
                     <h3 class="section__heading">Experience</h3>
                     <p class="section__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quod voluptatem, neque delectus dicta, facilis soluta ipsam saepe asperiores porro quasi assumenda sit. Tempore dolore quidem, ipsam aliquid reprehenderit debitis.</p>
-                    <h4 class="section__internal-link"><a href="experience.html">VIEW SUITES</a></h4>
+                    <h4 class="section__internal-link"><a href="experience.html">DISCOVER MORE</a></h4>
                 </div>
 
-                <img class="section__img" src="images/wellness.jpg" alt="wellness image">
+                    <img class="section__img" src="images/wellness.jpg" alt="wellness image">
+                
 
             </div>
 
