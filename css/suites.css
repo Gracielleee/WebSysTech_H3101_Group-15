@@ -1,189 +1,340 @@
-* Structure */
+/* STRUCTURE */
 
-/* Header section */
+/* -Header section */
 
-    /** Navigation bar **/
-    .header__nav{
-        display: flex; /* Enables flexbox */
-        justify-content: space-between; /* Distributes space between items */
-        align-items: center; /* Centers items vertically */
-        padding: 1rem 2rem; /* Adds padding */
-    }
+/** --Navigation bar **/
 
-    .nav__list {
-        display: flex; /* Enables flexbox */
-        flex-direction: row;
-        flex-wrap:wrap; /* Allows wrapping on smaller screens */
-        gap: 1.5rem; /* Adds space between links */
-    }
-
-    /** Hero section **/
-    .header__hero{
-        display: flex;
-        flex-direction: column;
-        justify-content: center; /* Centers horizontally */
-        align-items: center;     /* Centers vertically */
-        padding: 3rem; /* Adds padding */
-    }
-
-    .header__hero h1{
-        padding: 1rem;
-    }
-
-    /* Main section */
-    .section__suites {
-        display: flex; /* Enables flexbox */
-        flex-direction: column; /* Aligns items in a column */
-        justify-content: center; /* Centers items horizontally */
-        align-items: center; /* Centers items vertically */
-        padding: 1.5rem; /* Adds padding */
-    }
-
-    .suites__intro {
-        text-align: center; /* Centers text */
-        margin-bottom: 2rem; /* Adds space below the intro */
-    }
-
-    .section__suites{
-        padding-top: 5rem; /* Adds padding */
-        padding-right: 8rem; /* Adds padding */
-        padding-left: 8rem; /* Adds padding */
-    }
-
-    .suites__card {
-        display: flex; /* Enables flexbox */
-        flex-direction: column; /* Aligns items in a column */
-        gap: 1.5rem; /* Adds space between cards */
-        width: 100%; /* Full width */
-        max-width: 1200px; /* Limits maximum width */
-        padding: 5rem;
-    }
-
-    .tabs {
-        display: flex; /* Enables flexbox */
-        gap: 1rem; /* Adds space between tabs */
-        padding: 0.5rem;
-        margin: 0; /* Removes default margin */
-        border-bottom: 3px solid #a86060; /* Adds a bottom border */
-        justify-content: space-evenly;
-    }
-
-    .room__info{
-        display: flex; /* Enables flexbox */
-        flex-direction: row; /* Aligns items in a row */
-        align-items: top;
-        gap: 1rem; /* Adds space between items */
-        margin: 0;
-        padding: 1rem; /* Adds padding */
-    }
-
-    img{
-        width: 50%; /* Sets a fixed width */
-        height: auto; /* Maintains aspect ratio */
-        object-fit: contain; /* Ensures the image fits within its container without stretching */
-    }
-
-    .room__features{
-        display: flex; /* Enables flexbox */
-        flex-direction: column; /* Aligns items in a column */
-        align-items: flex-start; /* Aligns items to the start */
-        gap: 1rem; /* Adds space between items */
-        margin-left: 1.5rem;
-    }
-
-    
-
-.footer{
-    background-color: black;
+.navbar {
     display: flex;
-    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 2rem 1rem;
+    position: sticky; /* Makes the navbar stick to the top */
+    top: 0; /* Sticks to the top */
+    z-index: 100; /* Ensures it stays above other content */
+}
+
+.navbar__container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+}
+
+/** --Hero section **/
+.header__hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15rem;
+}
+
+.header__hero h1 {
+    padding: 1rem;
+}
+
+
+
+/* Main section */
+main {
+    padding: 8rem 10rem;
+    margin: 0 auto;
+}
+.section__suites {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#section-top {
+    margin-bottom: 7rem;
+}
+
+.suites__intro {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.suites__card {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.tabs {
+    display: flex;
+    gap: 1rem;
+    padding: 0.5rem;
+    margin: 0;
+    border-bottom: 3px solid #a86060;
+    justify-content: space-evenly;
+}
+
+.room__info {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 2rem;
+}
+
+img {
+    width: 50%;
+    height: auto;
+    object-fit: contain;
+}
+
+.room__features {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 0 2.5rem;
+}
+
+
+
+/* -Footer section */
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
-    padding-top: 1em;
-    padding-right: 5rem;
-    padding-left: 5rem;
-    padding-bottom: 5em;
-    color:white;
+    padding: 5rem;
+    padding-bottom: 5rem;
+    box-sizing: border-box;
 }
 
-
-/* Skin */
-body{
-    margin: 0; /* Removes default margin */
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-    line-height: 1.6; /* Improves readability */
-    color: #000000; /* Sets a default text color */
+.footer__section {
+    margin: 1rem;
 }
 
-.header__nav{
-    background-color: black;
+.footer__heading {
+    margin-bottom: 1.5rem;
 }
 
-.nav_list, .nav__list a{
-    color: #ffffff; /* Sets text color to white */
-    font-size: 1.25rem; /* Sets font size */
+.footer__section li {
+    display: flex;
+    max-width: 30rem;
 }
 
-ul, li{
-    list-style: none; /* Removes default list styling */
+.list-contact__item {
+    display: flex;
+    align-items: baseline;
+    margin: 1rem 0;
+}
+
+.footer__list-socials {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
     padding: 0;
     margin: 0;
 }
 
-.tabs{
+
+
+/* SKIN */
+:root {
+    --color-primary: #e63946;
+    --color-primary-dark: #b12229;
+    --color-bg-dark: #000;
+    --color-bg-light: #fff;
+    --color-text-light: #f0f0f0;
+    --color-text-dark: #333;
+    --font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --font-family-serif: 'Times New Roman', Times, serif;
+    --border-radius: 0.5rem;
+    --transition: 0.3s ease;
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    --box-shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+    color: var(--color-text-light);
+}
+
+.navbar {
+    background-color: var(--color-bg-dark);
+
+}
+
+.navbar__menu {
+    list-style: none;
+}
+
+.navbar__menu-link {
+    color: var(--color-text-light);
+    font-weight: 600;
+    font-size: clamp(1rem, 1.2vw, 1.125rem);
+    padding: 0.75rem 0;
+    transition: color var(--transition);
+}
+
+.navbar__menu-link:hover,
+.navbar__menu-link:focus {
+    color: var(--color-primary);
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav_list,
+.nav__list a {
+    font-size: 1.25rem;
+}
+
+.room__features-btn {
+    border: none;
+    cursor: pointer;
+    padding: 0.75rem 2rem;
+    border-radius: 7px;
+    font-weight: 700;
+    font-size: 1rem;
+    user-select: none;
+    text-align: center;
+    display: inline-block;
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-light);
+}
+
+.button--primary {
+    background-color: var(--color-primary);
+    color: var(--color-bg-light);
+    box-shadow: 0 4px 14px rgba(230, 57, 70, 0.5);
+}
+
+.room__features-btn:hover,
+.room__features-btn:focus-visible {
+    background-color: var(--color-bg-light);
+    color: var(--color-text-dark);
+    outline-offset: 2px;
+    outline: 2px solid var(--color-bg-dark);
+    box-shadow: 0 0 4px var(--color-bg-dark);
+}
+
+.button--primary:hover,
+.button--primary:focus-visible {
+    background-color: var(--color-primary-dark);
+    outline-offset: 2px;
+    outline: 2px solid var(--color-primary-dark);
+    box-shadow: 0 0 16px var(--color-primary-dark);
+}
+
+.button {
+    border: none;
+    cursor: pointer;
+    padding: 0.75rem 2rem;
+    border-radius: var(--border-radius);
+    font-weight: 700;
+    font-size: 1.125rem;
+    transition: background-color var(--transition), box-shadow var(--transition);
+    user-select: none;
+    text-align: center;
+    display: inline-block;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    line-height: 1.6;
+}
+
+ul,
+li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tabs {
     background-color: #000000;
     color: white;
 }
 
-.header__hero{
+.header__hero {
     background-color: black;
 }
 
-.header__hero h1{
-    font-family: Helvetica, Arial, sans-serif;
+.header__hero h1 {
+    font-family: var(--font-family-serif);
     line-height: 1.6;
     color: white;
-    font-size: 3.5rem;
-    font-weight: bold;    
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    font-weight: 900;
 }
 
 .suites__heading {
-    font-size: 2.5rem; /* Sets font size */
-    margin-bottom: 0.5rem; /* Adds space below the heading */
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .suites__subheading {
-    font-size: 1.25rem; /* Sets font size */
-    color: #555; /* Sets a lighter text color */
+    font-size: 1.25rem;
+    color: #555;
 }
 
 .suites__card {
     box-shadow: #b2b5c6 0px 2px 4px; /* Adds a shadow effect */
-    padding: 1rem; /* Adds padding */
 }
 
-.footer{
-    background-color: black;
-    color:white;
+.footer {
+    color: var(--color-text-light);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('../images/hotel.jpg') center/cover no-repeat;
 }
 
-.footer__section {
-    padding: 10px;
-    margin: 1rem;
+.footer__heading {
+    color: var(--color-text-light);
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
-.footer__heading{
-    color: white;
-    font-size: 1.25rem;
-    font-weight: bold;
+.footer__section .list-socials__item {
+    color: var(--color-text-light);
+    line-height: 1.8;
+    font-size: 1rem;
 }
 
-.footer__section a{
-    color: white;
-    font-size: small;
+.fa-solid {
+    margin-right: 0.5em;
 }
 
-.subscribe__btn {
-    background-color: rgb(255, 255, 255);
-    color: black;
-    font-weight: bold;
+.fa-brands {
+    font-size: 1.5rem;
+    color: var(--color-text-light);
+}
+
+.footer__input-email {
+    padding: 0.75rem 1rem;
+    border: 1.8px solid #ccc;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.form__submit,
+.form__subscribe {
+    cursor: pointer;
 }
