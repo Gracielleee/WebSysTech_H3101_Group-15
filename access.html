@@ -26,24 +26,21 @@
   </head>
   <body>
     <!-- Main Page Header Block -->
-    <header class="header" role="banner">
+    <header class="header">
       <!-- Navbar Block -->
-      <nav class="navbar" role="navigation" aria-label="Main Navigation">
+      <nav class="navbar" aria-label="Main Navigation">
         <div class="navbar__container">
           <!-- Dropdown for tablet/mobile -->
-          <div
-            class="dropdown"
-            tabindex="0"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
+          <div class="dropdown" tabindex="0">
             <button
               class="dropdown__button"
               aria-controls="dropdown-menu"
+              aria-haspopup="true"
               aria-expanded="false"
             >
               MENU
             </button>
+
             <ul
               class="dropdown__menu"
               id="dropdown-menu"
@@ -156,13 +153,13 @@
       </nav>
 
       <!-- Showcase Block -->
-      <div class="showcase" role="banner">
+      <div class="showcase">
         <h1 class="showcase__title">ACCESS</h1>
       </div>
     </header>
 
     <!-- Main Content Section Block -->
-    <main class="section" role="main">
+    <main class="section">
       <div class="section__container">
         <!-- Left Column Element -->
         <div class="section__column section__column--left">
@@ -253,11 +250,16 @@
     </main>
 
     <!-- Footer Block -->
-    <footer class="footer" role="contentinfo">
+    <footer class="footer">
       <div class="footer__container">
         <!-- Footer Contact Column Element -->
-        <section class="footer__column">
-          <h3 class="footer__heading">Contact Us</h3>
+        <section
+          class="footer__column"
+          aria-labelledby="footer-contact-heading"
+        >
+          <h3 id="footer-contact-heading" class="footer__heading">
+            Contact Us
+          </h3>
           <ul class="footer__list">
             <li class="footer__list-item">
               <i class="fa-solid fa-location-dot" aria-hidden="true"></i> Suite
@@ -270,33 +272,40 @@
             </li>
             <li class="footer__list-item">
               <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-              info@skyesuiteshotel.com
+              <a href="mailto:info@skyesuiteshotel.com"
+                >info@skyesuiteshotel.com</a
+              >
             </li>
           </ul>
         </section>
 
         <!-- Footer Social Media Column -->
-        <section class="footer__column">
-          <h3 class="footer__heading">Follow Us</h3>
+        <section class="footer__column" aria-labelledby="footer-social-heading">
+          <h3 id="footer-social-heading" class="footer__heading">Follow Us</h3>
           <nav aria-label="Social media links" class="footer__socials">
-            <a href="#" aria-label="Facebook" class="footer__social-link"
-              ><i class="fa-brands fa-facebook"></i
-            ></a>
-            <a href="#" aria-label="Instagram" class="footer__social-link"
-              ><i class="fa-brands fa-instagram"></i
-            ></a>
-            <a href="#" aria-label="Pinterest" class="footer__social-link"
-              ><i class="fa-brands fa-pinterest"></i
-            ></a>
-            <a href="#" aria-label="YouTube" class="footer__social-link"
-              ><i class="fa-brands fa-youtube"></i
-            ></a>
+            <a href="#" aria-label="Facebook" class="footer__social-link">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="#" aria-label="Instagram" class="footer__social-link">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#" aria-label="Pinterest" class="footer__social-link">
+              <i class="fa-brands fa-pinterest"></i>
+            </a>
+            <a href="#" aria-label="YouTube" class="footer__social-link">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
           </nav>
         </section>
 
         <!-- Footer Newsletter Column -->
-        <section class="footer__column">
-          <h3 class="footer__heading">Subscribe to our newsletter</h3>
+        <section
+          class="footer__column"
+          aria-labelledby="footer-newsletter-heading"
+        >
+          <h3 id="footer-newsletter-heading" class="footer__heading">
+            Subscribe to our newsletter
+          </h3>
           <form class="form form--newsletter" novalidate>
             <div class="form__group form__group--newsletter">
               <label for="newsletter-email" class="visually-hidden"
