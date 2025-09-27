@@ -1,17 +1,3 @@
-/*
-|================================================================================|
-|                           ACCESS.CSS - STYLESHEET                              |
-|================================================================================|
-| DOCUMENTATION:                                                                 |
-| 1. Variables: Defines theme colors, fonts, and common measurements.            |
-| 2. Base & Utility: Global resets, body styles, links, and accessibility helper.|
-| 3. Layout Blocks: Styles for the Header, Navbar, Showcase, Main Section, Footer|
-| 4. Components: Specific styles for Forms, Buttons, and Map.                    |
-| 5. Media Queries: Responsive adjustments for various screen sizes.             |
-|================================================================================|
-*/
-
-
 /*=============== 1. Root Variables for Colors, Fonts, and Measurements ===============*/
 :root {
   --border-radius: 0.5rem;
@@ -23,7 +9,6 @@
   --color-text-light: #f0f0f0;
   --font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --font-family-serif: 'Times New Roman', Times, serif;
-  --font-family-serif: T
   --transition: 0.3s ease;
 }
 
