@@ -1,4 +1,4 @@
-/*=============== 1. Root Variables for Colors, Fonts, and Measurements ===============*/
+/*=============== Root Variables ===============*/
 :root {
   --border-radius: 0.5rem;
   --color-bg-dark: #000;
@@ -7,15 +7,12 @@
   --color-primary-dark: #b12229;
   --color-text-dark: #333;
   --color-text-light: #f0f0f0;
-  --font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  --font-family-serif: 'Times New Roman', Times, serif;
+  --font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-family-serif: "Times New Roman", Times, serif;
   --transition: 0.3s ease;
 }
 
-
-/*=============== 2. Base & Utility ===============*/
-
-/* Global Resets and Box Sizing */
+/*=============== Base & Utility ===============*/
 *,
 *::before,
 *::after {
@@ -34,7 +31,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Link Base Styles */
 a {
   color: inherit;
   text-decoration: none;
@@ -46,7 +42,6 @@ a:focus {
   outline: none;
 }
 
-/* Accessibility Utility Class */
 .visually-hidden {
   border: 0;
   clip: rect(0, 0, 0, 0);
@@ -59,17 +54,13 @@ a:focus {
   width: 1px;
 }
 
-
-/*=============== 3. Layout Blocks and Components ===============*/
-
-/* --- Header Block --- */
+/*=============== Header Block ===============*/
 .header {
   background-color: var(--color-bg-dark);
   color: var(--color-text-light);
   padding-bottom: 2rem;
 }
 
-/* Navbar Block (Sticky Navigation) */
 .navbar {
   align-items: center;
   background-color: var(--color-bg-dark);
@@ -98,7 +89,27 @@ a:focus {
   padding: 0.75rem 2rem;
 }
 
-/* Horizontal menu for large screens */
+.navbar__logo-link {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  margin-right: 1rem;
+}
+
+.navbar__logo {
+  height: 55px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  transition: height var(--transition);
+}
+
+@media (max-width: 600px) {
+  .navbar__logo {
+    height: 36px;
+  }
+}
+
 .navbar__menu {
   align-items: center;
   display: none; /* hidden by default, shown on large screens */
@@ -123,9 +134,21 @@ a:focus {
   outline: none;
 }
 
-/* Dropdown Block and Elements (for small screens) */
+.navbar__menu-link i {
+  margin-right: 0.5rem;
+  font-size: 1.125rem;
+  vertical-align: middle;
+  color: var(--color-text-light);
+  transition: color var(--transition);
+}
+
+.navbar__menu-link:hover i,
+.navbar__menu-link:focus i {
+  color: var(--color-primary);
+}
+
 .dropdown {
-  display: none; /* hide by default, show on small screens */
+  display: none;
   position: relative;
 }
 
@@ -198,10 +221,9 @@ a:focus {
   outline: none;
 }
 
-/* --- Showcase Block --- */
 .showcase {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
-    url('../images/lobby.jpg') center/cover no-repeat;
+  /* common shared styles except background image */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
   padding: 8rem 1rem 6rem;
   text-align: center;
 }
@@ -216,134 +238,11 @@ a:focus {
   text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.8);
 }
 
-/* --- Main Section Block --- */
-.section {
-  color: var(--color-text-dark);
-  margin: auto;
-  max-width: 1200px;
-  padding: 3rem 1.5rem;
-}
 
-.section__container {
-  display: grid;
-  gap: 3rem;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-}
-
-.section__column--left h2 {
-  font-size: clamp(1.5rem, 2.5vw, 2rem);
-  font-weight: 700;
-  font-style: italic;
-  margin-bottom: 0.5rem;
-}
-
-.section__column--left p {
-  font-size: 1rem;
-  margin-bottom: 1rem;
-}
-
-.section__column--right p.section__intro {
-  font-size: 1.125rem;
-  font-style: italic;
-  font-weight: 600;
-  margin-bottom: 1.25rem;
-}
-
-/* Map Component */
-.map__iframe {
-  border: 0;
-  border-radius: var(--border-radius);
-  box-shadow: 0 4px 12px rgb(0 0 0 / 0.15);
-  height: 320px;
-  width: 100%;
-}
-
-/* --- Form Components --- */
-
-/* CTA Button Base Styles */
-.button {
-  background-color: var(--color-primary);
-  border: none;
-  border-radius: var(--border-radius);
-  box-shadow: 0 4px 14px rgba(230, 57, 70 / 0.5);
-  color: var(--color-bg-light);
-  cursor: pointer;
-  display: inline-block;
-  font-size: 1.125rem;
-  font-weight: 700;
-  padding: 0.75rem 2rem;
-  text-align: center;
-  transition: background-color var(--transition), box-shadow var(--transition);
-  user-select: none;
-}
-
-.button:hover,
-.button:focus-visible {
-  background-color: var(--color-primary-dark);
-  box-shadow: 0 0 16px var(--color-primary-dark);
-  outline: 2px solid var(--color-primary-dark);
-  outline-offset: 2px;
-}
-
-/* General Form Styles */
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.form__group {
-  display: flex;
-  flex-direction: column;
-}
-
-.form__footer {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.form__group--newsletter {
-  display: flex;
-  flex-direction: column;
-}
-
-.form__input,
-.form__textarea {
-  border: 1.8px solid #ccc;
-  border-radius: var(--border-radius);
-  font-family: inherit;
-  font-size: 1rem;
-  padding: 0.75rem 1rem;
-  resize: vertical;
-  transition: border-color var(--transition), box-shadow var(--transition);
-}
-
-.form__input:focus,
-.form__textarea:focus {
-  border-color: var(--color-primary);
-  box-shadow: 0 0 5px var(--color-primary);
-  outline: none;
-}
-
-.form__label {
-  font-size: 1rem;
-  font-weight: 700;
-  margin-bottom: 0.375rem;
-}
-
-.form__submit,
-.form__subscribe {
-  cursor: pointer;
-}
-
-.form__textarea {
-  min-height: 80px;
-}
-
-/* --- Footer Block --- */
+/*=============== Footer Block ===============*/
 .footer {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
-    url('../images/hotel.jpg') center/cover no-repeat;
+    url("../images/hotel.jpg") center/cover no-repeat;
   background-color: var(--color-bg-dark);
   color: var(--color-text-light);
   padding: 3.5rem 1.5rem;
@@ -357,11 +256,6 @@ a:focus {
   margin: auto;
   max-width: 1200px;
 }
-
-/* Container for each footer section */
-/* .footer__column {
-  
-} */
 
 .footer__heading {
   font-size: 1.5rem;
@@ -397,12 +291,9 @@ a:focus {
   outline: none;
 }
 
-
-/*=============== 4. Media Queries ===============*/
-
+/*=============== Media Queries ===============*/
 /* Menu Visibility Logic (Desktop vs. Mobile/Tablet) */
 @media (max-width: 1024px) {
-  /* Ensure dropdown is visible on all small devices and tablets */
   .dropdown {
     display: block;
   }
@@ -412,7 +303,6 @@ a:focus {
 }
 
 @media (min-width: 1025px) {
-  /* Horizontal menu only on large screens */
   .dropdown {
     display: none;
   }
@@ -421,35 +311,23 @@ a:focus {
   }
 }
 
-/* Adjustments for smaller tablets and mobile screens (Max Width 600px) */
 @media (max-width: 600px) {
   .dropdown__button,
-  .navbar__book-button,
-  .form__submit,
-  .form__subscribe {
+  .navbar__book-button {
     font-size: 1rem;
     padding: 0.6rem 1.2rem;
   }
 
-  .form__submit,
-  .form__subscribe {
-    width: 100%;
-  }
-
-  .showcase__title {
-    font-size: 2.5rem;
+  .navbar__book-button {
+    width: auto;
   }
 }
 
-/* Adjustments for smallest screens (Max Width 400px) */
 @media (max-width: 400px) {
-  /* Force grid layouts to stack columns */
-  .footer__container,
-  .section__container {
+  .footer__container {
     grid-template-columns: 1fr !important;
   }
 
-  /* Force dropdown menu to behave like a standard block list on smallest screens */
   .dropdown__menu {
     background: transparent !important;
     box-shadow: none !important;
@@ -462,4 +340,29 @@ a:focus {
   .dropdown:hover .dropdown__menu {
     display: block;
   }
+}
+
+/* Buttons (Base, Primary) */
+.button {
+  background-color: var(--color-primary);
+  border: none;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 14px rgba(230, 57, 70 / 0.5);
+  color: var(--color-bg-light);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.125rem;
+  font-weight: 700;
+  padding: 0.75rem 2rem;
+  text-align: center;
+  transition: background-color var(--transition), box-shadow var(--transition);
+  user-select: none;
+}
+
+.button:hover,
+.button:focus-visible {
+  background-color: var(--color-primary-dark);
+  box-shadow: 0 0 16px var(--color-primary-dark);
+  outline: 2px solid var(--color-primary-dark);
+  outline-offset: 2px;
 }

@@ -1,24 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Dining | Skye Suites</title>
-
-    <!-- CSS -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     />
-    <link rel="stylesheet" href="css/dining.css" />
-
-    <!-- Material Icons -->
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/custom.css" />
     <link
-      rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
     />
-
-    <!-- FontAwesome -->
     <script
       src="https://kit.fontawesome.com/62d08c9dc3.js"
       crossorigin="anonymous"
@@ -27,38 +23,155 @@
   </head>
 
   <body>
-    <!-- Header Section -->
-    <header class="main-header">
-      <nav class="navbar">
-        <div class="navbar-container">
-          <ul class="nav-list">
-            <li class="nav-list-item">
-              <a href="index.html"> Home </a>
+    <!-- Main Page Header Block -->
+    <header class="header">
+      <!-- Navbar Block -->
+      <nav class="navbar" aria-label="Main Navigation">
+        <div class="navbar__container">
+          <!-- Site Logo -->
+          <a
+            href="index.html"
+            class="navbar__logo-link"
+            aria-label="Skye Suites Home"
+          >
+            <img
+              src="../images/logo.png"
+              alt="Skye Suites Logo"
+              class="navbar__logo"
+            />
+          </a>
+
+          <!-- Dropdown for tablet/mobile -->
+          <div class="dropdown" tabindex="0">
+            <button
+              class="dropdown__button"
+              aria-controls="dropdown-menu"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              MENU
+            </button>
+
+            <ul
+              class="dropdown__menu"
+              id="dropdown-menu"
+              role="menu"
+              aria-label="Main Menu"
+            >
+              <li class="dropdown__menu-item" role="none">
+                <a
+                  class="dropdown__menu-link"
+                  role="menuitem"
+                  href="index.html"
+                >
+                  <i class="material-icons dropdown__icon" aria-hidden="true"
+                    >home</i
+                  >
+                  Home
+                </a>
+              </li>
+              <li class="dropdown__menu-item" role="none">
+                <a
+                  class="dropdown__menu-link"
+                  role="menuitem"
+                  href="suites.html"
+                >
+                  <i class="material-icons dropdown__icon" aria-hidden="true"
+                    >hotel</i
+                  >
+                  Suites
+                </a>
+              </li>
+              <li class="dropdown__menu-item" role="none">
+                <a
+                  class="dropdown__menu-link"
+                  role="menuitem"
+                  href="dining.html"
+                >
+                  <i class="material-icons dropdown__icon" aria-hidden="true"
+                    >local_dining</i
+                  >
+                  Dining
+                </a>
+              </li>
+              <li class="dropdown__menu-item" role="none">
+                <a
+                  class="dropdown__menu-link"
+                  role="menuitem"
+                  href="experience.html"
+                >
+                  <i class="material-icons dropdown__icon" aria-hidden="true"
+                    >spa</i
+                  >
+                  Experience
+                </a>
+              </li>
+              <li class="dropdown__menu-item" role="none">
+                <a
+                  class="dropdown__menu-link"
+                  role="menuitem"
+                  href="access.html"
+                >
+                  <i class="material-icons dropdown__icon" aria-hidden="true"
+                    >info</i
+                  >
+                  Access
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Horizontal menu for large screens with FontAwesome icons -->
+          <ul class="navbar__menu" role="menubar" aria-label="Main Menu">
+            <li role="none">
+              <a href="index.html" role="menuitem" class="navbar__menu-link">
+                <i class="fa-solid fa-house"></i> Home
+              </a>
             </li>
-            <li class="nav-list-item">
-              <a href="suites.html"> Suites </a>
+            <li role="none">
+              <a href="suites.html" role="menuitem" class="navbar__menu-link">
+                <i class="fa-solid fa-bed"></i> Suites
+              </a>
             </li>
-            <li class="nav-list-item">
-              <a href="dining.html"> Dining </a>
+            <li role="none">
+              <a href="dining.html" role="menuitem" class="navbar__menu-link">
+                <i class="fa-solid fa-utensils"></i> Dining
+              </a>
             </li>
-            <li class="nav-list-item">
-              <a href="experience.html"> Experience </a>
+            <li role="none">
+              <a
+                href="experience.html"
+                role="menuitem"
+                class="navbar__menu-link"
+              >
+                <i class="fa-solid fa-spa"></i> Experience
+              </a>
             </li>
-            <li class="nav-list-item">
-              <a href="access.html"> Access </a>
+            <li role="none">
+              <a href="access.html" role="menuitem" class="navbar__menu-link">
+                <i class="material-icons dropdown__icon" aria-hidden="true"
+                  >info</i
+                >
+                Access
+              </a>
             </li>
           </ul>
-          <button class="nav-btn book-btn" type="button">BOOK NOW</button>
+
+          <!-- Call-to-action book button -->
+          <button
+            class="button button--primary navbar__book-button"
+            type="button"
+          >
+            BOOK NOW
+          </button>
         </div>
       </nav>
 
-      <div class="showcase">
-        <div class="row">
-          <h1 class="showcase-title">DINING</h1>
-        </div>
+      <!-- Showcase Block -->
+      <div class="showcase showcase--dining">
+        <h1 class="showcase__title">DINING</h1>
       </div>
     </header>
-
     <!-- Main Content Section -->
     <main>
       <!-- Breakfast -->
@@ -135,55 +248,84 @@
       </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="page-footer">
-      <div class="footer-container">
-        <!-- Left Column -->
-        <div class="footer-column">
-          <h5>Contact Us</h5>
-          <ul>
-            <li>
-              <i class="fa-solid fa-location-dot fa-lg prefix"></i>
-              631 Douglas Mountains
-              <br />
-              New Mireilleshire, Indiana USA
+    <!-- Footer Block -->
+    <footer class="footer">
+      <div class="footer__container">
+        <!-- Footer Contact Column Element -->
+        <section
+          class="footer__column"
+          aria-labelledby="footer-contact-heading"
+        >
+          <h3 id="footer-contact-heading" class="footer__heading">
+            Contact Us
+          </h3>
+          <ul class="footer__list">
+            <li class="footer__list-item">
+              <i class="fa-solid fa-location-dot" aria-hidden="true"></i> 15A
+              Horizon Villa, Bahura Estate Linapacan Island, Palawan 5313
             </li>
-            <li>
-              <i class="fa-solid fa-phone fa-lg prefix"></i>
-              204-663-3258
+            <li class="footer__list-item">
+              <i class="fa-solid fa-phone" aria-hidden="true"></i> +63 917 987
+              6543 / +63 2 888 2345
             </li>
-            <li>
-              <i class="fa-solid fa-envelope fa-lg prefix"></i>
-              <a href="mailto:info@skysuiteshotel.com"
-                >info@skysuiteshotel.com</a
+            <li class="footer__list-item">
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              <a href="mailto:info@skyesuiteshotel.com"
+                >info@skyesuiteshotel.com</a
               >
             </li>
           </ul>
-        </div>
+        </section>
 
-        <!-- Middle Column -->
-        <div class="footer-column">
-          <h5>Follow Us</h5>
-          <ul class="social-icons">
-            <li>
-              <i class="fa-brands fa-facebook fa-2x"></i>
-              <i class="fa-brands fa-instagram fa-2x"></i>
-              <i class="fa-brands fa-pinterest fa-2x"></i>
-              <i class="fa-brands fa-youtube fa-2x"></i>
-            </li>
-          </ul>
-        </div>
+        <!-- Footer Social Media Column -->
+        <section class="footer__column" aria-labelledby="footer-social-heading">
+          <h3 id="footer-social-heading" class="footer__heading">Follow Us</h3>
+          <nav aria-label="Social media links" class="footer__socials">
+            <a href="#" aria-label="Facebook" class="footer__social-link">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="#" aria-label="Instagram" class="footer__social-link">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#" aria-label="Pinterest" class="footer__social-link">
+              <i class="fa-brands fa-pinterest"></i>
+            </a>
+            <a href="#" aria-label="YouTube" class="footer__social-link">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+          </nav>
+        </section>
 
-        <!-- Right Column -->
-        <div class="footer-column">
-          <h5>Subscribe to our newsletter</h5>
-          <div class="input-field">
-            <i class="fa-regular fa-envelope prefix"></i>
-            <input id="icon_prefix" type="text" class="validate" />
-            <label for="icon_prefix"> Email address </label>
-            <button class="subscribe-btn" type="submit">Subscribe</button>
-          </div>
-        </div>
+        <!-- Footer Newsletter Column -->
+        <section
+          class="footer__column"
+          aria-labelledby="footer-newsletter-heading"
+        >
+          <h3 id="footer-newsletter-heading" class="footer__heading">
+            Subscribe to our newsletter
+          </h3>
+          <form class="form form--newsletter" novalidate>
+            <div class="form__group form__group--newsletter">
+              <label for="newsletter-email" class="visually-hidden"
+                >Email address</label
+              >
+              <input
+                class="form__input"
+                type="email"
+                id="newsletter-email"
+                name="newsletter-email"
+                placeholder="Email address"
+                required
+              />
+            </div>
+            <button
+              class="button button--primary form__subscribe"
+              type="submit"
+            >
+              Subscribe
+            </button>
+          </form>
+        </section>
       </div>
     </footer>
   </body>

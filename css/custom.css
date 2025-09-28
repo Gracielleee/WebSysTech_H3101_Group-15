@@ -1,0 +1,655 @@
+/*=============== Access ===============*/
+/* --- Showcase  --- */
+.showcase--access {
+  background-image: url("../images/lobby.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* --- Main Section and Columns --- */
+.section {
+  color: var(--color-text-dark);
+  margin: auto;
+  max-width: 1200px;
+  padding: 3rem 1.5rem;
+}
+
+.section__container {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.section__column--left h2 {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 700;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.section__column--left p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.section__column--right p.section__intro {
+  font-size: 1.125rem;
+  font-style: italic;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+
+/* Map iframe */
+.map__iframe {
+  border: 0;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.15);
+  height: 320px;
+  width: 100%;
+}
+
+/* --- Form Components --- */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.form__group--newsletter {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__input,
+.form__textarea {
+  border: 1.8px solid #ccc;
+  border-radius: var(--border-radius);
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+  resize: vertical;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.form__input:focus,
+.form__textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 5px var(--color-primary);
+  outline: none;
+}
+
+.form__label {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.375rem;
+}
+
+.form__submit,
+.form__subscribe {
+  cursor: pointer;
+}
+
+.form__textarea {
+  min-height: 80px;
+}
+
+/* Responsive adjustments for form and buttons */
+@media (max-width: 600px) {
+  .form__submit,
+  .form__subscribe {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+    width: 100%;
+  }
+
+  .showcase__title {
+    font-size: 2.5rem;
+  }
+}
+
+/* Smallest screen custom grid stacking */
+@media (max-width: 400px) {
+  .section__container {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/*=============== Dining ===============*/
+/* --- Showcase  --- */
+.showcase--dining {
+  background-image: url("../images/restaurant.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Dining Sections */
+.dining-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin: 3rem auto;
+  max-width: 1200px;
+}
+
+.dining-feature:nth-child(even) .dining-container {
+  flex-direction: row-reverse;
+}
+
+.dining-text {
+  flex: 1;
+  text-align: center;
+}
+
+.dining-text .section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.dining-text .section-description {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  font-weight: normal;
+}
+
+.dining-text .section-paragraph {
+  font-size: 1.1rem;
+  color: #000;
+}
+
+.dining-text .section-paragraph-white {
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+/* Alternate B/W Background */
+main .content-title:nth-of-type(odd) {
+  background-color: #fff;
+  color: #000;
+  padding: 2rem 0;
+}
+
+main .content-title:nth-of-type(even) {
+  background-color: #000;
+  color: #fff;
+  padding: 2rem 0;
+}
+
+/* Slideshow */
+.slideshow {
+  flex: 1;
+  max-width: 100%;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+.slides {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 100%;
+  animation: slide 12s linear infinite;
+}
+
+.slides img {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+  object-position: center;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  30% {
+    transform: translateX(0);
+  }
+  35% {
+    transform: translateX(-100%);
+  }
+  65% {
+    transform: translateX(-100%);
+  }
+  70% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+/* Buttons */
+.menu-btn {
+  font-weight: bold;
+  border-radius: 8px;
+  background-color: white;
+  color: black;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+  border: none;
+}
+
+.menu-btn:hover {
+  background-color: red;
+  color: white;
+}
+
+.subscribe-btn {
+  font-weight: bold;
+  border-radius: 8px;
+  background-color: white;
+  color: black;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+  border: none;
+}
+
+.subscribe-btn:hover {
+  background-color: red;
+  color: white;
+}
+
+/*=============== Experience ===============*/
+/* --- Showcase  --- */
+.showcase--experience {
+  background-image: url("../images/adventure-hero.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.wellness {
+  background: var(--color-bg-light);
+}
+
+.wellness__hero {
+  position: relative;
+  height: 485px;
+  overflow: hidden;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+}
+
+.wellness__hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  object-position: bottom;
+}
+
+.wellness__content {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-light);
+  padding: 5rem 0;
+}
+
+.wellness__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.wellness__header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.wellness__title {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--color-text-light);
+  margin-bottom: 1.25rem;
+  margin-top: 0;
+}
+
+.wellness__subtitle {
+  font-size: clamp(1.125rem, 2vw, 1.25rem);
+  font-weight: 300;
+  color: var(--color-text-light);
+  margin: 0;
+}
+
+.wellness__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+/* Adventure Block */
+.adventure {
+  background: var(--color-bg-light);
+}
+
+.adventure__hero {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+}
+
+.adventure__hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  object-position: bottom;
+}
+
+.adventure__content {
+  background-color: var(--color-bg-light);
+  color: var(--color-text-dark);
+  padding: 5rem 0;
+}
+
+.adventure__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.adventure__header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.adventure__title {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--color-text-dark);
+  margin-bottom: 1.25rem;
+  margin-top: 0;
+}
+
+.adventure__subtitle {
+  font-size: clamp(1.125rem, 2vw, 1.25rem);
+  font-weight: 300;
+  color: var(--color-text-dark);
+  margin: 0;
+}
+
+.adventure__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+/* Experience Card Block  */
+.experience-card {
+  background: var(--color-bg-light);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.experience-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--box-shadow-hover);
+}
+
+.experience-card__image-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 300px;
+}
+
+.experience-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition);
+}
+
+.experience-card:hover .experience-card__image {
+  transform: scale(1.1);
+}
+
+.experience-card__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  padding: 2.5rem 1.25rem 1.25rem;
+  color: var(--color-text-light);
+}
+
+.experience-card__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text-light);
+  margin: 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  font-family: var(--font-family);
+}
+
+.experience-card__content {
+  padding: 1.5rem;
+}
+
+.experience-card__description {
+  color: var(--color-text-dark);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/*=============== Suites ===============*/
+/* --- Showcase  --- */
+.showcase--suites {
+  background-image: url("../images/suite-bed.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+main {
+  padding: 8rem 10rem;
+  margin: 0 auto;
+}
+.section__suites {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#section-top {
+  margin-bottom: 7rem;
+}
+
+.suites__intro {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.suites__card {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.tabs {
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem;
+  margin: 0;
+  border-bottom: 3px solid #a86060;
+  justify-content: space-evenly;
+}
+
+.room__info {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 2rem;
+}
+
+img {
+  width: 50%;
+  height: auto;
+  object-fit: contain;
+}
+
+.room__features {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  margin: 0 2.5rem;
+}
+
+.suites__heading {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.suites__subheading {
+  font-size: 1.25rem;
+  color: #555;
+}
+
+.suites__card {
+  box-shadow: #b2b5c6 0px 2px 4px; /* Adds a shadow effect */
+}
+
+/*=============== Index ===============*/
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header-1 {
+  background: url("../images/hotel.jpg") center/cover no-repeat;
+  min-height: 1000px;
+  position: relative;
+  color: #fff;
+}
+
+.header-1__nav {
+  background: transparent; /* transparent background */
+  padding: 30px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-1__menu-btn,
+.header-1__book-btn {
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+}
+
+.header-1__menu-btn {
+  background: #fff;
+  color: #000;
+}
+
+.header-1__book-btn {
+  background: red;
+  color: #fff;
+}
+
+.header-1__dropdown {
+  list-style: none;
+  margin: 20px 0 0;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  display: none; /* for now: CSS only, no JS dropdown */
+}
+
+.header-1__dropdown li {
+  margin: 10px 0;
+}
+
+.header-1__dropdown a {
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.header-1__showcase {
+  text-align: center;
+  margin-top: 150px;
+}
+
+.header-1__title {
+  font-size: 5rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 10px black, 0 0 1em cyan, 0 0 0.15em turquoise;
+}
+
+.header-1__subtitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 10px black, 0 0 1em cyan, 0 0 0.15em turquoise;
+}
+
+/* Sections */
+.section-suites-1, .section-dining-1, .section-experience-1 {
+  padding: 50px;
+  min-height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-suites-1__row,
+.section-dining-1__row,
+.section-experience-1__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.section-suites-1__col-img img,
+.section-dining-1__col-img img,
+.section-experience-1__col-img img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+/* Footer */
+.footer-1 {
+  background: #000;
+  color: #fff;
+  padding: 40px 20px;
+}
+
+.footer-1__row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}

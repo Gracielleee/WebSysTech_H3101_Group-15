@@ -1,187 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skye Suites</title>
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Skye Suites | Home</title>
+  <body>
+    <!-- Header -->
+    <header class="header-1">
+      <nav class="header-1__nav">
+        <div class="header-1__container">
+          <a href="#" class="header-1__menu-btn"
+            >MENU <i class="fa fa-caret-down"></i
+          ></a>
+          <a href="#booknow" class="header-1__book-btn">BOOK NOW</a>
+        </div>
+      </nav>
 
-    <!-- Normalize CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/normalize.css@8.0.1/normalize.css">
+      <!-- Dropdown -->
+      <ul class="header-1__dropdown">
+        <li>
+          <a href="index.html">Home <i class="fa fa-home"></i></a>
+        </li>
+        <li>
+          <a href="suites.html">Suites <i class="fa fa-bed"></i></a>
+        </li>
+        <li>
+          <a href="dining.html">Dining <i class="fa fa-utensils"></i></a>
+        </li>
+        <li>
+          <a href="experience.html">Experience <i class="fa fa-spa"></i></a>
+        </li>
+        <li>
+          <a href="access.html">Access <i class="fa fa-info-circle"></i></a>
+        </li>
+      </ul>
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/index.css">
-</head>
-
-<body>
-    <header class="header">
-
-        <nav class="navbar">
-
-            <div class="navbar__container">
-
-                <ul class="navbar__menu">
-                    <li class="nav__menu-item"><a class="navbar__menu-link" href="index.html">Home</a></li>
-                    <li class="nav__menu-item"><a class="navbar__menu-link" href="suites.html">Suites</a></li>
-                    <li class="nav__menu-item"><a class="navbar__menu-link" href="dining.html">Dining</a></li>
-                    <li class="nav__menu-item"><a class="navbar__menu-link" href="experience.html">Experience</a></li>
-                    <li class="nav__menu-item"><a class="navbar__menu-link" href="access.html">Access</a></li>
-                </ul>
-
-                <button class="button navbar__book-btn button--primary">Book Now</button>
-
-            </div>
-
-        </nav>
-
-
-
-        <section class="header__hero">
-
-            <div class="hero__headline">
-                <h1>SKYE SUITES</h1>
-            </div>
-
-            <div class="hero__subheadline">
-                <h2>Hotel & Restaurant</h2>
-            </div>
-
-        </section>
-
+      <!-- Showcase -->
+      <div class="header-1__showcase">
+        <h1 class="header-1__title">SKYE SUITES</h1>
+        <p class="header-1__subtitle">Hotel & Restaurant</p>
+      </div>
     </header>
 
-    <main class="main">
-        <!-- Section: 
-            Each section is wrapped, containing the image and the text wrap. 
-            There is an additional wrap for the texts.  
+    <!-- Suites -->
+    <section class="section-1 section-suites-1">
+      <div class="section-suites-1__row">
+        <div class="section-suites-1__col-img">
+          <img src="images/bed.jpg" alt="Suite" class="section-suites-1__img" />
+        </div>
+        <div class="section-suites-1__col-text">
+          <h3>Suites</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+          <a href="suites.html"
+            >VIEW SUITES <i class="fa fa-arrow-right"></i
+          ></a>
+        </div>
+      </div>
+    </section>
 
-            Visual structure:
-            <section-wrap>
+    <!-- Dining -->
+    <section class="section-2 section-dining-1">
+      <div class="section-dining-1__row">
+        <div class="section-dining-1__col-text">
+          <h3>Dining</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+          <a href="dining.html"
+            >SEE DETAILS <i class="fa fa-arrow-right"></i
+          ></a>
+        </div>
+        <div class="section-dining-1__col-img">
+          <img
+            src="images/restaurant.jpg"
+            alt="Dining"
+            class="section-dining-1__img"
+          />
+        </div>
+      </div>
+    </section>
 
-                <text-wrap>
-                    <texts>
-                </text-wrap>
+    <!-- Experience -->
+    <section class="section-3 section-experience-1">
+      <div class="section-experience-1__row">
+        <div class="section-experience-1__col-img">
+          <img
+            src="images/wellness.jpg"
+            alt="Experience"
+            class="section-experience-1__img"
+          />
+        </div>
+        <div class="section-experience-1__col-text">
+          <h3>Experience</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+          <a href="experience.html"
+            >DISCOVER MORE <i class="fa fa-arrow-right"></i
+          ></a>
+        </div>
+      </div>
+    </section>
 
-                <img>
-
-            </section-wrap>
-        -->
-
-
-        <!-- Suites Section -->
-        <section class="main__section">
-
-            <div class="section__wrap">
-
-                <div class="section__wrap-texts">
-                    <h3 class="section__heading">Suites</h3>
-                    <p class="section__paragraph">Step into a world of comfort and tranquility. Our suites offer a
-                        private sanctuary with stylish decor, modern amenities, plush bedding, and breathtaking views
-                        for a restful stay. Whether it's a romantic getaway or a family vacation, our suites offer a
-                        relaxing haven to unwind and create lasting memories.</p>
-                    <h4 class="section__internal-link"><a href="suites.html">VIEW SUITES<i
-                                class="fa fa-long-arrow-right"></i></a></h4>
-                </div>
-
-                <img class="section__img" src="images/bed.jpg" alt="An elegant two-person bed in a hotel suite.">
-
-            </div>
-
-        </section>
-
-
-
-        <!-- Dining Section -->
-        <section class="main__section section--black">
-
-            <div class="section__wrap">
-
-                <div class="section__wrap-texts">
-                    <h3 class="section__heading">Dining</h3>
-                    <p class="section__paragraph">Embark on a culinary journey at Skye Suites. Start your day with a
-                        local breakfast, enjoy a hearty lunch, then relax in our lounge with crafted dishes and
-                        cocktails, ideal for sharing. Each meal is an experience, crafted to tantalize your taste buds
-                        and leave you wanting more.</p>
-                    <h4 class="section__internal-link"><a href="dining.html">SEE DETAILS<i
-                                class="fa fa-long-arrow-right"></i></a></h4>
-                </div>
-
-                <img class="section__img" src="images/restaurant.jpg" alt="A lounge setting with food and drinks.">
-
-            </div>
-
-        </section>
-
-
-
-        <!-- Experience Section -->
-        <section class="main__section">
-
-            <div class="section__wrap">
-
-                <div class="section__wrap-texts">
-                    <h3 class="section__heading">Experience</h3>
-                    <p class="section__paragraph">Your adventure starts here. At Skye Suites, enjoy immersive local
-                        experiences, from massage and skincare treatments to thermal baths. Explore stunning landscapes
-                        with guided hikes, kayaking, or biking. We have something for everyone, perfect for creating
-                        unforgettable moments.</p>
-                    <h4 class="section__internal-link"><a href="experience.html">DISCOVER MORE<i
-                                class="fa fa-long-arrow-right"></i></a></h4>
-                </div>
-
-                <img class="section__img" src="images/wellness.jpg" alt="A set of spa towel and stones.">
-
-
-            </div>
-
-
-    </main>
-
-
-    
-    <footer class="footer">
-        <section class="footer__section">
-            <h5 class="footer__heading">Contact Us</h5>
-            <ul class="footer__list-contact">
-                <li class="list-contact__item">
-                    <i class="fa-solid fa-location-dot"></i>
-                    Suite 1202, Tower 3, Bonifacio High Street, Bonifacio Global City, Taguig, Metro Manila, Philippines
-                </li>
-                <li class="list-contact__item">
-                    <i class="fa-solid fa-phone"></i>
-                    +63 917 987 6543 / +63 2 888 2345
-                </li>
-                <li class="list-contact__item">
-                    <i class="fa-solid fa-envelope"></i>
-                    info@skyesuiteshotel.com
-                </li>
-
-            </ul>
-        </section>
-
-        <section id="display__socials " class="footer__section">
-            <h5 class="footer__heading">Follow Us</h5>
-            <ul class="footer__list-socials">
-                <li class="list-socials__item"><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-                <li class="list-socials__item"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                <li class="list-socials__item"><a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
-                <li class="list-socials__item"><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-            </ul>
-        </section>
-
-        <section class="footer__section">
-            <h5 class="footer__heading">Subscribe to our newsletter</h5>
-            <form class="footer__form">
-                <input class="footer__input-email" type="email" placeholder="Email address">
-                <button class="button button--primary form_submit" type="submit">Subscribe</button>
-            </form>
-        </section>
-
+    <!-- Footer -->
+    <footer class="footer-1">
+      <div class="footer-1__row">
+        <div class="footer-1__col">
+          <h5>Contact Us</h5>
+          <ul>
+            <li><i class="fa fa-map-marker"></i> 631 Douglas Mountains...</li>
+            <li><i class="fa fa-phone"></i> 204-663-3258</li>
+            <li><i class="fa fa-envelope"></i> info@skyesuiteshotel.com</li>
+          </ul>
+        </div>
+        <div class="footer-1__col">
+          <h5>Follow Us</h5>
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-pinterest"></i>
+          <i class="fab fa-youtube"></i>
+        </div>
+        <div class="footer-1__col">
+          <h5>Subscribe</h5>
+          <form>
+            <input type="email" placeholder="Email address" />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>
