@@ -1,0 +1,193 @@
+/*=============== Experience Page ===============*/
+.experience-header {
+  background-image: url("https://images.pexels.com/photos/19075384/pexels-photo-19075384.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-align: center;
+  letter-spacing: 0.12em;
+  text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.8);
+}
+
+.experience-main {
+  width: 100%;
+  margin: 3rem auto;
+}
+
+.wellness {
+  background: var(--color-bg-light);
+}
+
+.wellness__hero {
+  position: relative;
+  height: 485px;
+  overflow: hidden;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+}
+
+.wellness__hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  object-position: bottom;
+}
+
+.wellness__content {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-light);
+  padding: 5rem 0;
+}
+
+.wellness__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.wellness__header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.wellness__title {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--color-text-light);
+  margin-bottom: 1.25rem;
+  margin-top: 0;
+}
+
+.wellness__subtitle {
+  font-size: clamp(1.125rem, 2vw, 1.25rem);
+  font-weight: 300;
+  color: var(--color-text-light);
+  margin: 0;
+}
+
+.wellness__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+/* Adventure Block */
+.adventure {
+  background: var(--color-bg-light);
+}
+
+.adventure__hero {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+}
+
+.adventure__hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  object-position: bottom;
+}
+
+.adventure__content {
+  background-color: var(--color-bg-light);
+  color: var(--color-text-dark);
+  padding: 5rem 0;
+}
+
+.adventure__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.adventure__header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.adventure__title {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--color-text-dark);
+  margin-bottom: 1.25rem;
+  margin-top: 0;
+}
+
+.adventure__subtitle {
+  font-size: clamp(1.125rem, 2vw, 1.25rem);
+  font-weight: 300;
+  color: var(--color-text-dark);
+  margin: 0;
+}
+
+.adventure__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+/* Experience Card Block  */
+.experience-card {
+  background: var(--color-bg-light);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.experience-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--box-shadow-hover);
+}
+
+.experience-card__image-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 300px;
+}
+
+.experience-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition);
+}
+
+.experience-card:hover .experience-card__image {
+  transform: scale(1.1);
+}
+
+.experience-card__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  padding: 2.5rem 1.25rem 1.25rem;
+  color: var(--color-text-light);
+}
+
+.experience-card__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text-light);
+  margin: 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  font-family: var(--font-family);
+}
+
+.experience-card__content {
+  padding: 1.5rem;
+}
+
+.experience-card__description {
+  color: var(--color-text-dark);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}

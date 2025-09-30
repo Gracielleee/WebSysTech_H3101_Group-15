@@ -56,7 +56,6 @@ a:focus {
 
 /*=============== Header Block ===============*/
 .header {
-  /* background-color: var(--color-bg-dark); */
   color: var(--color-text-light);
   padding-bottom: 0 !important;
   margin: 0 !important;

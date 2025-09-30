@@ -1,0 +1,129 @@
+/*=============== Access ===============*/
+.access-header {
+  background-image: url("https://images.pexels.com/photos/16253098/pexels-photo-16253098.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-align: center;
+  letter-spacing: 0.12em;
+  text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.8);
+}
+
+/* --- Main Section and Columns --- */
+.section {
+  color: var(--color-text-dark);
+  margin: auto;
+  max-width: 1200px;
+  padding: 3rem 1.5rem;
+}
+
+.section__container {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.section__column--left h2 {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 700;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.section__column--left p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.section__column--right p.section__intro {
+  font-size: 1.125rem;
+  font-style: italic;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+
+/* Map iframe */
+.map__iframe {
+  border: 0;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.15);
+  height: 320px;
+  width: 100%;
+}
+
+/* --- Form Components --- */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.form__group--newsletter {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__input,
+.form__textarea {
+  border: 1.8px solid #ccc;
+  border-radius: var(--border-radius);
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+  resize: vertical;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.form__input:focus,
+.form__textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 5px var(--color-primary);
+  outline: none;
+}
+
+.form__label {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.375rem;
+}
+
+.form__submit,
+.form__subscribe {
+  cursor: pointer;
+}
+
+.form__textarea {
+  min-height: 80px;
+}
+
+/* Responsive adjustments for form and buttons */
+@media (max-width: 600px) {
+  .form__submit,
+  .form__subscribe {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+    width: 100%;
+  }
+
+  .showcase__title {
+    font-size: 2.5rem;
+  }
+}
+
+/* Smallest screen custom grid stacking */
+@media (max-width: 400px) {
+  .section__container {
+    grid-template-columns: 1fr !important;
+  }
+}

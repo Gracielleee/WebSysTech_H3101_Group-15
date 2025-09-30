@@ -1,349 +1,206 @@
-/* STRUCTURE */
-
-/* -Header section */
-
-/** --Navigation bar **/
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 3rem 2rem 1rem;
-    position: sticky;
-    /* Makes the navbar stick to the top */
-    top: 0;
-    /* Sticks to the top */
-    z-index: 100;
-    /* Ensures it stays above other content */
+/*=============== Index Page ===============*/
+.index-header {
+  position: relative;
+  overflow: hidden;
+  color: var(--color-bg-light);
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.8);
+  text-align: center;
+  padding: 0;
 }
 
-.navbar__container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    gap: 1rem;
-    justify-content: space-between;
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
+/* Container for hero images */
+.hero-slideshow {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* Behind the showcase text */
 }
 
-.navbar__menu {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    margin: 0;
-    padding: 0;
-    flex-grow: 1;
+/* Each slide covers full area and is initially hidden */
+.hero-slideshow .slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center center;
+  opacity: 0;
+  animation: fadeSlide 36s infinite;
 }
 
-
-
-/** --Hero section **/
-.header__hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 3rem;
+/* Delay each slide by 6s (36s / 6 images) */
+.hero-slideshow .slide:nth-child(1) {
+  animation-delay: 0s;
+}
+.hero-slideshow .slide:nth-child(2) {
+  animation-delay: 6s;
+}
+.hero-slideshow .slide:nth-child(3) {
+  animation-delay: 12s;
+}
+.hero-slideshow .slide:nth-child(4) {
+  animation-delay: 18s;
+}
+.hero-slideshow .slide:nth-child(5) {
+  animation-delay: 24s;
+}
+.hero-slideshow .slide:nth-child(6) {
+  animation-delay: 30s;
 }
 
-.header__hero h1 {
-    padding: 1rem;
+/* Fade animation keyframes: visible for 5s, fade to next */
+@keyframes fadeSlide {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
-
-
-/* -Main section */
-
-.main__section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    gap: 1rem;
+.hero-slideshow .slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center center;
+  opacity: 0;
+  animation: fadeSlide 36s infinite;
+  pointer-events: none;
 }
 
-.section__wrap {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 2.5rem;
-    width: 100%;
+/* Background images and animation delay for each slide */
+.hero-slideshow .slide1 {
+  background-image: url('https://images.pexels.com/photos/2724079/pexels-photo-2724079.jpeg');
+  animation-delay: 0s;
+}
+.hero-slideshow .slide2 {
+  background-image: url('https://images.pexels.com/photos/4180994/pexels-photo-4180994.jpeg');
+  animation-delay: 6s;
+}
+.hero-slideshow .slide3 {
+  background-image: url('https://images.pexels.com/photos/28843954/pexels-photo-28843954.jpeg');
+  animation-delay: 12s;
+}
+.hero-slideshow .slide4 {
+  background-image: url('https://images.pexels.com/photos/7832620//pexels-photo-7832620.jpeg');
+  animation-delay: 18s;
+}
+.hero-slideshow .slide5 {
+  background-image: url('https://images.pexels.com/photos/9400988/pexels-photo-9400988.jpeg');
+  animation-delay: 24s;
+}
+.hero-slideshow .slide6 {
+  background-image: url('https://images.pexels.com/photos/3319711/pexels-photo-3319711.jpeg');
+  animation-delay: 30s;
 }
 
-.section__wrap-texts {
-    flex: 1;
-    margin-right: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 5rem;
-    box-sizing: border-box;
-}
-
-img {
-    flex: 0 0 auto;
-    /* Prevents the image from growing */
-    max-width: 100%;
-    height: auto;
-    width: calc(50% - 1rem);
-    /* Adjust width to fit two items with some margin */
-    box-sizing: border-box;
-    object-fit: cover;
-    margin: 1rem;
-}
-
-
-
-/* -Footer section */
-
-.footer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 5rem;
-    padding-bottom: 5rem;
-    box-sizing: border-box;
-}
-
-.footer__section {
-    margin: 1rem;
-}
-
-.footer__heading {
-    margin-bottom: 1.5rem;
-}
-
-.footer__section li {
-    display: flex;
-    max-width: 30rem;
-}
-
-.list-contact__item {
-    display: flex;
-    align-items: baseline;
-    margin: 1rem 0;
-}
-
-.footer__list-socials {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    padding: 0;
-    margin: 0;
+/* Fade animation keyframes */
+@keyframes fadeSlide {
+  0% { opacity: 0; }
+  5% { opacity: 1; }
+  20% { opacity: 1; }
+  25% { opacity: 0; }
+  100% { opacity: 0; }
 }
 
 
-
-
-
-/* SKIN */
-:root {
-    --color-primary: #e63946;
-    --color-primary-dark: #b12229;
-    --color-bg-dark: #000;
-    --color-bg-light: #fff;
-    --color-text-light: #f0f0f0;
-    --color-text-dark: #333;
-    --font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    --font-family-serif: 'Times New Roman', Times, serif;
-    --border-radius: 0.5rem;
-    --transition: 0.3s ease;
-    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    --box-shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.2);
+/* Keep the showcase text above images */
+.index--showcase {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 650px;
+  padding: 0 1rem;
 }
 
-.header {
-    color: var(--color-text-light);
+.index-showcase__title {
+  font-size: clamp(0.5rem, 2vw, 1rem);
+}
+/* Services Section */
+.index-main {
+  max-width: 1200px;
+  margin: 3rem auto 5rem;
+  padding: 0 1.5rem;
 }
 
-.navbar__book-button {
-    font-weight: 600;
-    padding: 0.75rem 2rem;
-    box-shadow: 0 3px 8px var(--color-primary);
+.index-services__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 3rem;
 }
 
-.button--primary {
-    background-color: var(--color-primary);
-    color: var(--color-bg-light);
-    box-shadow: 0 4px 14px rgba(230, 57, 70, 0.5);
+.index-service-card {
+  background-color: var(--color-bg-light);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 20px rgb(0 0 0 / 0.1);
+  transition: box-shadow var(--transition);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
-.button--primary:hover,
-.button--primary:focus-visible {
-    background-color: var(--color-primary-dark);
-    outline-offset: 2px;
-    outline: 2px solid var(--color-primary-dark);
-    box-shadow: 0 0 16px var(--color-primary-dark);
+.index-service-card:hover,
+.index-service-card:focus-within {
+  box-shadow: 0 8px 30px rgb(230 57 70 / 0.3);
 }
 
-.button {
-    border: none;
-    cursor: pointer;
-    padding: 0.75rem 2rem;
-    border-radius: var(--border-radius);
-    font-weight: 700;
-    font-size: 1.125rem;
-    transition: background-color var(--transition), box-shadow var(--transition);
-    user-select: none;
-    text-align: center;
-    display: inline-block;
+.index-service-card__image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  flex-shrink: 0;
 }
 
-body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-    line-height: 1.6;
+.index-service-card__content {
+  padding: 1.5rem 1.5rem;
+  color: var(--color-text-dark);
 }
 
-h3 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+.index-service-card__title {
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  margin: 0 0 0.5rem;
+  font-weight: 700;
+  font-family: var(--font-family-serif);
 }
 
-p {
-    font-size: 1.15rem;
+.index-service-card__title a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+.index-service-card__title a:hover,
+.index-service-card__title a:focus {
+  color: var(--color-primary-dark);
+  outline: none;
 }
 
-ul,
-li {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.index-service-card__text {
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
-.navbar {
-    background-color: var(--color-bg-dark);
-
-}
-
-.navbar__menu {
-    list-style: none;
-}
-
-.navbar__menu-link {
-    color: var(--color-text-light);
-    font-weight: 600;
-    font-size: clamp(1rem, 1.2vw, 1.125rem);
-    padding: 0.75rem 0;
-    transition: color var(--transition);
-}
-
-.navbar__menu-link:hover,
-.navbar__menu-link:focus {
-    color: var(--color-primary);
-    outline: none;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.nav_list,
-.nav__list a {
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .index-service-card__image {
+    height: 180px;
+  }
+  .index-hero__title {
+    font-size: 3.25rem;
+  }
+  .index-hero__subtitle {
     font-size: 1.25rem;
-}
-
-.header__hero {
-    width: 100%;
-    height: 100vh;
-    background-image: url("../images/hotel.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
-.header__hero h1 {
-    font-size: clamp(2.5rem, 5vw, 5rem);
-    font-weight: 900;
-    color: var(--color-bg-light);
-    text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.8);
-    font-family: var(--font-family-serif);
-    margin-bottom: 0;
-    margin-top: 1rem;
-
-}
-
-.header__hero h2 {
-    font-size: clamp(1.3rem, 2vw, 3rem);
-    font-weight: 400;
-    color: var(--color-bg-light);
-    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.7);
-    font-family: var(--font-family-serif);
-}
-
-img {
-    border-style: solid;
-    border-width: 25px;
-}
-
-.section--black {
-    background-color: black;
-    color: var(--color-text-light);
-}
-
-.section--black a {
-    color: var(--color-text-light);
-}
-
-.section--black img {
-    order: -1;
-    /* Moves the image to the left */
-}
-
-.section__internal-link {
-    margin-top: 1.5rem;
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: var(--color-text-dark);
-}
-
-.fa-long-arrow-right {
-    margin-left: 0.5rem;
-}
-
-.footer {
-    color: var(--color-text-light);
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('../images/hotel.jpg') center/cover no-repeat;
-}
-
-.footer__heading {
-    color: var(--color-text-light);
-    font-size: 1.5rem;
-    font-weight: 700;
-}
-
-.footer__section .list-socials__item {
-    color: var(--color-text-light);
-    line-height: 1.8;
-    font-size: 1rem;
-}
-
-.fa-solid {
-    margin-right: 0.5em;
-}
-
-.fa-brands {
-    font-size: 1.5rem;
-    color: var(--color-text-light);
-}
-
-.footer__input-email {
-    padding: 0.75rem 1rem;
-    border: 1.8px solid #ccc;
-    border-radius: var(--border-radius);
-    font-size: 1rem;
-    font-family: inherit;
-    transition: border-color var(--transition), box-shadow var(--transition);
-}
-
-.form__submit,
-.form__subscribe {
-    cursor: pointer;
+  }
 }

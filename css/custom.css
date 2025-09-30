@@ -1,4 +1,4 @@
-/*=============== Access ===============*/
+/*=============== Access Page ===============*/
 .header--access {
   background-image: url("https://images.pexels.com/photos/16253098/pexels-photo-16253098.jpeg");
   background-position: center;
@@ -128,7 +128,7 @@
   }
 }
 
-/*=============== Dining ===============*/
+/*=============== Dining Page ===============*/
 .header--dining {
   background-image: url("https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg");
   background-position: center;
@@ -277,7 +277,7 @@ main .content-title:nth-of-type(even) {
   color: white;
 }
 
-/*=============== Experience ===============*/
+/*=============== Experience Page ===============*/
 .header--experience {
   background-image: url("https://images.pexels.com/photos/19075384/pexels-photo-19075384.jpeg");
   background-position: center;
@@ -466,7 +466,7 @@ main .content-title:nth-of-type(even) {
   margin: 0;
 }
 
-/*=============== Suites ===============*/
+/*=============== Suites Page ===============*/
 .header--suites {
   background-image: url("https://images.pexels.com/photos/30037427/pexels-photo-30037427.jpeg");
   background-position: center;
@@ -664,7 +664,7 @@ main {
   }
 }
 
-/*=============== Index ===============*/
+/*=============== Index Page ===============*/
 .header--index {
   position: relative;
   overflow: hidden;
