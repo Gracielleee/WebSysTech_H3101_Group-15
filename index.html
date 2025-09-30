@@ -2,135 +2,339 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Skye Suites</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
     <link rel="stylesheet" href="./css/global.css" />
     <link rel="stylesheet" href="./css/custom.css" />
     <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+    <script
+      src="https://kit.fontawesome.com/62d08c9dc3.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
   </head>
-
   <body>
-    <!-- Header -->
-    <header class="header-1">
-      <nav class="header-1__nav">
-        <div class="header-1__container">
-          <a href="#" class="header-1__menu-btn"
-            >MENU <i class="fa fa-caret-down"></i
-          ></a>
-          <a href="#booknow" class="header-1__book-btn">BOOK NOW</a>
+    <!-- Main Page Header Block -->
+    <header class="header header--index">
+      <!-- Navbar Block (reuse same .navbar structure) -->
+      <!-- Navbar Block -->
+      <nav class="navbar" aria-label="Main Navigation">
+        <div class="navbar__container">
+          <!-- Site Logo -->
+          <a
+            href="index.html"
+            class="navbar__logo-link"
+            aria-label="Skye Suites Home"
+          >
+            <img
+              src="../images/logo.png"
+              alt="Skye Suites Logo"
+              class="navbar__logo"
+            />
+          </a>
+
+          <!-- Dropdown for tablet/mobile -->
+          <div class="dropdown" tabindex="0">
+            <button
+              class="dropdown__button"
+              aria-controls="dropdown-menu"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              MENU
+            </button>
+
+            <ul
+              class="dropdown__menu"
+              id="dropdown-menu"
+              role="menu"
+              aria-label="Main Menu"
+            >
+              <li class="dropdown__menu-item" role="none">
+                <a
+                  class="dropdown__menu-link"
+                  role="menuitem"
+                  href="index.html"
+                >
+                  <i class="material-icons dropdown__icon" aria-hidden="true"
+                    >home</i
+                  >
+                  Home
+                </a>
+              </li>
+              <li class="dropdown__menu-item" role="none">
+                <a
+                  class="dropdown__menu-link"
+                  role="menuitem"
+                  href="suites.html"
+                >
+                  <i class="material-icons dropdown__icon" aria-hidden="true"
+                    >hotel</i
+                  >
+                  Suites
+                </a>
+              </li>
+              <li class="dropdown__menu-item" role="none">
+                <a
+                  class="dropdown__menu-link"
+                  role="menuitem"
+                  href="dining.html"
+                >
+                  <i class="material-icons dropdown__icon" aria-hidden="true"
+                    >local_dining</i
+                  >
+                  Dining
+                </a>
+              </li>
+              <li class="dropdown__menu-item" role="none">
+                <a
+                  class="dropdown__menu-link"
+                  role="menuitem"
+                  href="experience.html"
+                >
+                  <i class="material-icons dropdown__icon" aria-hidden="true"
+                    >spa</i
+                  >
+                  Experience
+                </a>
+              </li>
+              <li class="dropdown__menu-item" role="none">
+                <a
+                  class="dropdown__menu-link"
+                  role="menuitem"
+                  href="access.html"
+                >
+                  <i class="material-icons dropdown__icon" aria-hidden="true"
+                    >info</i
+                  >
+                  Access
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Horizontal menu for large screens with FontAwesome icons -->
+          <ul class="navbar__menu" role="menubar" aria-label="Main Menu">
+            <li role="none">
+              <a href="index.html" role="menuitem" class="navbar__menu-link">
+                <i class="fa-solid fa-house"></i> Home
+              </a>
+            </li>
+            <li role="none">
+              <a href="suites.html" role="menuitem" class="navbar__menu-link">
+                <i class="fa-solid fa-bed"></i> Suites
+              </a>
+            </li>
+            <li role="none">
+              <a href="dining.html" role="menuitem" class="navbar__menu-link">
+                <i class="fa-solid fa-utensils"></i> Dining
+              </a>
+            </li>
+            <li role="none">
+              <a
+                href="experience.html"
+                role="menuitem"
+                class="navbar__menu-link"
+              >
+                <i class="fa-solid fa-spa"></i> Experience
+              </a>
+            </li>
+            <li role="none">
+              <a href="access.html" role="menuitem" class="navbar__menu-link">
+                <i class="material-icons dropdown__icon" aria-hidden="true"
+                  >info</i
+                >
+                Access
+              </a>
+            </li>
+          </ul>
+
+          <!-- Call-to-action book button -->
+          <button
+            class="button button--primary navbar__book-button"
+            type="button"
+          >
+            BOOK NOW
+          </button>
         </div>
       </nav>
+      <!-- Hero slideshow images for fade animation -->
+      <div class="hero-slideshow">
+        <div class="slide slide1"></div>
+        <div class="slide slide2"></div>
+        <div class="slide slide3"></div>
+        <div class="slide slide4"></div>
+        <div class="slide slide5"></div>
+        <div class="slide slide6"></div>
+      </div>
 
-      <!-- Dropdown -->
-      <ul class="header-1__dropdown">
-        <li>
-          <a href="index.html">Home <i class="fa fa-home"></i></a>
-        </li>
-        <li>
-          <a href="suites.html">Suites <i class="fa fa-bed"></i></a>
-        </li>
-        <li>
-          <a href="dining.html">Dining <i class="fa fa-utensils"></i></a>
-        </li>
-        <li>
-          <a href="experience.html">Experience <i class="fa fa-spa"></i></a>
-        </li>
-        <li>
-          <a href="access.html">Access <i class="fa fa-info-circle"></i></a>
-        </li>
-      </ul>
-
-      <!-- Showcase -->
-      <div class="header-1__showcase">
-        <h1 class="header-1__title">SKYE SUITES</h1>
-        <p class="header-1__subtitle">Hotel & Restaurant</p>
+      <div class="showcase index--showcase">
+        <h1 class="showcase__title">Your Sanctuary of Calm Adventure</h1>
       </div>
     </header>
 
-    <!-- Suites -->
-    <section class="section-1 section-suites-1">
-      <div class="section-suites-1__row">
-        <div class="section-suites-1__col-img">
-          <img src="images/bed.jpg" alt="Suite" class="section-suites-1__img" />
-        </div>
-        <div class="section-suites-1__col-text">
-          <h3>Suites</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
-          <a href="suites.html"
-            >VIEW SUITES <i class="fa fa-arrow-right"></i
-          ></a>
-        </div>
-      </div>
-    </section>
+    <!-- Main Content Section Block -->
+    <main class="index-main" id="main-content">
+      <section class="index-services" aria-label="Main services offered">
+        <div class="index-services__container">
+          <article class="index-service-card">
+            <img
+              src="https://images.pexels.com/photos/31817162/pexels-photo-31817162.jpeg"
+              alt="Luxurious suites"
+              class="index-service-card__image"
+              loading="lazy"
+            />
+            <div class="index-service-card__content">
+              <h2 class="index-service-card__title">
+                <a href="suites.html">Exquisite Suites</a>
+              </h2>
+              <p class="index-service-card__text">
+                Experience elegant comfort with our beautifully designed suites,
+                combining luxury with breathtaking views.
+              </p>
+            </div>
+          </article>
 
-    <!-- Dining -->
-    <section class="section-2 section-dining-1">
-      <div class="section-dining-1__row">
-        <div class="section-dining-1__col-text">
-          <h3>Dining</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
-          <a href="dining.html"
-            >SEE DETAILS <i class="fa fa-arrow-right"></i
-          ></a>
-        </div>
-        <div class="section-dining-1__col-img">
-          <img
-            src="images/restaurant.jpg"
-            alt="Dining"
-            class="section-dining-1__img"
-          />
-        </div>
-      </div>
-    </section>
+          <article class="index-service-card">
+            <img
+              src="https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg"
+              alt="Dining experience"
+              class="index-service-card__image"
+              loading="lazy"
+            />
+            <div class="index-service-card__content">
+              <h2 class="index-service-card__title">
+                <a href="dining.html">Culinary Delights</a>
+              </h2>
+              <p class="index-service-card__text">
+                Savor gourmet dishes crafted by our world-class chefs at our
+                award-winning restaurants.
+              </p>
+            </div>
+          </article>
 
-    <!-- Experience -->
-    <section class="section-3 section-experience-1">
-      <div class="section-experience-1__row">
-        <div class="section-experience-1__col-img">
-          <img
-            src="images/wellness.jpg"
-            alt="Experience"
-            class="section-experience-1__img"
-          />
-        </div>
-        <div class="section-experience-1__col-text">
-          <h3>Experience</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
-          <a href="experience.html"
-            >DISCOVER MORE <i class="fa fa-arrow-right"></i
-          ></a>
-        </div>
-      </div>
-    </section>
+          <article class="index-service-card">
+            <img
+              src="https://images.pexels.com/photos/6908362/pexels-photo-6908362.jpeg"
+              alt="Spa and wellness experience"
+              class="index-service-card__image"
+              loading="lazy"
+            />
+            <div class="index-service-card__content">
+              <h2 class="index-service-card__title">
+                <a href="experience.html">Unforgettable Experiences</a>
+              </h2>
+              <p class="index-service-card__text">
+                Relax and rejuvenate with exclusive spa treatments, adventures,
+                and curated experiences.
+              </p>
+            </div>
+          </article>
 
-    <!-- Footer -->
-    <footer class="footer-1">
-      <div class="footer-1__row">
-        <div class="footer-1__col">
-          <h5>Contact Us</h5>
-          <ul>
-            <li><i class="fa fa-map-marker"></i> 631 Douglas Mountains...</li>
-            <li><i class="fa fa-phone"></i> 204-663-3258</li>
-            <li><i class="fa fa-envelope"></i> info@skyesuiteshotel.com</li>
+          <article class="index-service-card">
+            <img
+              src="https://images.pexels.com/photos/16253098/pexels-photo-16253098.jpeg"
+              alt="Hotel access location"
+              class="index-service-card__image"
+              loading="lazy"
+            />
+            <div class="index-service-card__content">
+              <h2 class="index-service-card__title">
+                <a href="access.html">Seamless Access</a>
+              </h2>
+              <p class="index-service-card__text">
+                Conveniently located with detailed directions and transport
+                options, making your journey effortless.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+    <!-- Footer Block -->
+    <footer class="footer">
+      <div class="footer__container">
+        <!-- Same footer content as in your other pages -->
+        <section
+          class="footer__column"
+          aria-labelledby="footer-contact-heading"
+        >
+          <h3 id="footer-contact-heading" class="footer__heading">
+            Contact Us
+          </h3>
+          <ul class="footer__list">
+            <li class="footer__list-item">
+              <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+              15A Horizon Villa, Bahura Estate Linapacan Island, Palawan 5313
+            </li>
+            <li class="footer__list-item">
+              <i class="fa-solid fa-phone" aria-hidden="true"></i> +63 917 987
+              6543 / +63 2 888 2345
+            </li>
+            <li class="footer__list-item">
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              <a href="mailto:info@skyesuiteshotel.com"
+                >info@skyesuiteshotel.com</a
+              >
+            </li>
           </ul>
-        </div>
-        <div class="footer-1__col">
-          <h5>Follow Us</h5>
-          <i class="fab fa-facebook"></i>
-          <i class="fab fa-instagram"></i>
-          <i class="fab fa-pinterest"></i>
-          <i class="fab fa-youtube"></i>
-        </div>
-        <div class="footer-1__col">
-          <h5>Subscribe</h5>
-          <form>
-            <input type="email" placeholder="Email address" />
-            <button type="submit">Subscribe</button>
+        </section>
+
+        <section class="footer__column" aria-labelledby="footer-social-heading">
+          <h3 id="footer-social-heading" class="footer__heading">Follow Us</h3>
+          <nav aria-label="Social media links" class="footer__socials">
+            <a href="#" aria-label="Facebook" class="footer__social-link">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="#" aria-label="Instagram" class="footer__social-link">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#" aria-label="Pinterest" class="footer__social-link">
+              <i class="fa-brands fa-pinterest"></i>
+            </a>
+            <a href="#" aria-label="YouTube" class="footer__social-link">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+          </nav>
+        </section>
+
+        <section
+          class="footer__column"
+          aria-labelledby="footer-newsletter-heading"
+        >
+          <h3 id="footer-newsletter-heading" class="footer__heading">
+            Subscribe to our newsletter
+          </h3>
+          <form class="form form--newsletter" novalidate>
+            <div class="form__group form__group--newsletter">
+              <label for="newsletter-email" class="visually-hidden"
+                >Email address</label
+              >
+              <input
+                class="form__input"
+                type="email"
+                id="newsletter-email"
+                name="newsletter-email"
+                placeholder="Email address"
+                required
+              />
+            </div>
+            <button
+              class="button button--primary form__subscribe"
+              type="submit"
+            >
+              Subscribe
+            </button>
           </form>
-        </div>
+        </section>
       </div>
     </footer>
   </body>
