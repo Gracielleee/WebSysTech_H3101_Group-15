@@ -27,6 +27,7 @@
   background-position: center center;
   opacity: 0;
   animation: fadeSlide 36s infinite;
+  background-attachment: fixed;
 }
 
 /* Delay each slide by 6s (36s / 6 images) */
@@ -80,39 +81,48 @@
 
 /* Background images and animation delay for each slide */
 .hero-slideshow .slide1 {
-  background-image: url('https://images.pexels.com/photos/2724079/pexels-photo-2724079.jpeg');
+  background-image: url("https://images.pexels.com/photos/2724079/pexels-photo-2724079.jpeg");
   animation-delay: 0s;
 }
 .hero-slideshow .slide2 {
-  background-image: url('https://images.pexels.com/photos/4180994/pexels-photo-4180994.jpeg');
+  background-image: url("https://images.pexels.com/photos/4180994/pexels-photo-4180994.jpeg");
   animation-delay: 6s;
 }
 .hero-slideshow .slide3 {
-  background-image: url('https://images.pexels.com/photos/28843954/pexels-photo-28843954.jpeg');
+  background-image: url("https://images.pexels.com/photos/28843954/pexels-photo-28843954.jpeg");
   animation-delay: 12s;
 }
 .hero-slideshow .slide4 {
-  background-image: url('https://images.pexels.com/photos/7832620//pexels-photo-7832620.jpeg');
+  background-image: url("https://images.pexels.com/photos/7832620//pexels-photo-7832620.jpeg");
   animation-delay: 18s;
 }
 .hero-slideshow .slide5 {
-  background-image: url('https://images.pexels.com/photos/9400988/pexels-photo-9400988.jpeg');
+  background-image: url("https://images.pexels.com/photos/9400988/pexels-photo-9400988.jpeg");
   animation-delay: 24s;
 }
 .hero-slideshow .slide6 {
-  background-image: url('https://images.pexels.com/photos/3319711/pexels-photo-3319711.jpeg');
+  background-image: url("https://images.pexels.com/photos/3319711/pexels-photo-3319711.jpeg");
   animation-delay: 30s;
 }
 
 /* Fade animation keyframes */
 @keyframes fadeSlide {
-  0% { opacity: 0; }
-  5% { opacity: 1; }
-  20% { opacity: 1; }
-  25% { opacity: 0; }
-  100% { opacity: 0; }
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
-
 
 /* Keep the showcase text above images */
 .index--showcase {
