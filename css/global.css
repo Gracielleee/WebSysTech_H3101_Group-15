@@ -228,7 +228,7 @@ a:focus {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  min-height: 650px;
+  min-height: 800px;
   padding: 0 1rem; /* Remove large top/bottom padding */
   text-align: center;
   color: var(--color-bg-light);
