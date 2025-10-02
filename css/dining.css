@@ -1,77 +1,13 @@
-body {
-  font-family: Helvetica, Arial, sans-serif;
-  scroll-behavior: smooth;
-  margin: 0;
-  padding: 0;
-}
-
-/* Header */
-.main-header {
-  min-height: 500px;
-  background-color: #000;
-  position: top;
-  top: 0;
-  z-index: 1000;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
-    url("../images/restaurant.jpg") center/cover no-repeat;
-}
-
-.navbar-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-}
-
-.nav-list {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  gap: 2rem;
-}
-
-.nav-list-item a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 1.2rem;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-.nav-list-item a:hover {
-  color: #e63946;
-}
-
-.nav-btn.book-btn {
-  padding: 0.5rem 1.5rem;
-  background-color: #e63946;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background 0.3s, color 0.3s;
-}
-
-.nav-btn.book-btn:hover {
-  background-color: #fff;
-  color: #000;
-}
-
-/* Showcase */
-.showcase {
-  padding-top: 120px;
+/*=============== Dining Page ===============*/
+.dining-header {
+  background-image: url("https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   text-align: center;
-  color: #fff;
-}
-
-.showcase-title {
-  font: "Times New Roman";
-  font-size: 5rem;
-  font-weight: bold;
-  margin: 0;
-  font-family: "Times New Roman", Times, serif;
+  letter-spacing: 0.12em;
+  text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.8);
 }
 
 /* Dining Sections */
@@ -127,6 +63,10 @@ main .content-title:nth-of-type(even) {
   background-color: #000;
   color: #fff;
   padding: 2rem 0;
+}
+
+.dining-main {
+  width: 100%;
 }
 
 /* Slideshow */
@@ -209,64 +149,4 @@ main .content-title:nth-of-type(even) {
 .subscribe-btn:hover {
   background-color: red;
   color: white;
-}
-
-/* Footer */
-footer {
-  background-color: #000;
-  color: #fff;
-  padding: 2rem 0;
-}
-
-.page-footer {
-  background-color: #000;
-  color: #fff;
-  padding: 2rem 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
-    url("../images/hotel.jpg") center/cover no-repeat;
-}
-
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 2rem;
-  flex-wrap: wrap;
-  padding: 0 2rem;
-}
-
-.footer-column {
-  flex: 1;
-  min-width: 250px;
-}
-
-.footer-column h5 {
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-.footer-column ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-column ul li {
-  margin-bottom: 0.5rem;
-}
-
-.footer-column a,
-.footer-column i {
-  color: #fff;
-  transition: color 0.3s;
-}
-
-.footer-column a:hover,
-.footer-column i:hover {
-  color: #e63946;
-}
-
-.social-icons i {
-  margin-right: 10px;
 }

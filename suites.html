@@ -1,161 +1,481 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Suites | Skye Suites</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/suites.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/62d08c9dc3.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Skye Suites | Suites</title>
+  <body>
+    <!-- Main Page Header Block -->
+    <header class="header suites-header">
+      <!-- Navbar Block -->
+      <nav class="navbar" aria-label="Main Navigation">
+        <div class="navbar__container">
+          <!-- Site Logo -->
+          <a
+            href="index.html"
+            class="navbar__logo-link"
+            aria-label="Skye Suites Home"
+          >
+            <img
+              src="../images/logo.png"
+              alt="Skye Suites Logo"
+              class="navbar__logo"
+            />
+          </a>
 
-    <!-- Normalize CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/normalize.css@8.0.1/normalize.css">
+          <!-- Dropdown for tablet/mobile -->
+          <div class="dropdown" tabindex="0">
+            <button
+              class="dropdown__button"
+              aria-controls="dropdown-menu"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              MENU
+            </button>
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+            <ul
+              class="dropdown__menu"
+              id="dropdown-menu"
+              role="menu"
+              aria-label="Main Menu"
+            >
+              <li class="dropdown__menu-item" role="none">
+                <a
+                  class="dropdown__menu-link"
+                  role="menuitem"
+                  href="index.html"
+                >
+                  <i class="material-icons dropdown__icon" aria-hidden="true"
+                    >home</i
+                  >
+                  Home
+                </a>
+              </li>
+              <li class="dropdown__menu-item" role="none">
+                <a
+                  class="dropdown__menu-link"
+                  role="menuitem"
+                  href="suites.html"
+                >
+                  <i class="material-icons dropdown__icon" aria-hidden="true"
+                    >hotel</i
+                  >
+                  Suites
+                </a>
+              </li>
+              <li class="dropdown__menu-item" role="none">
+                <a
+                  class="dropdown__menu-link"
+                  role="menuitem"
+                  href="dining.html"
+                >
+                  <i class="material-icons dropdown__icon" aria-hidden="true"
+                    >local_dining</i
+                  >
+                  Dining
+                </a>
+              </li>
+              <li class="dropdown__menu-item" role="none">
+                <a
+                  class="dropdown__menu-link"
+                  role="menuitem"
+                  href="experience.html"
+                >
+                  <i class="material-icons dropdown__icon" aria-hidden="true"
+                    >spa</i
+                  >
+                  Experience
+                </a>
+              </li>
+              <li class="dropdown__menu-item" role="none">
+                <a
+                  class="dropdown__menu-link"
+                  role="menuitem"
+                  href="access.html"
+                >
+                  <i class="material-icons dropdown__icon" aria-hidden="true"
+                    >info</i
+                  >
+                  Access
+                </a>
+              </li>
+            </ul>
+          </div>
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/suites.css">
-</head>
+          <!-- Horizontal menu for large screens with FontAwesome icons -->
+          <ul class="navbar__menu" role="menubar" aria-label="Main Menu">
+            <li role="none">
+              <a href="index.html" role="menuitem" class="navbar__menu-link">
+                <i class="fa-solid fa-house"></i> Home
+              </a>
+            </li>
+            <li role="none">
+              <a href="suites.html" role="menuitem" class="navbar__menu-link">
+                <i class="fa-solid fa-bed"></i> Suites
+              </a>
+            </li>
+            <li role="none">
+              <a href="dining.html" role="menuitem" class="navbar__menu-link">
+                <i class="fa-solid fa-utensils"></i> Dining
+              </a>
+            </li>
+            <li role="none">
+              <a
+                href="experience.html"
+                role="menuitem"
+                class="navbar__menu-link"
+              >
+                <i class="fa-solid fa-spa"></i> Experience
+              </a>
+            </li>
+            <li role="none">
+              <a href="access.html" role="menuitem" class="navbar__menu-link">
+                <i class="material-icons dropdown__icon" aria-hidden="true"
+                  >info</i
+                >
+                Access
+              </a>
+            </li>
+          </ul>
 
-<body>
-    <header class="header">
+          <!-- Call-to-action book button -->
+          <button
+            class="button button--primary navbar__book-button"
+            type="button"
+          >
+            BOOK NOW
+          </button>
+        </div>
+      </nav>
 
-        <nav class="navbar">
-
-            <div class="navbar__container">
-
-                <ul class="navbar__menu">
-                    <li class="nav__menu-item"><a class="navbar__menu-link" href="index.html">Home</a></li>
-                    <li class="nav__menu-item"><a class="navbar__menu-link" href="suites.html">Suites</a></li>
-                    <li class="nav__menu-item"><a class="navbar__menu-link" href="dining.html">Dining</a></li>
-                    <li class="nav__menu-item"><a class="navbar__menu-link" href="experience.html">Experience</a></li>
-                    <li class="nav__menu-item"><a class="navbar__menu-link" href="access.html">Access</a></li>
-                </ul>
-
-                <button class="button navbar__book-btn button--primary">Book Now</button>
-
-            </div>
-
-        </nav>
-
-
-
-        <section class="header__hero">
-
-            <div class="hero__headline">
-                <h1>SUITES</h1>
-            </div>
-
-        </section>
-
+      <!-- Showcase Block -->
+      <div class="showcase">
+        <h1 class="showcase__title">Experience Like Never Before</h1>
+      </div>
     </header>
 
-
-
     <main>
-        <!-- First Section-->
-        <section id="section-top" class="section__suites">
-            <div class="suites__intro">
-                <h2 class="suites__heading">Junior Suite</h2>
-                <p class="suites__subheading">Our junior suite rooms are well equipped and offer spectacular views.</p>
-            </div>
-            <div class="suites__card">
-                <ul class="tabs">
-                    <li class="tab__item">SILENE JUNIOR SUITE</li>
-                    <li class="tab__item">LUPINE JUNIOR SUITE</li>
-                </ul>
-                <div class="room__info">
-                    <img class="room__img" src="images/suite-bed.jpg" alt="A two-person bed inside the Junior Suite room">
+      <!-- Junior Suite Section -->
+      <section
+        id="suites-top"
+        class="suites-section"
+        aria-labelledby="suites-top-heading"
+      >
+        <div class="suites-intro">
+          <h2 id="suites-top-heading" class="suites-heading">Junior Suite</h2>
+          <p class="suites-subheading">
+            Our junior suite rooms are well equipped and offer spectacular
+            views.
+          </p>
+        </div>
 
-                    <div class="room__features">
-                        <ul class="room__features-list">
-                            <li class="room__features-item">215 sq.ft. / sq.m</li>
-                            <li class="room__features-item">For 2 people</li>
-                            <li class="room__features-item">Shower or bathub</li>
-                            <li class="room__features-item">Wifi & TV</li>
-                            <li class="room__features-item">Kettle or coffee machine</li>
-                            <li class="room__features-item">Mountain view</li>
-                        </ul>
-                        <button class="room__features-btn book__btn">BOOK NOW</button>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <div class="suites-card">
+          <ul
+            class="suites-tabs"
+            role="tablist"
+            aria-label="Junior Suite Room Types"
+          >
+            <li
+              class="suites-tab"
+              role="tab"
+              tabindex="0"
+              aria-selected="true"
+              aria-controls="tab-content-silene-junior"
+              id="tab-silene-junior"
+            >
+              SILENE JUNIOR SUITE
+            </li>
+            <li
+              class="suites-tab"
+              role="tab"
+              tabindex="-1"
+              aria-selected="false"
+              aria-controls="tab-content-lupine-junior"
+              id="tab-lupine-junior"
+            >
+              LUPINE JUNIOR SUITE
+            </li>
+          </ul>
 
-        <!-- Second Section-->
-        <section class="section__suites">
-            <div class="suites__intro">
-                <h2 class="suites__heading">Suite</h2>
-                <p class="suites__subheading">Our suite rooms are spacious with spectacular views and luxurious
-                    amenities.</p>
-            </div>
-            <div class="suites__card">
-                <ul class="tabs">
-                    <li class="tab__item">SILENE SUITE</li>
-                    <li class="tab__item">LUPINE SUITE</li>
-                </ul>
-                <div class="room__info">
-                    <img class="room__img" src="images/suite-bed.jpg" alt="A two-person bed inside the Suite Room">
+          <div
+            class="suites-room-info"
+            role="tabpanel"
+            id="tab-content-silene-junior"
+            aria-labelledby="tab-silene-junior"
+            tabindex="0"
+          >
+            <img
+              class="suites-room-img"
+              src="https://images.pexels.com/photos/19840954/pexels-photo-19840954.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+              alt="A two-person bed inside the Junior Suite room with elegant décor"
+              loading="lazy"
+              width="600"
+              height="400"
+            />
 
-                    <div class="room__features">
-                        <ul class="room__features-list">
-                            <li class="room__features-item">430 sq.ft. / 40 sq.m</li>
-                            <li class="room__features-item">For 2 people</li>
-                            <li class="room__features-item">Shower or bathub</li>
-                            <li class="room__features-item">Wifi & TV</li>
-                            <li class="room__features-item">Kettle or coffee machine</li>
-                            <li class="room__features-item">Room service</li>
-                            <li class="room__features-item">Mountain view</li>
-                        </ul>
-                        <button class="room__features-btn book__btn">BOOK NOW</button>
-                    </div>
-                </div>
+            <div class="suites-room-features">
+              <ul class="suites-features-list">
+                <li class="suites-features-item">215 sq.ft. / 20 sq.m</li>
+                <li class="suites-features-item">For 2 people</li>
+                <li class="suites-features-item">Shower or bathtub</li>
+                <li class="suites-features-item">Wifi &amp; TV</li>
+                <li class="suites-features-item">Kettle or coffee machine</li>
+                <li class="suites-features-item">Mountain view</li>
+              </ul>
+              <button
+                class="suites-book-btn"
+                type="button"
+                aria-label="Book Junior Silene Suite"
+              >
+                BOOK NOW
+              </button>
             </div>
-        </section>
+          </div>
 
+          <div
+            class="suites-room-info suites-room-info--hidden"
+            role="tabpanel"
+            id="tab-content-lupine-junior"
+            aria-labelledby="tab-lupine-junior"
+            tabindex="0"
+          >
+            <img
+              class="suites-room-img"
+              src="https://images.pexels.com/photos/19840954/pexels-photo-19840954.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+              alt="Lupine Junior Suite room with modern furniture and large windows"
+              loading="lazy"
+              width="600"
+              height="400"
+            />
+
+            <div class="suites-room-features">
+              <ul class="suites-features-list">
+                <li class="suites-features-item">230 sq.ft. / 21 sq.m</li>
+                <li class="suites-features-item">For 2 people</li>
+                <li class="suites-features-item">Bathtub</li>
+                <li class="suites-features-item">Wifi &amp; TV</li>
+                <li class="suites-features-item">Coffee machine</li>
+                <li class="suites-features-item">Garden view</li>
+              </ul>
+              <button
+                class="suites-book-btn"
+                type="button"
+                aria-label="Book Junior Lupine Suite"
+              >
+                BOOK NOW
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Suite Section -->
+      <section class="suites-section" aria-labelledby="suites-main-heading">
+        <div class="suites-intro">
+          <h2 id="suites-main-heading" class="suites-heading">Suite</h2>
+          <p class="suites-subheading">
+            Our suite rooms are spacious with spectacular views and luxurious
+            amenities.
+          </p>
+        </div>
+
+        <div class="suites-card">
+          <ul class="suites-tabs" role="tablist" aria-label="Suite Room Types">
+            <li
+              class="suites-tab"
+              role="tab"
+              tabindex="0"
+              aria-selected="true"
+              aria-controls="tab-content-silene-suite"
+              id="tab-silene-suite"
+            >
+              SILENE SUITE
+            </li>
+            <li
+              class="suites-tab"
+              role="tab"
+              tabindex="-1"
+              aria-selected="false"
+              aria-controls="tab-content-lupine-suite"
+              id="tab-lupine-suite"
+            >
+              LUPINE SUITE
+            </li>
+          </ul>
+
+          <div
+            class="suites-room-info"
+            role="tabpanel"
+            id="tab-content-silene-suite"
+            aria-labelledby="tab-silene-suite"
+            tabindex="0"
+          >
+            <img
+              class="suites-room-img"
+              src="https://images.pexels.com/photos/31817155/pexels-photo-31817155.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+              alt="A two-person bed inside the Suite Room with elegant bedding"
+              loading="lazy"
+              width="600"
+              height="400"
+            />
+
+            <div class="suites-room-features">
+              <ul class="suites-features-list">
+                <li class="suites-features-item">430 sq.ft. / 40 sq.m</li>
+                <li class="suites-features-item">For 2 people</li>
+                <li class="suites-features-item">Shower or bathtub</li>
+                <li class="suites-features-item">Wifi &amp; TV</li>
+                <li class="suites-features-item">Kettle or coffee machine</li>
+                <li class="suites-features-item">Room service</li>
+                <li class="suites-features-item">Mountain view</li>
+              </ul>
+              <button
+                class="suites-book-btn"
+                type="button"
+                aria-label="Book Silene Suite"
+              >
+                BOOK NOW
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="suites-room-info suites-room-info--hidden"
+            role="tabpanel"
+            id="tab-content-lupine-suite"
+            aria-labelledby="tab-lupine-suite"
+            tabindex="0"
+          >
+            <img
+              class="suites-room-img"
+              src="https://images.pexels.com/photos/31817155/pexels-photo-31817155.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+              alt="Lupine Suite room with luxurious furnishings and scenic view"
+              loading="lazy"
+              width="600"
+              height="400"
+            />
+
+            <div class="suites-room-features">
+              <ul class="suites-features-list">
+                <li class="suites-features-item">450 sq.ft. / 42 sq.m</li>
+                <li class="suites-features-item">For 2 people</li>
+                <li class="suites-features-item">Bathtub</li>
+                <li class="suites-features-item">Wifi &amp; TV</li>
+                <li class="suites-features-item">Coffee machine</li>
+                <li class="suites-features-item">Room service</li>
+                <li class="suites-features-item">Ocean view</li>
+              </ul>
+              <button
+                class="suites-book-btn"
+                type="button"
+                aria-label="Book Lupine Suite"
+              >
+                BOOK NOW
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
-
-
+    <!-- Footer Block -->
     <footer class="footer">
-        <section class="footer__section">
-            <h5 class="footer__heading">Contact Us</h5>
-            <ul class="footer__list-contact">
-                <li class="list-contact__item">
-                    <i class="fa-solid fa-location-dot"></i>
-                    Suite 1202, Tower 3, Bonifacio High Street, Bonifacio Global City, Taguig, Metro Manila, Philippines
-                </li>
-                <li class="list-contact__item">
-                    <i class="fa-solid fa-phone"></i>
-                    +63 917 987 6543 / +63 2 888 2345
-                </li>
-                <li class="list-contact__item">
-                    <i class="fa-solid fa-envelope"></i>
-                    info@skyesuiteshotel.com
-                </li>
-
-            </ul>
+      <div class="footer__container">
+        <!-- Footer Contact Column Element -->
+        <section
+          class="footer__column"
+          aria-labelledby="footer-contact-heading"
+        >
+          <h3 id="footer-contact-heading" class="footer__heading">
+            Contact Us
+          </h3>
+          <ul class="footer__list">
+            <li class="footer__list-item">
+              <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+              15A Avocado Villa, Atchuete Estate Linapacan Island, Palawan 5313
+            </li>
+            <li class="footer__list-item">
+              <i class="fa-solid fa-phone" aria-hidden="true"></i> +63 917 987
+              6543 / +63 2 888 2345
+            </li>
+            <li class="footer__list-item">
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              <a href="mailto:info@skyesuiteshotel.com"
+                >info@skyesuiteshotel.com</a
+              >
+            </li>
+          </ul>
         </section>
 
-        <section id="display__socials " class="footer__section">
-            <h5 class="footer__heading">Follow Us</h5>
-            <ul class="footer__list-socials">
-                <li class="list-socials__item"><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-                <li class="list-socials__item"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                <li class="list-socials__item"><a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
-                <li class="list-socials__item"><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-            </ul>
+        <!-- Footer Social Media Column -->
+        <section class="footer__column" aria-labelledby="footer-social-heading">
+          <h3 id="footer-social-heading" class="footer__heading">Follow Us</h3>
+          <nav aria-label="Social media links" class="footer__socials">
+            <a href="#" aria-label="Facebook" class="footer__social-link">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="#" aria-label="Instagram" class="footer__social-link">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#" aria-label="Pinterest" class="footer__social-link">
+              <i class="fa-brands fa-pinterest"></i>
+            </a>
+            <a href="#" aria-label="YouTube" class="footer__social-link">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+          </nav>
         </section>
 
-        <section class="footer__section">
-            <h5 class="footer__heading">Subscribe to our newsletter</h5>
-            <form class="footer__form">
-                <input class="footer__input-email" type="email" placeholder="Email address">
-                <button class="button button--primary form_submit" type="submit">Subscribe</button>
-            </form>
+        <!-- Footer Newsletter Column -->
+        <section
+          class="footer__column"
+          aria-labelledby="footer-newsletter-heading"
+        >
+          <h3 id="footer-newsletter-heading" class="footer__heading">
+            Subscribe to our newsletter
+          </h3>
+          <form class="form form--newsletter" novalidate>
+            <div class="form__group form__group--newsletter">
+              <label for="newsletter-email" class="visually-hidden"
+                >Email address</label
+              >
+              <input
+                class="form__input"
+                type="email"
+                id="newsletter-email"
+                name="newsletter-email"
+                placeholder="Email address"
+                required
+              />
+            </div>
+            <button
+              class="button button--primary form__subscribe"
+              type="submit"
+            >
+              Subscribe
+            </button>
+          </form>
         </section>
-
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>

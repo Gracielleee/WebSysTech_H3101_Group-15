@@ -9,15 +9,12 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     />
+    <link rel="stylesheet" href="./css/global.css" />
     <link rel="stylesheet" href="./css/access.css" />
-
-    <!-- Google Material Icons -->
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-
-    <!-- FontAwesome -->
     <script
       src="https://kit.fontawesome.com/62d08c9dc3.js"
       crossorigin="anonymous"
@@ -26,10 +23,23 @@
   </head>
   <body>
     <!-- Main Page Header Block -->
-    <header class="header">
+    <header class="header access-header">
       <!-- Navbar Block -->
       <nav class="navbar" aria-label="Main Navigation">
         <div class="navbar__container">
+          <!-- Site Logo -->
+          <a
+            href="index.html"
+            class="navbar__logo-link"
+            aria-label="Skye Suites Home"
+          >
+            <img
+              src="../images/logo.png"
+              alt="Skye Suites Logo"
+              class="navbar__logo"
+            />
+          </a>
+
           <!-- Dropdown for tablet/mobile -->
           <div class="dropdown" tabindex="0">
             <button
@@ -110,35 +120,39 @@
             </ul>
           </div>
 
-          <!-- Horizontal menu for large screens -->
+          <!-- Horizontal menu for large screens with FontAwesome icons -->
           <ul class="navbar__menu" role="menubar" aria-label="Main Menu">
             <li role="none">
-              <a href="index.html" role="menuitem" class="navbar__menu-link"
-                >Home</a
-              >
+              <a href="index.html" role="menuitem" class="navbar__menu-link">
+                <i class="fa-solid fa-house"></i> Home
+              </a>
             </li>
             <li role="none">
-              <a href="suites.html" role="menuitem" class="navbar__menu-link"
-                >Suites</a
-              >
+              <a href="suites.html" role="menuitem" class="navbar__menu-link">
+                <i class="fa-solid fa-bed"></i> Suites
+              </a>
             </li>
             <li role="none">
-              <a href="dining.html" role="menuitem" class="navbar__menu-link"
-                >Dining</a
-              >
+              <a href="dining.html" role="menuitem" class="navbar__menu-link">
+                <i class="fa-solid fa-utensils"></i> Dining
+              </a>
             </li>
             <li role="none">
               <a
                 href="experience.html"
                 role="menuitem"
                 class="navbar__menu-link"
-                >Experience</a
               >
+                <i class="fa-solid fa-spa"></i> Experience
+              </a>
             </li>
             <li role="none">
-              <a href="access.html" role="menuitem" class="navbar__menu-link"
-                >Access</a
-              >
+              <a href="access.html" role="menuitem" class="navbar__menu-link">
+                <i class="material-icons dropdown__icon" aria-hidden="true"
+                  >info</i
+                >
+                Access
+              </a>
             </li>
           </ul>
 
@@ -154,7 +168,7 @@
 
       <!-- Showcase Block -->
       <div class="showcase">
-        <h1 class="showcase__title">ACCESS</h1>
+        <h1 class="showcase__title">Seamless Access to Paradise</h1>
       </div>
     </header>
 
@@ -262,9 +276,8 @@
           </h3>
           <ul class="footer__list">
             <li class="footer__list-item">
-              <i class="fa-solid fa-location-dot" aria-hidden="true"></i> Suite
-              1202, Tower 3, Bonifacio High Street, Bonifacio Global City,
-              Taguig, Metro Manila, Philippines
+              <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+              15A Avocado Villa, Atchuete Estate Linapacan Island, Palawan 5313
             </li>
             <li class="footer__list-item">
               <i class="fa-solid fa-phone" aria-hidden="true"></i> +63 917 987
