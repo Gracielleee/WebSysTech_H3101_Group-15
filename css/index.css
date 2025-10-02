@@ -27,7 +27,6 @@
   background-position: center center;
   opacity: 0;
   animation: fadeSlide 36s infinite;
-  background-attachment: fixed;
 }
 
 /* Delay each slide by 6s (36s / 6 images) */
