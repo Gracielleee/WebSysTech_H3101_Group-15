@@ -9,6 +9,8 @@ Please check [this link](https://github.com/Gracielleee/WebSysTech_H3101_Group-1
 
 ## MS 1 Project Documentation
 
+**[Link to MS 1 source code](https://github.com/Gracielleee/WebSysTech_H3101_Group-15/tree/ms1)**
+
 ### Tree
 
 ```sh
@@ -40,7 +42,7 @@ root/
 
 The project is built on a strong foundation of **HTML5** for semantic structure and **CSS3** for styling.
 
-- **Styling Consistency:** The primary methodology used is **BEM (Block Element Modifier)** naming, which is uniformly applied across **all pages** (Index, Suites, Dining, Access, and Experience). This is paired with **OOCSS (Object-Oriented CSS)** principles to ensure styles are modular and highly reusable.
+- **Styling Consistency:** The primary methodology used is **BEM (Block Element Modifier)** naming, which is uniformly applied across **all pages** (Index, Suites, Dining, Access, and Experience) for modularity and reusability.
 - **Dependencies:** All pages utilize **Normalize.css** for browser consistency and rely on **Font Awesome** and **Google Material Icons** for lightweight, scalable iconography.
 
 ---
