@@ -13,7 +13,7 @@
 /* --- Main Section and Columns --- */
 .section {
   color: var(--color-text-dark);
-  margin: auto;
+  margin: 3rem auto;
   max-width: 1200px;
   padding: 3rem 1.5rem;
 }

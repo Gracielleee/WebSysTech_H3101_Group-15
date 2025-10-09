@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Suites | Skye Suites</title>
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     />
     <link rel="stylesheet" href="./css/global.css" />
     <link rel="stylesheet" href="./css/suites.css" />
@@ -26,9 +26,9 @@
     <!-- Main Page Header Block -->
     <header class="header suites-header">
       <!-- Navbar Block -->
-      <nav class="navbar" aria-label="Main Navigation">
-        <div class="navbar__container">
-          <!-- Site Logo -->
+      <nav class="navbar navbar-expand-lg custom-glass-navbar">
+        <div class="container navbar__container">
+          <!-- Logo -->
           <a
             href="index.html"
             class="navbar__logo-link"
@@ -41,131 +41,132 @@
             />
           </a>
 
-          <!-- Dropdown for tablet/mobile -->
-          <div class="dropdown" tabindex="0">
-            <button
-              class="dropdown__button"
-              aria-controls="dropdown-menu"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              MENU
-            </button>
+          <!-- Hamburger toggle for small screens -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNav"
+            aria-controls="offcanvasNav"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
+          <!-- Large screen menu (visible on lg and up) -->
+          <div
+            class="collapse navbar-collapse d-none d-lg-flex"
+            id="navbarSupportedContent"
+          >
             <ul
-              class="dropdown__menu"
-              id="dropdown-menu"
-              role="menu"
+              class="navbar-nav ms-auto mb-2 mb-lg-0"
+              role="menubar"
               aria-label="Main Menu"
             >
-              <li class="dropdown__menu-item" role="none">
+              <li class="nav-item" role="none">
                 <a
-                  class="dropdown__menu-link"
-                  role="menuitem"
                   href="index.html"
+                  role="menuitem"
+                  class="nav-link"
+                  aria-current="page"
                 >
-                  <i class="material-icons dropdown__icon" aria-hidden="true"
-                    >home</i
-                  >
-                  Home
+                  <i class="fa-solid fa-house"></i> Home
                 </a>
               </li>
-              <li class="dropdown__menu-item" role="none">
-                <a
-                  class="dropdown__menu-link"
-                  role="menuitem"
-                  href="suites.html"
-                >
-                  <i class="material-icons dropdown__icon" aria-hidden="true"
-                    >hotel</i
-                  >
-                  Suites
+              <li class="nav-item" role="none">
+                <a href="suites.html" role="menuitem" class="nav-link">
+                  <i class="fa-solid fa-bed"></i> Suites
                 </a>
               </li>
-              <li class="dropdown__menu-item" role="none">
-                <a
-                  class="dropdown__menu-link"
-                  role="menuitem"
-                  href="dining.html"
-                >
-                  <i class="material-icons dropdown__icon" aria-hidden="true"
-                    >local_dining</i
-                  >
-                  Dining
+              <li class="nav-item" role="none">
+                <a href="dining.html" role="menuitem" class="nav-link">
+                  <i class="fa-solid fa-utensils"></i> Dining
                 </a>
               </li>
-              <li class="dropdown__menu-item" role="none">
-                <a
-                  class="dropdown__menu-link"
-                  role="menuitem"
-                  href="experience.html"
-                >
-                  <i class="material-icons dropdown__icon" aria-hidden="true"
-                    >spa</i
-                  >
-                  Experience
+              <li class="nav-item" role="none">
+                <a href="experience.html" role="menuitem" class="nav-link">
+                  <i class="fa-solid fa-spa"></i> Experience
                 </a>
               </li>
-              <li class="dropdown__menu-item" role="none">
-                <a
-                  class="dropdown__menu-link"
-                  role="menuitem"
-                  href="access.html"
-                >
-                  <i class="material-icons dropdown__icon" aria-hidden="true"
-                    >info</i
-                  >
+              <li class="nav-item" role="none">
+                <a href="access.html" role="menuitem" class="nav-link">
+                  <i
+                    class="fa-solid fa-universal-access"
+                    aria-hidden="true"
+                  ></i>
                   Access
                 </a>
               </li>
             </ul>
+            <button
+              class="btn btn-danger navbar__book-button ms-lg-3"
+              type="button"
+            >
+              BOOK NOW
+            </button>
           </div>
+        </div>
+      </nav>
 
-          <!-- Horizontal menu for large screens with FontAwesome icons -->
-          <ul class="navbar__menu" role="menubar" aria-label="Main Menu">
-            <li role="none">
-              <a href="index.html" role="menuitem" class="navbar__menu-link">
+      <!-- Offcanvas menu for small screens -->
+      <div
+        class="offcanvas offcanvas-start"
+        tabindex="-1"
+        id="offcanvasNav"
+        aria-labelledby="offcanvasNavLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavLabel">Menu</h5>
+          <button
+            type="button"
+            class="btn-close text-reset"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav" role="menubar" aria-label="Main Menu">
+            <li class="nav-item" role="none">
+              <a
+                href="index.html"
+                role="menuitem"
+                class="nav-link"
+                aria-current="page"
+              >
                 <i class="fa-solid fa-house"></i> Home
               </a>
             </li>
-            <li role="none">
-              <a href="suites.html" role="menuitem" class="navbar__menu-link">
+            <li class="nav-item" role="none">
+              <a href="suites.html" role="menuitem" class="nav-link">
                 <i class="fa-solid fa-bed"></i> Suites
               </a>
             </li>
-            <li role="none">
-              <a href="dining.html" role="menuitem" class="navbar__menu-link">
+            <li class="nav-item" role="none">
+              <a href="dining.html" role="menuitem" class="nav-link">
                 <i class="fa-solid fa-utensils"></i> Dining
               </a>
             </li>
-            <li role="none">
-              <a
-                href="experience.html"
-                role="menuitem"
-                class="navbar__menu-link"
-              >
-                <i class="fa-solid fa-spa"></i> Experience
+            <li class="nav-item" role="none">
+              <a href="experience.html" role="menuitem" class="nav-link">
+                <i class="fa-solid fa-spa"></i>Experience
               </a>
             </li>
-            <li role="none">
-              <a href="access.html" role="menuitem" class="navbar__menu-link">
-                <i class="material-icons dropdown__icon" aria-hidden="true"
-                  >info</i
-                >
+            <li class="nav-item" role="none">
+              <a href="access.html" role="menuitem" class="nav-link">
+                <i class="fa-solid fa-universal-access" aria-hidden="true"></i>
                 Access
               </a>
             </li>
           </ul>
-
-          <!-- Call-to-action book button -->
           <button
-            class="button button--primary navbar__book-button"
+            class="btn btn-danger w-100 mt-3"
             type="button"
+            data-bs-dismiss="offcanvas"
           >
-            BOOK NOW
+            Book Now
           </button>
         </div>
-      </nav>
+      </div>
 
       <!-- Showcase Block -->
       <div class="showcase">
@@ -453,29 +454,28 @@
           <h3 id="footer-newsletter-heading" class="footer__heading">
             Subscribe to our newsletter
           </h3>
-          <form class="form form--newsletter" novalidate>
-            <div class="form__group form__group--newsletter">
+          <form class="needs-validation" novalidate>
+            <div class="mb-3">
               <label for="newsletter-email" class="visually-hidden"
                 >Email address</label
               >
               <input
-                class="form__input"
                 type="email"
+                class="form-control"
                 id="newsletter-email"
                 name="newsletter-email"
                 placeholder="Email address"
                 required
               />
+              <div class="invalid-feedback">Please enter a valid email.</div>
             </div>
-            <button
-              class="button button--primary form__subscribe"
-              type="submit"
-            >
+            <button type="submit" class="btn btn-danger w-100">
               Subscribe
             </button>
           </form>
         </section>
       </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

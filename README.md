@@ -7,6 +7,14 @@ A.Y 2025-2026
 
 Please check [this link](https://github.com/Gracielleee/WebSysTech_H3101_Group-15/blob/main/WIREFRAME.md) for the wireframe documentation.
 
+---
+
+## MS 2 Project Documentation
+
+**To be filled**
+
+---
+
 ## MS 1 Project Documentation
 
 **[Link to MS 1 source code](https://github.com/Gracielleee/WebSysTech_H3101_Group-15/tree/ms1)**
