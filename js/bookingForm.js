@@ -1,4 +1,5 @@
 import { validateEmail, validatePhoneNumber } from "./validators.js";
+import { showToast } from "./toastHelper.js";
 
 (function () {
   document.addEventListener("DOMContentLoaded", () => {
@@ -39,7 +40,8 @@ import { validateEmail, validatePhoneNumber } from "./validators.js";
       form.classList.add("was-validated");
 
       if (valid) {
-        alert("Booking submitted successfully!");
+        // alert("Booking submitted successfully!");
+        showToast("Booking submitted successfully!");
         bootstrapModal.hide();
         form.reset();
         form.classList.remove("was-validated");
