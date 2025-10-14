@@ -1,4 +1,5 @@
 import { validateEmail } from "./validators.js";
+import { showToast } from "./toastHelper.js";
 
 (function () {
   // DOM Ready
@@ -96,7 +97,7 @@ import { validateEmail } from "./validators.js";
 
       if (validateContactForm(this)) {
         // Form is valid: proceed with submission logic here (email send, save, etc.)
-        alert("Form is valid and ready to be submitted.");
+        showToast("Form is valid and ready to be submitted.");
         this.reset();
 
         // Reset validation styling after form reset

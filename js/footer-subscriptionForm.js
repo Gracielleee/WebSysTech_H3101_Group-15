@@ -1,4 +1,5 @@
 import { validateEmail } from "./validators.js";
+import { showToast } from "./toastHelper.js";
 
 (function () {
   document.addEventListener("DOMContentLoaded", () => {
@@ -32,7 +33,8 @@ import { validateEmail } from "./validators.js";
         }
       } else {
         emailInput.classList.add("is-valid");
-        alert("Subscribed successfully!");
+        // alert("Subscribed successfully!");
+        showToast("Subscribed successfully!");
         newsletterForm.reset();
         emailInput.classList.remove("is-valid");
       }

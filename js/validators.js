@@ -1,6 +1,11 @@
 export function validateEmail(email) {
   const forbiddenSubstrings = [
-    'domain', 'dummy', 'example', 'test', 'no-reply', 'noreply'
+    "domain",
+    "dummy",
+    "example",
+    "test",
+    "no-reply",
+    "noreply",
   ];
 
   // Regular expression to check general email validity
@@ -8,27 +13,32 @@ export function validateEmail(email) {
 
   // Check if email matches the regex
   if (!emailRegex.test(email)) {
-    return 'Invalid email format.';
+    return "Invalid email format.";
   }
 
   // Extract domain from email
-  const domain = email.split('@')[1];
+  const domain = email.split("@")[1];
 
   // Check if domain contains any forbidden substring
   for (let substring of forbiddenSubstrings) {
     if (domain.toLowerCase().includes(substring)) {
-      return 'This email domain is not allowed.';
+      return "This email domain is not allowed.";
     }
   }
 
   return null;
 }
 
-// Validate Philippine phone number function
+// Validate Philippine phone number function supporting spaces and dashes
 export function validatePhoneNumber(phone) {
-  // Regular expression for Philippine phone numbers (Mobile and Landline)
-  const phoneRegex = /^(09\d{9}|02\d{8})$/;
+  // Normalize input by removing spaces, dashes, and optional leading plus sign
+  const normalizedPhone = phone.replace(/^\+/, "").replace(/[\s-]/g, "");
 
-  // Test the phone number against the regex pattern
-  return phoneRegex.test(phone);
+  // Regex to validate:
+  // - local mobile: 09xxxxxxxxx
+  // - international mobile: 639xxxxxxxxx (must start with 9 after 63)
+  // - landline: 02xxxxxxxx
+  const phoneRegex = /^(09\d{9}|63[9]\d{9}|02\d{8})$/;
+
+  return phoneRegex.test(normalizedPhone);
 }
