@@ -11,7 +11,71 @@ Please check [this link](https://github.com/Gracielleee/WebSysTech_H3101_Group-1
 
 ## MS 2 Project Documentation
 
-**To be filled**
+### Common Elements and Components
+
+This section documents the implementation details and design considerations for the common elements and components used consistently across all pages of the Skye Suites static website. These elements include the header and navigation, booking form, global CSS styles, and common JavaScript scripts that enhance functionality and user experience.
+
+---
+
+#### Header and Navigation
+
+| Aspect                 | Description                                                                                    |
+| ---------------------- | ---------------------------------------------------------------------------------------------- |
+| Structural Elements    | The header uses semantic `<header>` and `<nav>` landmarks with ARIA roles for accessibility.   |
+| Logo and Branding      | Logo is linked to homepage with descriptive alt text and aria-label for screen readers.        |
+| Responsive Navigation  | Implements a Bootstrap offcanvas menu for small screens with a toggler button.                 |
+| Accessibility Features | Navbar links have `role="menuitem"` and menus have `role="menubar"` with proper aria labels.   |
+| Icons                  | FontAwesome icons visually reinforce menu items; icons have appropriate aria-hidden or labels. |
+| Booking Button         | Prominent "BOOK NOW" button triggers a modal booking form, styled for emphasis.                |
+| Visual Design          | Glassmorphic navbar with `backdrop-filter` blur and semi-transparent backgrounds.              |
+| Sticky Navbar          | Positioned sticky at the top with shadow for visibility during scroll.                         |
+
+---
+
+#### Booking Form Modal
+
+| Aspect            | Description                                                                                       |
+| ----------------- | ------------------------------------------------------------------------------------------------- |
+| Modal Structure   | Bootstrap modal included with accessible aria labels and roles for dialogs.                       |
+| Form Fields       | Includes inputs for contact info, booking details with labels linked to inputs.                   |
+| Validation        | Uses built-in HTML5 validation with `novalidate` and custom validation logic in JavaScript.       |
+| Custom Validators | Email and Philippine phone number custom validators check format and disallow invalid domains.    |
+| UX Enhancements   | Form resets validation on modal show/hide and reset buttons, with confirmation alerts on success. |
+| Accessibility     | Proper keyboard and screen reader support for modal and form controls.                            |
+
+---
+
+#### Global CSS Styles
+
+| Aspect            | Description                                                                                  |
+| ----------------- | -------------------------------------------------------------------------------------------- |
+| Root Variables    | Defines color palette, fonts, radius, and transitions for consistent theming and branding.   |
+| Reset & Utility   | Universal box-sizing and base styles for typography and layout normalization.                |
+| Navigation Styles | Glassmorphic nav with blur, shadow, sticky positioning, and responsive logo sizing.          |
+| Responsive Design | Media queries for logo size and heading text scale on smaller screens.                       |
+| Footer Styling    | Footer uses layered background with gradient overlay and responsive grid layout for columns. |
+| Accessibility     | Utility classes such as `.visually-hidden` for screen reader-only content.                   |
+
+---
+
+#### Global JavaScript Scripts
+
+| Script                     | Purpose and Features                                                                                          |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| bookingForm.js             | Handles booking form validation with custom rules and Bootstrap modal control; manages UX interaction states. |
+| footer-subscriptionForm.js | Validates newsletter subscription form email; manages validation feedback states visually and on reset.       |
+| validators.js              | Contains reusable validation functions: email format and domain checks plus Philippine phone number regex.    |
+
+---
+
+Summary Visualization
+
+| Component           | Key Features                      | Accessibility                  | UX Considerations      | Styling Approach         |
+| ------------------- | --------------------------------- | ------------------------------ | ---------------------- | ------------------------ |
+| Header & Navigation | Semantic, Responsive, Icons       | ARIA roles and labels          | Sticky, Offcanvas menu | Glassmorphic, Shadow     |
+| Booking Form Modal  | Modal Dialog, Validated Inputs    | ARIA labeled, keyboard support | Reset state management | Bootstrap styled, Alerts |
+| Global CSS          | Root Variables, Reset, Responsive | Screen reader utility classes  | Responsive adjustments | Consistent theming       |
+| Global JS           | Validation logic in modules       | Manages visual feedback        | Prevents form errors   | Modular, reusable        |
 
 ---
 
