@@ -35,7 +35,7 @@ main {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
-  color: var(--color-primary);
+  color: var(--color-text-dark);
 }
 
 .suites-subheading {
@@ -45,16 +45,22 @@ main {
   margin: 0 auto;
 }
 
+/* Main Container */
+.container {
+  width: 90%;
+}
+
 /* Tabs */
 .suites-tabs {
   display: flex;
-  justify-content: center;
-  gap: 1.5rem;
+  justify-content: space-evenly;
+  gap: 0rem;
   border-bottom: 3px solid var(--color-primary);
   list-style: none;
   margin: 0;
-  padding: 0.5rem 0;
+  padding-top: 0.5rem;
   user-select: none;
+  flex-wrap: nowrap;
 }
 
 .suites-tab {
@@ -67,12 +73,33 @@ main {
   transition: color var(--transition), border-color var(--transition);
 }
 
+.suites-tab-item{
+  flex: 1;
+  min-width: 100px;
+}
+
 .suites-tab[aria-selected="true"],
 .suites-tab:hover,
 .suites-tab:focus-visible {
   color: var(--color-primary);
   border-color: var(--color-primary);
   outline: none;
+}
+
+/* Bootstrap Overrides for Nav Pills */
+.nav-pills .nav-link {
+  background-color: #fff;
+  color: var(--color-text-dark);
+  border-radius: 0rem;
+  padding: 0.5rem;
+  width: 100%;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.nav-pills .nav-link.active {
+  background-color: var(--color-text-dark);
+  color: #fff;
 }
 
 /* Room info */
@@ -91,11 +118,14 @@ main {
 }
 
 .suites-room-img {
-  width: 50%;
+  display: block;
+  width: 30rem;
   height: auto;
   object-fit: cover;
   border-radius: var(--border-radius);
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+  margin-left: auto;
+  margin-right: 0;
 }
 
 /* Features list */
@@ -104,29 +134,30 @@ main {
   flex-direction: column;
   align-items: flex-start;
   gap: 1rem;
-  width: 50%;
+  width: auto;
+  margin-top: 1.4rem;
+  padding-left: 30px;
 }
 
 .suites-features-list {
   list-style: none;
   padding: 0;
-  margin: 0 0 1.5rem 0;
+  margin: 0 0 1.2rem 0;
   font-weight: 600;
   color: var(--color-text-dark);
 }
 
 .suites-features-item {
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.4rem;
   position: relative;
-  padding-left: 1.3rem;
+  /* padding-left: 1.3rem; */
+  text-align: left;
+  font-weight: 300;
 }
 
-.suites-features-item::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  color: var(--color-primary);
-  font-weight: 900;
+.suites-features-icon {
+  color: var(--color-text-dark);
+  margin-right: 0.6rem;
 }
 
 /* Book Button */
@@ -139,7 +170,7 @@ main {
   font-size: 1.125rem;
   font-weight: 700;
   cursor: pointer;
-  box-shadow: 0 4px 14px rgba(230 57 70 / 0.5);
+  box-shadow: 2px 3px 8px var(--color-primary-dark);
   transition: background-color var(--transition), box-shadow var(--transition);
   width: fit-content;
 }
@@ -147,7 +178,7 @@ main {
 .suites-book-btn:hover,
 .suites-book-btn:focus-visible {
   background-color: var(--color-primary-dark);
-  box-shadow: 0 0 16px var(--color-primary-dark);
+  box-shadow: 0 0 10px var(--color-primary);
   outline: 2px solid var(--color-primary-dark);
   outline-offset: 2px;
   outline-offset: 2px;
@@ -195,3 +226,10 @@ main {
     padding: 0.5rem;
   }
 }
+
+@media (max-width: 600px) {
+  .nav-link {
+      font-size: 2.6vw;
+  }
+}
+
