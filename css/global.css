@@ -49,7 +49,7 @@ a:focus {
   margin: -1px;
   overflow: hidden;
   padding: 0;
-  position: absolute !important;
+  position: absolute;
   white-space: nowrap;
   width: 1px;
 }
@@ -57,12 +57,12 @@ a:focus {
 /*=============== Header Block ===============*/
 .header {
   color: var(--color-text-light);
-  padding-bottom: 0 !important;
-  margin: 0 !important;
+  padding-bottom: 0;
+  margin: 0;
 }
 
 .navbar {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(7px); /* frosted glass blur */
   -webkit-backdrop-filter: blur(7px); /* Safari support */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* softer shadow */
@@ -120,7 +120,7 @@ a:focus {
 }
 
 .custom-glass-navbar {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(7px);
   -webkit-backdrop-filter: blur(7px);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
@@ -157,16 +157,11 @@ a:focus {
 
 /* Glassmorphic background for offcanvas */
 .offcanvas {
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.15
-  ) !important; /* Slightly transparent black */
+  background-color: rgba(0, 0, 0, 0.3) !important;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 0 0.5rem 0.5rem 0;
-  color: white; /* Ensure text inside is visible */
+  color: var(--color-bg-light);
 }
 
 /* Optional: style close button to suit dark glass */
@@ -176,7 +171,7 @@ a:focus {
 
 /* Make offcanvas links white too */
 .offcanvas .nav-link {
-  color: white;
+  color: var(--color-bg-light);
 }
 
 .offcanvas .nav-link:hover,
@@ -201,13 +196,13 @@ a:focus {
 
 .showcase__title {
   font-size: clamp(1rem, 3vw, 2rem);
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 0.25em 0.75em;
   border-radius: 0.5rem;
   color: var(--color-bg-light);
   letter-spacing: 0.1em;
   font-weight: 700;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
   display: inline-block;
   margin: 0 auto;
 }
