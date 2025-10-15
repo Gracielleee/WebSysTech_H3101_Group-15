@@ -26,14 +26,10 @@
     <!-- ########## Start Top Header Block ########## -->
     <header class="header suites-header">
       <!-- Navbar Block -->
-      <nav class="navbar navbar-expand-lg custom-glass-navbar">
+      <nav class="navbar navbar-expand-lg custom-glass-navbar" role="navigation" aria-label="Primary Navigation">
         <div class="container navbar__container">
           <!-- Logo -->
-          <a
-            href="index.html"
-            class="navbar__logo-link"
-            aria-label="Skye Suites Home"
-          >
+          <a href="index.html" class="navbar__logo-link" aria-label="Skye Suites Home">
             <img
               src="./images/logo.png"
               alt="Skye Suites Logo"
@@ -48,6 +44,7 @@
             data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasNav"
             aria-controls="offcanvasNav"
+            aria-expanded="false"
             aria-label="Toggle navigation"
           >
             <span class="navbar-toggler-icon"></span>
@@ -70,31 +67,28 @@
                   class="nav-link"
                   aria-current="page"
                 >
-                  <i class="fa-solid fa-house"></i> Home
+                  <i class="fa-solid fa-house" aria-hidden="true"></i> Home
+                  <span class="visually-hidden">(current)</span>
                 </a>
               </li>
               <li class="nav-item" role="none">
                 <a href="suites.html" role="menuitem" class="nav-link">
-                  <i class="fa-solid fa-bed"></i> Suites
+                  <i class="fa-solid fa-bed" aria-hidden="true"></i> Suites
                 </a>
               </li>
               <li class="nav-item" role="none">
                 <a href="dining.html" role="menuitem" class="nav-link">
-                  <i class="fa-solid fa-utensils"></i> Dining
+                  <i class="fa-solid fa-utensils" aria-hidden="true"></i> Dining
                 </a>
               </li>
               <li class="nav-item" role="none">
                 <a href="experience.html" role="menuitem" class="nav-link">
-                  <i class="fa-solid fa-spa"></i> Experience
+                  <i class="fa-solid fa-spa" aria-hidden="true"></i> Experience
                 </a>
               </li>
               <li class="nav-item" role="none">
                 <a href="access.html" role="menuitem" class="nav-link">
-                  <i
-                    class="fa-solid fa-universal-access"
-                    aria-hidden="true"
-                  ></i>
-                  Access
+                  <i class="fa-solid fa-universal-access" aria-hidden="true"></i> Access
                 </a>
               </li>
             </ul>
@@ -116,6 +110,8 @@
         tabindex="-1"
         id="offcanvasNav"
         aria-labelledby="offcanvasNavLabel"
+        aria-modal="true"
+        role="dialog"
       >
         <div class="offcanvas-header">
           <h5 class="offcanvas-title" id="offcanvasNavLabel">Menu</h5>
@@ -135,28 +131,28 @@
                 class="nav-link"
                 aria-current="page"
               >
-                <i class="fa-solid fa-house"></i> Home
+                <i class="fa-solid fa-house" aria-hidden="true"></i> Home
+                <span class="visually-hidden">(current)</span>
               </a>
             </li>
             <li class="nav-item" role="none">
               <a href="suites.html" role="menuitem" class="nav-link">
-                <i class="fa-solid fa-bed"></i> Suites
+                <i class="fa-solid fa-bed" aria-hidden="true"></i> Suites
               </a>
             </li>
             <li class="nav-item" role="none">
               <a href="dining.html" role="menuitem" class="nav-link">
-                <i class="fa-solid fa-utensils"></i> Dining
+                <i class="fa-solid fa-utensils" aria-hidden="true"></i> Dining
               </a>
             </li>
             <li class="nav-item" role="none">
               <a href="experience.html" role="menuitem" class="nav-link">
-                <i class="fa-solid fa-spa"></i>Experience
+                <i class="fa-solid fa-spa" aria-hidden="true"></i> Experience
               </a>
             </li>
             <li class="nav-item" role="none">
               <a href="access.html" role="menuitem" class="nav-link">
-                <i class="fa-solid fa-universal-access" aria-hidden="true"></i>
-                Access
+                <i class="fa-solid fa-universal-access" aria-hidden="true"></i> Access
               </a>
             </li>
           </ul>
@@ -182,62 +178,60 @@
     <!-- ########## Start Main Content Section Block ########## -->
     <main>
       <!-- Junior Suite Section -->
-      <section
-        id="suites-top"
-        class="suites-section"
-        aria-labelledby="suites-top-heading"
-      >
+      <section id="suites-top" class="suites-section" aria-labelledby="suites-top-heading">
         <div class="container">
           <!-- BOOTSTRAP: Container -->
           <div class="suites-intro">
             <h2 id="suites-top-heading" class="suites-heading">Junior Suite</h2>
             <p class="suites-subheading">
-              Our junior suite rooms are well equipped and offer spectacular
-              views.
+              Our junior suite rooms are well equipped and offer spectacular views.
             </p>
           </div>
 
           <div class="suites-card">
             <div class="suites-card-tabs">
+              <!-- Junior Suite Tabs using buttons and proper ARIA roles -->
               <ul
                 class="nav nav-pills suites-tabs"
                 role="tablist"
                 aria-label="Junior Suite Room Types"
               >
-                <li class="suites-tab-item">
-                  <a
-                    class="nav-link active d-sm-block suites-tab"
-                    role="tab"
-                    tabindex="0"
-                    aria-selected="true"
-                    aria-controls="tab-content-silene-junior"
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link active suites-tab"
                     id="tab-silene-junior"
-                    href="#tab-content-silene-junior"
                     data-bs-toggle="pill"
+                    data-bs-target="#tab-content-silene-junior"
+                    type="button"
+                    role="tab"
+                    aria-controls="tab-content-silene-junior"
+                    aria-selected="true"
+                    tabindex="0"
                   >
                     SILENE JUNIOR SUITE
-                  </a>
+                  </button>
                 </li>
-                <li class="suites-tab-item">
-                  <a
-                    class="nav-link d-sm-block suites-tab"
-                    role="tab"
-                    tabindex="-1"
-                    aria-selected="false"
-                    aria-controls="tab-content-lupine-junior"
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link suites-tab"
                     id="tab-lupine-junior"
-                    href="#tab-content-lupine-junior"
                     data-bs-toggle="pill"
+                    data-bs-target="#tab-content-lupine-junior"
+                    type="button"
+                    role="tab"
+                    aria-controls="tab-content-lupine-junior"
+                    aria-selected="false"
+                    tabindex="-1"
                   >
                     LUPINE JUNIOR SUITE
-                  </a>
+                  </button>
                 </li>
               </ul>
             </div>
 
             <div class="tab-content">
               <div
-                class="tab-pane container active suites-room-info"
+                class="tab-pane fade show active suites-room-info"
                 role="tabpanel"
                 id="tab-content-silene-junior"
                 aria-labelledby="tab-silene-junior"
@@ -320,7 +314,7 @@
               </div>
 
               <div
-                class="tab-pane container suites-room-info"
+                class="tab-pane fade suites-room-info"
                 role="tabpanel"
                 id="tab-content-lupine-junior"
                 aria-labelledby="tab-lupine-junior"
@@ -413,51 +407,48 @@
           <div class="suites-intro">
             <h2 id="suites-main-heading" class="suites-heading">Suite</h2>
             <p class="suites-subheading">
-              Our suite rooms are spacious with spectacular views and luxurious
-              amenities.
+              Our suite rooms are spacious with spectacular views and luxurious amenities.
             </p>
           </div>
           <div class="suites-card">
             <div class="suites-card-tabs">
-              <ul
-                class="nav nav-pills suites-tabs"
-                role="tablist"
-                aria-label="Suite Room Types"
-              >
-                <li class="suites-tab-item">
-                  <a
-                    class="nav-link active d-sm-block suites-tab"
-                    role="tab"
-                    tabindex="0"
-                    aria-selected="true"
-                    aria-controls="tab-content-silene-suite"
+              <ul class="nav nav-pills suites-tabs" role="tablist" aria-label="Suite Room Types">
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link active suites-tab"
                     id="tab-silene-suite"
-                    href="#tab-content-silene-suite"
                     data-bs-toggle="pill"
+                    data-bs-target="#tab-content-silene-suite"
+                    type="button"
+                    role="tab"
+                    aria-controls="tab-content-silene-suite"
+                    aria-selected="true"
+                    tabindex="0"
                   >
                     SILENE SUITE
-                  </a>
+                  </button>
                 </li>
-                <li class="suites-tab-item">
-                  <a
-                    class="nav-link d-sm-block suites-tab"
-                    role="tab"
-                    tabindex="-1"
-                    aria-selected="false"
-                    aria-controls="tab-content-lupine-suite"
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link suites-tab"
                     id="tab-lupine-suite"
-                    href="#tab-content-lupine-suite"
                     data-bs-toggle="pill"
+                    data-bs-target="#tab-content-lupine-suite"
+                    type="button"
+                    role="tab"
+                    aria-controls="tab-content-lupine-suite"
+                    aria-selected="false"
+                    tabindex="-1"
                   >
                     LUPINE SUITE
-                  </a>
+                  </button>
                 </li>
               </ul>
             </div>
 
             <div class="tab-content">
               <div
-                class="tab-pane container active suites-room-info"
+                class="tab-pane fade show active suites-room-info"
                 role="tabpanel"
                 id="tab-content-silene-suite"
                 aria-labelledby="tab-silene-suite"
@@ -477,60 +468,25 @@
                     <div class="suites-room-features">
                       <ul class="suites-features-list">
                         <li class="suites-features-item">
-                          <span
-                            ><i
-                              class="fa-solid fa-ruler-combined suites-features-icon"
-                            ></i
-                            >430 sq.ft. / 40 sq.m</span
-                          >
+                          <span><i class="fa-solid fa-ruler-combined suites-features-icon"></i>430 sq.ft. / 40 sq.m</span>
                         </li>
                         <li class="suites-features-item">
-                          <span
-                            ><i
-                              class="fa-solid fa-user-group suites-features-icon"
-                            ></i
-                            >For 2 people</span
-                          >
+                          <span><i class="fa-solid fa-user-group suites-features-icon"></i>For 2 people</span>
                         </li>
                         <li class="suites-features-item">
-                          <span
-                            ><i
-                              class="fa-solid fa-bath suites-features-icon"
-                            ></i
-                            >Shower or bathtub</span
-                          >
+                          <span><i class="fa-solid fa-bath suites-features-icon"></i>Shower or bathtub</span>
                         </li>
                         <li class="suites-features-item">
-                          <span
-                            ><i
-                              class="fa-solid fa-wifi suites-features-icon"
-                            ></i
-                            >Wifi &amp; TV</span
-                          >
+                          <span><i class="fa-solid fa-wifi suites-features-icon"></i>Wifi &amp; TV</span>
                         </li>
                         <li class="suites-features-item">
-                          <span
-                            ><i
-                              class="fa-solid fa-mug-saucer suites-features-icon"
-                            ></i
-                            >Kettle or coffee machine</span
-                          >
+                          <span><i class="fa-solid fa-mug-saucer suites-features-icon"></i>Kettle or coffee machine</span>
                         </li>
                         <li class="suites-features-item">
-                          <span
-                            ><i
-                              class="fa-solid fa-bell-concierge suites-features-icon"
-                            ></i
-                            >Room Service</span
-                          >
+                          <span><i class="fa-solid fa-bell-concierge suites-features-icon"></i>Room Service</span>
                         </li>
                         <li class="suites-features-item">
-                          <span
-                            ><i
-                              class="fa-solid fa-mountain suites-features-icon"
-                            ></i
-                            >Mountain view</span
-                          >
+                          <span><i class="fa-solid fa-mountain suites-features-icon"></i>Mountain view</span>
                         </li>
                       </ul>
                       <button
@@ -548,7 +504,7 @@
               </div>
 
               <div
-                class="tab-pane container suites-room-info"
+                class="tab-pane fade suites-room-info"
                 role="tabpanel"
                 id="tab-content-lupine-suite"
                 aria-labelledby="tab-lupine-suite"
@@ -568,60 +524,25 @@
                     <div class="suites-room-features">
                       <ul class="suites-features-list">
                         <li class="suites-features-item">
-                          <span
-                            ><i
-                              class="fa-solid fa-ruler-combined suites-features-icon"
-                            ></i
-                            >450 sq.ft. / 42 sq.m</span
-                          >
+                          <span><i class="fa-solid fa-ruler-combined suites-features-icon"></i>450 sq.ft. / 42 sq.m</span>
                         </li>
                         <li class="suites-features-item">
-                          <span
-                            ><i
-                              class="fa-solid fa-user-group suites-features-icon"
-                            ></i
-                            >For 2 people</span
-                          >
+                          <span><i class="fa-solid fa-user-group suites-features-icon"></i>For 2 people</span>
                         </li>
                         <li class="suites-features-item">
-                          <span
-                            ><i
-                              class="fa-solid fa-bath suites-features-icon"
-                            ></i
-                            >Bathtub</span
-                          >
+                          <span><i class="fa-solid fa-bath suites-features-icon"></i>Bathtub</span>
                         </li>
                         <li class="suites-features-item">
-                          <span
-                            ><i
-                              class="fa-solid fa-wifi suites-features-icon"
-                            ></i
-                            >Wifi &amp; TV</span
-                          >
+                          <span><i class="fa-solid fa-wifi suites-features-icon"></i>Wifi &amp; TV</span>
                         </li>
                         <li class="suites-features-item">
-                          <span
-                            ><i
-                              class="fa-solid fa-mug-saucer suites-features-icon"
-                            ></i
-                            >Coffee machine</span
-                          >
+                          <span><i class="fa-solid fa-mug-saucer suites-features-icon"></i>Coffee machine</span>
                         </li>
                         <li class="suites-features-item">
-                          <span
-                            ><i
-                              class="fa-solid fa-bell-concierge suites-features-icon"
-                            ></i
-                            >Room Service</span
-                          >
+                          <span><i class="fa-solid fa-bell-concierge suites-features-icon"></i>Room Service</span>
                         </li>
                         <li class="suites-features-item">
-                          <span
-                            ><i
-                              class="fa-solid fa-umbrella-beach suites-features-icon"
-                            ></i
-                            >Ocean view</span
-                          >
+                          <span><i class="fa-solid fa-umbrella-beach suites-features-icon"></i>Ocean view</span>
                         </li>
                       </ul>
                       <button
@@ -803,9 +724,7 @@
                   </div>
                 </div>
                 <div class="col-md-6">
-                  <label for="children" class="form-label fw-bold"
-                    >Children</label
-                  >
+                  <label for="children" class="form-label fw-bold">Children</label>
                   <select
                     class="form-select"
                     id="children"
@@ -840,12 +759,8 @@
                     aria-describedby="suiteFeedback"
                   >
                     <option value="" selected disabled>Select Suite</option>
-                    <option value="silene-junior-suite">
-                      Silene Junior Suite
-                    </option>
-                    <option value="lupine-junior-suite">
-                      Lupine Junior Suite
-                    </option>
+                    <option value="silene-junior-suite">Silene Junior Suite</option>
+                    <option value="lupine-junior-suite">Lupine Junior Suite</option>
                     <option value="silene-suite">Silene Suite</option>
                     <option value="lupine-suite">Lupine Suite</option>
                   </select>
@@ -862,9 +777,7 @@
                     required
                     aria-describedby="boardFeedback"
                   >
-                    <option value="" selected disabled>
-                      Select Board Type
-                    </option>
+                    <option value="" selected disabled>Select Board Type</option>
                     <option value="breakfast">Breakfast</option>
                     <option value="half-board">Half Board</option>
                   </select>
@@ -875,11 +788,7 @@
               </div>
             </div>
             <div class="modal-footer">
-              <button
-                type="reset"
-                class="btn btn-secondary me-2"
-                id="resetBookingFormBtn"
-              >
+              <button type="reset" class="btn btn-secondary me-2" id="resetBookingFormBtn">
                 Reset
               </button>
               <button type="submit" class="btn btn-danger fw-bold w-100">
@@ -897,27 +806,19 @@
     <footer class="footer">
       <div class="footer__container">
         <!-- Footer Contact Column Element -->
-        <section
-          class="footer__column"
-          aria-labelledby="footer-contact-heading"
-        >
-          <h3 id="footer-contact-heading" class="footer__heading">
-            Contact Us
-          </h3>
+        <section class="footer__column" aria-labelledby="footer-contact-heading">
+          <h3 id="footer-contact-heading" class="footer__heading">Contact Us</h3>
           <ul class="footer__list">
             <li class="footer__list-item">
               <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
               15A Avocado Villa, Atchuete Estate Linapacan Island, Palawan 5313
             </li>
             <li class="footer__list-item">
-              <i class="fa-solid fa-phone" aria-hidden="true"></i> +63 917 987
-              6543 / +63 2 888 2345
+              <i class="fa-solid fa-phone" aria-hidden="true"></i> +63 917 987 6543 / +63 2 888 2345
             </li>
             <li class="footer__list-item">
               <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-              <a href="mailto:info@skyesuiteshotel.com"
-                >info@skyesuiteshotel.com</a
-              >
+              <a href="mailto:info@skyesuiteshotel.com">info@skyesuiteshotel.com</a>
             </li>
           </ul>
         </section>
@@ -942,18 +843,11 @@
         </section>
 
         <!-- Footer Newsletter Column -->
-        <section
-          class="footer__column"
-          aria-labelledby="footer-newsletter-heading"
-        >
-          <h3 id="footer-newsletter-heading" class="footer__heading">
-            Subscribe to our newsletter
-          </h3>
+        <section class="footer__column" aria-labelledby="footer-newsletter-heading">
+          <h3 id="footer-newsletter-heading" class="footer__heading">Subscribe to our newsletter</h3>
           <form id="newsletter-form" class="needs-validation" novalidate>
             <div class="mb-3">
-              <label for="newsletter-email" class="visually-hidden"
-                >Email address</label
-              >
+              <label for="newsletter-email" class="visually-hidden">Email address</label>
               <input
                 type="email"
                 class="form-control"
@@ -972,7 +866,7 @@
       </div>
     </footer>
     <!-- ########## End Footer Block ########## -->
-     
+
     <!-- ##########  Start Toast container ########## -->
     <div
       aria-live="polite"
