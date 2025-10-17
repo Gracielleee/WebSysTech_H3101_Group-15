@@ -135,13 +135,13 @@
   background: var(--color-bg-light);
   border-radius: var(--border-radius);
   overflow: hidden;
-  box-shadow: var(--box-shadow);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform var(--transition), box-shadow var(--transition);
 }
 
 .experience-card:hover {
   transform: translateY(-10px);
-  box-shadow: var(--box-shadow-hover);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .experience-card__image-wrapper {
@@ -190,4 +190,128 @@
   font-size: 0.95rem;
   line-height: 1.6;
   margin: 0;
+}
+
+/* Bootstrap Form Enhancements */
+.modal-content {
+  border: none;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+}
+
+.modal-header {
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.modal-footer {
+  border-top: 1px solid #e0e0e0;
+}
+
+.form-label {
+  color: var(--color-text-dark);
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.form-control,
+.form-select {
+  border: 1px solid #ddd;
+  border-radius: 0.375rem;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 0.2rem rgba(230, 57, 70, 0.15);
+}
+
+.form-control::placeholder {
+  color: #999;
+  opacity: 0.8;
+}
+
+.invalid-feedback {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.form-text {
+  color: #6c757d;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+/* Button Enhancements */
+.btn-danger {
+  font-weight: 600;
+  transition: all var(--transition);
+}
+
+.btn-danger:hover,
+.btn-danger:focus {
+  box-shadow: 0 4px 12px rgba(230, 57, 70, 0.3);
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  transition: all var(--transition);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background-color: #5a6268;
+  border-color: #5a6268;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .wellness__hero,
+  .adventure__hero {
+    height: 300px;
+  }
+
+  .experience-main {
+    margin: 2rem auto;
+  }
+
+  .wellness__container,
+  .adventure__container {
+    padding: 0 1rem;
+  }
+
+  .wellness__header,
+  .adventure__header {
+    margin-bottom: 2.5rem;
+  }
+
+  .modal-lg {
+    --bs-modal-width: 95vw;
+  }
+}
+
+@media (max-width: 576px) {
+  .experience-card__image-wrapper {
+    height: 250px;
+  }
+
+  .wellness__title,
+  .adventure__title {
+    font-size: 1.75rem;
+  }
+
+  .wellness__subtitle,
+  .adventure__subtitle {
+    font-size: 1rem;
+  }
+
+  .modal-body {
+    padding: 1rem;
+  }
+
+  .form-label {
+    font-size: 0.9rem;
+  }
 }
