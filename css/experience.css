@@ -182,10 +182,6 @@
   border-radius: 0.5rem;
 }
 
-.modal-header {
-  border-bottom: 2px solid var(--color-primary);
-}
-
 .modal-footer {
   border-top: 1px solid #e0e0e0;
 }

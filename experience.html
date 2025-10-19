@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Experience | Skye Suites</title>
-    <meta name="description" content="Relax, rejuvenate, and explore exclusive spa treatments and curated adventures at Skye Suites. Your unforgettable experience awaits." />
+    <meta
+      name="description"
+      content="Relax, rejuvenate, and explore exclusive spa treatments and curated adventures at Skye Suites. Your unforgettable experience awaits."
+    />
     <link
       rel="canonical"
       href="https://gracielleee.github.io/WebSysTech_H3101_Group-15/experience.html"
@@ -31,7 +34,10 @@
     <!-- Main Page Header Block -->
     <header class="header experience-header">
       <!-- Navbar Block -->
-      <nav class="navbar navbar-expand-lg custom-glass-navbar" role="navigation" aria-label="Primary Navigation">
+      <nav
+        class="navbar navbar-expand-lg custom-glass-navbar"
+        aria-label="Primary Navigation"
+      >
         <div class="container-fluid navbar__container">
           <!-- Logo -->
           <a
@@ -323,8 +329,8 @@
                   <div class="experience-card__content">
                     <p class="experience-card__description">
                       Explore breathtaking trails and scenic landscapes on our
-                      guided hiking adventures. Perfect for all skill levels with
-                      stunning mountain views.
+                      guided hiking adventures. Perfect for all skill levels
+                      with stunning mountain views.
                     </p>
                   </div>
                 </div>
@@ -361,7 +367,9 @@
                       class="experience-card__image"
                     />
                     <div class="experience-card__overlay">
-                      <h3 class="experience-card__title">Tailored Experiences</h3>
+                      <h3 class="experience-card__title">
+                        Tailored Experiences
+                      </h3>
                     </div>
                   </div>
                   <div class="experience-card__content">
@@ -388,140 +396,134 @@
       aria-labelledby="bookNowModalLabel"
       aria-hidden="true"
     >
-      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal-content">
-          <div class="modal-header bg-dark text-white border-0">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div
+          class="modal-content"
+          style="font-family: Helvetica, Arial, sans-serif"
+        >
+          <div class="modal-header">
             <h5 class="modal-title fw-bold" id="bookNowModalLabel">
               Hotel Booking
             </h5>
             <button
               type="button"
-              class="btn-close btn-close-white"
+              class="btn-close"
               data-bs-dismiss="modal"
               aria-label="Close"
             ></button>
           </div>
           <form id="bookingForm" class="needs-validation" novalidate>
             <div class="modal-body">
-              <div class="mb-4">
-                <h6 class="fw-semibold text-dark mb-3">Contact Information</h6>
-                <div class="row g-3">
-                  <div class="col-md-6">
-                    <label for="firstName" class="form-label fw-semibold"
-                      >First Name</label
-                    >
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="firstName"
-                      name="firstName"
-                      required
-                      autocomplete="given-name"
-                      aria-describedby="firstNameFeedback"
-                    />
-                    <div id="firstNameFeedback" class="invalid-feedback d-block">
-                      Please enter your first name.
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <label for="lastName" class="form-label fw-semibold"
-                      >Last Name</label
-                    >
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="lastName"
-                      name="lastName"
-                      required
-                      autocomplete="family-name"
-                      aria-describedby="lastNameFeedback"
-                    />
-                    <div id="lastNameFeedback" class="invalid-feedback d-block">
-                      Please enter your last name.
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="mb-4">
-                <div class="row g-3">
-                  <div class="col-md-6">
-                    <label for="phone" class="form-label fw-semibold">Phone</label>
-                    <input
-                      type="tel"
-                      class="form-control"
-                      id="phone"
-                      name="phone"
-                      pattern="^\+?[0-9\s\-]{7,15}$"
-                      required
-                      autocomplete="tel"
-                      placeholder="+63 917 123 4567"
-                      aria-describedby="phoneFeedback"
-                    />
-                    <div id="phoneFeedback" class="invalid-feedback d-block">
-                      Please enter a valid phone number.
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <label for="email" class="form-label fw-semibold">Email</label>
-                    <input
-                      type="email"
-                      class="form-control"
-                      id="email"
-                      name="email"
-                      required
-                      autocomplete="email"
-                      placeholder="email@example.com"
-                      aria-describedby="emailFeedback"
-                    />
-                    <div id="emailFeedback" class="invalid-feedback d-block">
-                      Please enter a valid email.
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="mb-4">
-                <h6 class="fw-semibold text-dark mb-3">Booking Details</h6>
-                <div class="row g-3 mb-3">
-                  <div class="col-md-6">
-                    <label for="checkin" class="form-label fw-semibold"
-                      >Check-in</label
-                    >
-                    <input
-                      type="datetime-local"
-                      class="form-control"
-                      id="checkin"
-                      name="checkin"
-                      required
-                      aria-describedby="checkinFeedback"
-                    />
-                    <div id="checkinFeedback" class="invalid-feedback d-block">
-                      Please select your check-in date and time.
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <label for="checkout" class="form-label fw-semibold"
-                      >Check-out</label
-                    >
-                    <input
-                      type="datetime-local"
-                      class="form-control"
-                      id="checkout"
-                      name="checkout"
-                      required
-                      aria-describedby="checkoutFeedback"
-                    />
-                    <div id="checkoutFeedback" class="invalid-feedback d-block">
-                      Please select your check-out date and time.
-                    </div>
-                  </div>
-                </div>
-              </div>
-
+              <p class="h5 fw-semibold mb-3">Contact Information</p>
               <div class="row g-3 mb-4">
                 <div class="col-md-6">
-                  <label for="adults" class="form-label fw-semibold">Adults</label>
+                  <label for="firstName" class="form-label fw-bold"
+                    >First Name</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="firstName"
+                    name="firstName"
+                    required
+                    autocomplete="given-name"
+                    aria-describedby="firstNameFeedback"
+                  />
+                  <div id="firstNameFeedback" class="invalid-feedback">
+                    Please enter your first name.
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="lastName" class="form-label fw-bold"
+                    >Last Name</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="lastName"
+                    name="lastName"
+                    required
+                    autocomplete="family-name"
+                    aria-describedby="lastNameFeedback"
+                  />
+                  <div id="lastNameFeedback" class="invalid-feedback">
+                    Please enter your last name.
+                  </div>
+                </div>
+              </div>
+              <div class="row g-3 mb-4">
+                <div class="col-md-6">
+                  <label for="phone" class="form-label fw-bold">Phone</label>
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="phone"
+                    name="phone"
+                    pattern="^\+?[0-9\s\-]{7,15}$"
+                    required
+                    autocomplete="tel"
+                    placeholder="+63 917 123 4567 or 0212345678"
+                    aria-describedby="phoneFeedback"
+                  />
+                  <div id="phoneFeedback" class="invalid-feedback">
+                    Please enter a valid phone number.
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="email" class="form-label fw-bold">Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    name="email"
+                    required
+                    autocomplete="email"
+                    placeholder="email@example.com"
+                    aria-describedby="emailFeedback"
+                  />
+                  <div id="emailFeedback" class="invalid-feedback">
+                    Please enter a valid email.
+                  </div>
+                </div>
+              </div>
+              <p class="h5 fw-semibold mb-3">Booking Details</p>
+              <div class="row g-3 mb-4">
+                <div class="col-md-6">
+                  <label for="checkin" class="form-label fw-bold"
+                    >Check-in</label
+                  >
+                  <input
+                    type="datetime-local"
+                    class="form-control"
+                    id="checkin"
+                    name="checkin"
+                    required
+                    aria-describedby="checkinFeedback"
+                  />
+                  <div id="checkinFeedback" class="invalid-feedback">
+                    Please select your check-in date and time.
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="checkout" class="form-label fw-bold"
+                    >Check-out</label
+                  >
+                  <input
+                    type="datetime-local"
+                    class="form-control"
+                    id="checkout"
+                    name="checkout"
+                    required
+                    aria-describedby="checkoutFeedback"
+                  />
+                  <div id="checkoutFeedback" class="invalid-feedback">
+                    Please select your check-out date and time.
+                  </div>
+                </div>
+              </div>
+              <div class="row g-3 mb-4">
+                <div class="col-md-6">
+                  <label for="adults" class="form-label fw-bold">Adults</label>
                   <select
                     class="form-select"
                     id="adults"
@@ -537,15 +539,15 @@
                     <option value="3">3 Adults</option>
                     <option value="4">4 Adults</option>
                   </select>
-                  <small id="adultsHelp" class="form-text d-block">
+                  <div id="adultsHelp" class="form-text">
                     Select the number of adults staying.
-                  </small>
-                  <div id="adultsFeedback" class="invalid-feedback d-block">
+                  </div>
+                  <div id="adultsFeedback" class="invalid-feedback">
                     Please select number of adults.
                   </div>
                 </div>
                 <div class="col-md-6">
-                  <label for="children" class="form-label fw-semibold"
+                  <label for="children" class="form-label fw-bold"
                     >Children</label
                   >
                   <select
@@ -563,18 +565,17 @@
                     <option value="2">2 Children</option>
                     <option value="3">3 Children</option>
                   </select>
-                  <small id="childrenHelp" class="form-text d-block">
+                  <div id="childrenHelp" class="form-text">
                     Select the number of children staying.
-                  </small>
-                  <div id="childrenFeedback" class="invalid-feedback d-block">
+                  </div>
+                  <div id="childrenFeedback" class="invalid-feedback">
                     Please select number of children.
                   </div>
                 </div>
               </div>
-
               <div class="row g-3 mb-4">
                 <div class="col-md-6">
-                  <label for="suite" class="form-label fw-semibold">Suite</label>
+                  <label for="suite" class="form-label fw-bold">Suite</label>
                   <select
                     class="form-select"
                     id="suite"
@@ -592,12 +593,12 @@
                     <option value="silene-suite">Silene Suite</option>
                     <option value="lupine-suite">Lupine Suite</option>
                   </select>
-                  <div id="suiteFeedback" class="invalid-feedback d-block">
+                  <div id="suiteFeedback" class="invalid-feedback">
                     Please select a suite.
                   </div>
                 </div>
                 <div class="col-md-6">
-                  <label for="board" class="form-label fw-semibold">Board</label>
+                  <label for="board" class="form-label fw-bold">Board</label>
                   <select
                     class="form-select"
                     id="board"
@@ -611,21 +612,21 @@
                     <option value="breakfast">Breakfast</option>
                     <option value="half-board">Half Board</option>
                   </select>
-                  <div id="boardFeedback" class="invalid-feedback d-block">
+                  <div id="boardFeedback" class="invalid-feedback">
                     Please select a board type.
                   </div>
                 </div>
               </div>
             </div>
-            <div class="modal-footer border-top bg-light">
+            <div class="modal-footer">
               <button
                 type="reset"
-                class="btn btn-secondary"
+                class="btn btn-secondary me-2"
                 id="resetBookingFormBtn"
               >
                 Reset
               </button>
-              <button type="submit" class="btn btn-danger fw-bold">
+              <button type="submit" class="btn btn-danger fw-bold w-100">
                 Submit Booking
               </button>
             </div>
