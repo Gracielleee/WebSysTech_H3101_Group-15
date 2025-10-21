@@ -89,7 +89,7 @@
                 </a>
               </li>
               <li class="nav-item" role="none">
-                <a href="suites.html" role="menuitem" class="nav-link">
+                <a href="suites.html" role="menuitem" class="nav-link active">
                   <i class="fa-solid fa-bed" aria-hidden="true"></i> Suites
                 </a>
               </li>
@@ -143,7 +143,7 @@
             aria-label="Close"
           ></button>
         </div>
-        <div class="offcanvas-body">
+        <div class="offcanvas-body custom-vertical-center">
           <ul class="navbar-nav" role="menubar" aria-label="Main Menu">
             <li class="nav-item" role="none">
               <a
@@ -157,7 +157,7 @@
               </a>
             </li>
             <li class="nav-item" role="none">
-              <a href="suites.html" role="menuitem" class="nav-link">
+              <a href="suites.html" role="menuitem" class="nav-link active">
                 <i class="fa-solid fa-bed" aria-hidden="true"></i> Suites
               </a>
             </li>
@@ -327,11 +327,12 @@
                         </li>
                       </ul>
                       <button
-                        class="suites-book-btn"
+                        class="suites-book-btn btn btn-danger"
                         type="button"
-                        aria-label="Book Junior Silene Suite"
                         data-bs-toggle="modal"
                         data-bs-target="#bookNowModal"
+                        data-suite="silene-junior-suite"
+                        aria-label="Book Silene Junior Suite"
                       >
                         BOOK NOW
                       </button>
@@ -410,11 +411,12 @@
                         </li>
                       </ul>
                       <button
-                        class="suites-book-btn"
+                        class="suites-book-btn btn btn-danger"
                         type="button"
-                        aria-label="Book Junior Lupine Suite"
                         data-bs-toggle="modal"
                         data-bs-target="#bookNowModal"
+                        data-suite="lupine-junior-suite"
+                        aria-label="Book Lupine Junior Suite"
                       >
                         BOOK NOW
                       </button>
@@ -557,11 +559,12 @@
                         </li>
                       </ul>
                       <button
-                        class="suites-book-btn"
+                        class="suites-book-btn btn btn-danger"
                         type="button"
-                        aria-label="Book Silene Suite"
                         data-bs-toggle="modal"
                         data-bs-target="#bookNowModal"
+                        data-suite="silene-suite"
+                        aria-label="Book Silene Suite"
                       >
                         BOOK NOW
                       </button>
@@ -648,11 +651,12 @@
                         </li>
                       </ul>
                       <button
-                        class="suites-book-btn"
+                        class="suites-book-btn btn btn-danger"
                         type="button"
-                        aria-label="Book Lupine Suite"
                         data-bs-toggle="modal"
                         data-bs-target="#bookNowModal"
+                        data-suite="lupine-suite"
+                        aria-label="Book Lupine Suite"
                       >
                         BOOK NOW
                       </button>
@@ -676,10 +680,7 @@
       aria-hidden="true"
     >
       <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div
-          class="modal-content"
-          style="font-family: Helvetica, Arial, sans-serif"
-        >
+        <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title fw-bold" id="bookNowModalLabel">
               Hotel Booking
@@ -694,6 +695,11 @@
           <form id="bookingForm" class="needs-validation" novalidate>
             <div class="modal-body">
               <p class="h5 fw-semibold mb-3">Contact Information</p>
+              <p class="form-text text-muted">
+                Fields marked with <span class="text-danger">*</span> are
+                required.
+              </p>
+
               <div class="row g-3 mb-4">
                 <div class="col-md-6">
                   <label for="firstName" class="form-label fw-bold"
@@ -872,6 +878,7 @@
                     <option value="silene-suite">Silene Suite</option>
                     <option value="lupine-suite">Lupine Suite</option>
                   </select>
+
                   <div id="suiteFeedback" class="invalid-feedback">
                     Please select a suite.
                   </div>
@@ -987,7 +994,11 @@
               />
               <div class="invalid-feedback">Please enter a valid email.</div>
             </div>
-            <button type="submit" class="btn btn-danger w-100">
+            <button
+              type="submit"
+              class="btn btn-danger w-100"
+              id="footerSubscribeBtn"
+            >
               Subscribe
             </button>
           </form>
@@ -996,7 +1007,67 @@
     </footer>
     <!-- ########## End Footer Block ########## -->
 
-    <!-- ##########  Start Toast container ########## -->
+    <!-- ##########  Modal Subscription Form ########## -->
+    <div
+      class="modal fade"
+      id="newsletterModal"
+      tabindex="-1"
+      aria-labelledby="newsletterModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title fw-bold" id="newsletterModalLabel">
+              Subscribe to our Newsletter
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+              id="modalCloseBtn"
+            ></button>
+          </div>
+          <form id="modal-newsletter-form" class="needs-validation" novalidate>
+            <div class="modal-body">
+              <div class="mb-3">
+                <label
+                  for="modal-newsletter-email"
+                  class="form-label visually-hidden"
+                  >Email address</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="modal-newsletter-email"
+                  name="newsletterEmail"
+                  placeholder="Enter your email"
+                  required
+                />
+                <div class="invalid-feedback">Please enter a valid email.</div>
+              </div>
+            </div>
+            <div class="modal-footer d-flex justify-content-between">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                id="modal-no-thanks-btn"
+              >
+                No Thanks
+              </button>
+              <button type="submit" class="btn btn-danger fw-bold w-50">
+                Subscribe
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- ##########  End Modal Subscription Form ########## -->
+
+    <!-- ##########  Start Toast Container ########## -->
     <div
       aria-live="polite"
       aria-atomic="true"
@@ -1023,11 +1094,12 @@
         </div>
       </div>
     </div>
-    <!-- ##########  End Toast container ########## -->
+    <!-- ##########  End Toast Container ########## -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JS -->
     <script type="module" src="js/bookingForm.js"></script>
-    <script type="module" src="js/footer-subscriptionForm.js"></script>
+    <script type="module" src="js/footer.js"></script>
+    <script type="module" src="js/top-menu-nav.js"></script>
   </body>
 </html>

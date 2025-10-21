@@ -7,6 +7,29 @@ import { showToast } from "./toastHelper.js";
     const modalElement = document.getElementById("bookNowModal");
     const bootstrapModal = new bootstrap.Modal(modalElement);
 
+    const suiteSelect = document.getElementById("suite");
+    const bookButtons = document.querySelectorAll(".suites-book-btn");
+    let lastClickedSuiteValue = null;
+
+    // Update lastClickedSuiteValue when a BOOK NOW button is clicked
+    bookButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const suiteValue = button.getAttribute("data-suite");
+        if (suiteSelect && suiteValue) {
+          lastClickedSuiteValue = suiteValue;
+        }
+      });
+    });
+
+    // When modal shows, set the suite select's value to last clicked suite
+    modalElement.addEventListener("shown.bs.modal", () => {
+      form.classList.remove("was-validated");
+      if (lastClickedSuiteValue) {
+        suiteSelect.value = lastClickedSuiteValue;
+        suiteSelect.dispatchEvent(new Event("change"));
+      }
+    });
+
     form.addEventListener("submit", (e) => {
       e.preventDefault();
       e.stopPropagation();
@@ -40,29 +63,23 @@ import { showToast } from "./toastHelper.js";
       form.classList.add("was-validated");
 
       if (valid) {
-        // alert("Booking submitted successfully!");
         showToast("Booking submitted successfully!");
         bootstrapModal.hide();
         form.reset();
         form.classList.remove("was-validated");
+        lastClickedSuiteValue = null; // Reset after successful submission
       }
     });
 
-    // Reset validation state when clicking reset button
     form.addEventListener("reset", () => {
       form.classList.remove("was-validated");
     });
 
-    // Optional: reset form and validation when modal is hidden for a clean state
+    // Reset form when modal hides and clear stored suite value
     modalElement.addEventListener("hidden.bs.modal", () => {
       form.reset();
       form.classList.remove("was-validated");
-    });
-
-    // Optional: reset form and validation when modal is shown
-    modalElement.addEventListener("shown.bs.modal", () => {
-      form.reset();
-      form.classList.remove("was-validated");
+      lastClickedSuiteValue = null;
     });
   });
 })();
