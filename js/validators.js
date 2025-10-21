@@ -6,6 +6,8 @@ export function validateEmail(email) {
     "test",
     "no-reply",
     "noreply",
+    "sample",
+    "testing"
   ];
 
   // Regular expression to check general email validity
