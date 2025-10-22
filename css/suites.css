@@ -13,14 +13,15 @@
 /* Suites page specific styles - BEM using suites-prefix */
 
 /* Layout & Spacing */
-main {
-  padding: 4rem 1.5rem;
+.suites-main {
+  padding: 3rem 0rem 1.5rem 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .suites-section {
-  margin-bottom: 5rem;
+  /* margin-bottom: 5rem; */
+  margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -232,3 +233,6 @@ main {
     font-size: 2.6vw;
   }
 }
+
+
+

@@ -12,7 +12,7 @@
 
 .experience-main {
   width: 100%;
-  margin: 3rem auto;
+  margin: 0 auto;
 }
 
 /*=============== Wellness Section ===============*/
@@ -251,20 +251,12 @@
   .adventure__hero {
     height: 350px;
   }
-
-  .experience-main {
-    margin: 2rem auto;
-  }
 }
 
 @media (max-width: 768px) {
   .wellness__hero,
   .adventure__hero {
     height: 300px;
-  }
-
-  .experience-main {
-    margin: 2rem auto;
   }
 
   .wellness__header,
@@ -298,9 +290,5 @@
 
   .form-label {
     font-size: 0.9rem;
-  }
-
-  .experience-main {
-    margin: 1.5rem auto;
   }
 }
