@@ -204,10 +204,12 @@
       <!-- Wellness Section -->
       <section class="wellness" aria-labelledby="wellness-heading">
         <div class="wellness__hero">
+      
           <img
-            src="images/pool-hero.jpg"
+            src="https://images.pexels.com/photos/1265990/pexels-photo-1265990.jpeg"
             alt="Luxury pool at Skye Suites"
             class="wellness__hero-image"
+            loading="lazy"
           />
         </div>
 
@@ -228,7 +230,7 @@
                 <div class="experience-card h-100">
                   <div class="experience-card__image-wrapper">
                     <img
-                      src="images/massage-therapy.jpg"
+                        src="https://images.pexels.com/photos/7598360/pexels-photo-7598360.jpeg"
                       alt="Massage therapy at Skye Suites spa"
                       class="experience-card__image"
                     />
@@ -251,7 +253,7 @@
                 <div class="experience-card h-100">
                   <div class="experience-card__image-wrapper">
                     <img
-                      src="images/skincare-treatment.jpg"
+                      src="https://images.pexels.com/photos/6724464/pexels-photo-6724464.jpeg"
                       alt="Skincare treatment at Skye Suites spa"
                       class="experience-card__image"
                     />
@@ -272,8 +274,9 @@
               <article class="col-12 col-md-6 col-lg-4">
                 <div class="experience-card h-100">
                   <div class="experience-card__image-wrapper">
+                
                     <img
-                      src="images/thermal-bath.jpg"
+                         src="https://images.pexels.com/photos/13286770/pexels-photo-13286770.jpeg"
                       alt="Thermal bath at Skye Suites spa"
                       class="experience-card__image"
                     />
@@ -676,16 +679,32 @@
         <section class="footer__column" aria-labelledby="footer-social-heading">
           <h3 id="footer-social-heading" class="footer__heading">Follow Us</h3>
           <nav aria-label="Social media links" class="footer__socials">
-            <a href="#" aria-label="Facebook" class="footer__social-link">
+            <a
+              href="https://en.wikipedia.org/wiki/Facebook"
+              aria-label="Facebook"
+              class="footer__social-link"
+            >
               <i class="fa-brands fa-facebook"></i>
             </a>
-            <a href="#" aria-label="Instagram" class="footer__social-link">
+            <a
+              href="https://en.wikipedia.org/wiki/Instagram"
+              aria-label="Instagram"
+              class="footer__social-link"
+            >
               <i class="fa-brands fa-instagram"></i>
             </a>
-            <a href="#" aria-label="Pinterest" class="footer__social-link">
+            <a
+              href="https://en.wikipedia.org/wiki/Pinterest"
+              aria-label="Pinterest"
+              class="footer__social-link"
+            >
               <i class="fa-brands fa-pinterest"></i>
             </a>
-            <a href="#" aria-label="YouTube" class="footer__social-link">
+            <a
+              href="https://en.wikipedia.org/wiki/YouTube"
+              aria-label="YouTube"
+              class="footer__social-link"
+            >
               <i class="fa-brands fa-youtube"></i>
             </a>
           </nav>
@@ -736,42 +755,63 @@
       aria-hidden="true"
     >
       <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
+        <div class="modal-content modal-newsletter">
+          <div
+            class="modal-newsletter__header modal-header flex-column text-center border-0"
+          >
+            <img
+              src="./images/logo.png"
+              alt="Skye Suites Logo"
+              class="modal-newsletter__logo"
+            />
             <h5 class="modal-title fw-bold" id="newsletterModalLabel">
-              Subscribe to our Newsletter
+              Subscribe to Our Newsletter
             </h5>
+            <p class="modal-newsletter__subtitle small">
+              Be the first to receive exclusive offers and updates.
+            </p>
             <button
               type="button"
-              class="btn-close"
+              class="btn-close btn-close-white position-absolute top-0 end-0 m-3"
               data-bs-dismiss="modal"
               aria-label="Close"
               id="modalCloseBtn"
             ></button>
           </div>
-          <form id="modal-newsletter-form" class="needs-validation" novalidate>
-            <div class="modal-body">
+
+          <form
+            id="modal-newsletter-form"
+            class="modal-newsletter__form needs-validation"
+            novalidate
+          >
+            <div class="modal-body px-4">
               <div class="mb-3">
                 <label
                   for="modal-newsletter-email"
                   class="form-label visually-hidden"
-                  >Email address</label
                 >
+                  Email address
+                </label>
                 <input
                   type="email"
-                  class="form-control"
+                  class="form-control modal-newsletter__input"
                   id="modal-newsletter-email"
                   name="newsletterEmail"
                   placeholder="Enter your email"
                   required
                 />
-                <div class="invalid-feedback">Please enter a valid email.</div>
+                <div class="invalid-feedback text-light">
+                  Please enter a valid email.
+                </div>
               </div>
             </div>
-            <div class="modal-footer d-flex justify-content-between">
+
+            <div
+              class="modal-footer d-flex justify-content-between border-0 px-4 pb-4"
+            >
               <button
                 type="button"
-                class="btn btn-secondary"
+                class="btn btn-outline-secondary modal-newsletter__btn-no"
                 id="modal-no-thanks-btn"
               >
                 No Thanks
@@ -784,7 +824,6 @@
         </div>
       </div>
     </div>
-
     <!-- ##########  End Modal Subscription Form ########## -->
 
     <!-- ##########  Start Toast Container ########## -->
