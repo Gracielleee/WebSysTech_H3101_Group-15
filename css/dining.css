@@ -160,3 +160,9 @@ main .content-title:nth-of-type(even) {
   object-position: center;
   display: block;
 }
+
+.carousel-fade .carousel-item {
+  transition-property: opacity;
+  transition-duration: 0.75s;
+  transition-timing-function: ease-in-out;
+}
