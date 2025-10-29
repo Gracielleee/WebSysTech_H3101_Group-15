@@ -19,74 +19,85 @@ This section documents the design and implementation details for the core reusab
 
 #### Header and Navigation
 
-| Aspect                 | Description                                                                                                                  |
-| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| Structural Elements    | The header uses semantic `<header>` and `<nav>` landmarks with ARIA roles ensuring keyboard and screen reader accessibility. |
-| Logo and Branding      | The logo links to the homepage, includes descriptive alt text, and ARIA attributes for assistive technologies.               |
-| Responsive Navigation  | Employs Bootstrap offcanvas menus for small screens using a toggler button, enhancing mobile usability.                      |
-| Accessibility Features | Navigation links use `role="menuitem"` and menus `role="menubar"` with clear aria-labels.                                    |
-| Icons                  | FontAwesome provides visual iconography with proper aria-hidden settings for decorativeness.                                 |
-| Booking Button         | A prominently styled "BOOK NOW" button opens a modal booking form, visually distinct for call-to-action emphasis.            |
-| Visual Design          | Glassmorphic navbar with backdrop blur and transparency improves aesthetics and focus.                                       |
-| Sticky Navbar          | Navbar remains visible by sticking to the top with drop shadow for better page navigation feedback.                          |
+| Aspect                 | Description                                                                                                  |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------ |
+| Structural Elements    | Uses semantic `<header>` and `<nav>` landmarks with ARIA roles for keyboard and screen reader accessibility. |
+| Logo and Branding      | Logo links to homepage with descriptive alt text and ARIA attributes for assistive technologies.             |
+| Responsive Navigation  | Bootstrap offcanvas menus for small screens with toggler button for mobile usability.                        |
+| Accessibility Features | Navigation links use `role="menuitem"` and menus use `role="menubar"` with clear `aria-labels`.              |
+| Icons                  | FontAwesome icons with `aria-hidden="true"` for decorative use.                                              |
+| Booking Button         | Prominently styled "BOOK NOW" button with accessible `aria-label`, opens modal booking form.                 |
+| Visual Design          | Glassmorphic navbar with backdrop blur and transparency for modern aesthetics.                               |
+| Sticky Navbar          | Navbar remains visible with drop shadow for improved navigation feedback.                                    |
+| Active Link Logic      | Refactored to use `data-page-id` attributes on `<body>` and nav links for dynamic active state detection.    |
+| Screen Reader Support  | Adds visually hidden "current" text on active menu item for screen reader clarity.                           |
 
 ---
 
 #### Booking Form Modal
 
-| Aspect            | Description                                                                                                                                                                        |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Modal Structure   | Uses Bootstrap modal with proper ARIA roles and labels, supporting screen readers and keyboard navigation.                                                                         |
-| Form Fields       | Includes well-labeled inputs with accessibility enhancements such as `aria-describedby` linking inputs to validation messages for context.                                         |
-| Validation        | Combines HTML5 native validation with custom JavaScript rules for email and Philippine phone number formats.                                                                       |
-| Custom Validators | Email validation excludes invalid domains; phone validation accepts local, international, and flexible formatted Philippine numbers by normalizing spaces, dashes, and plus signs. |
-| UX Enhancements   | Resets validation state on modal show/hide or reset, providing feedback without intrusive alerts.                                                                                  |
-| Accessibility     | Ensures keyboard accessibility and screen reader support throughout form controls and state updates.                                                                               |
+| Aspect            | Description                                                                                                                                           |
+| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Modal Structure   | Bootstrap modal with ARIA roles (`role="dialog"`, `aria-modal="true"`) and labels for screen reader support.                                          |
+| Form Fields       | Inputs and selects use explicit `<label>` associations and `aria-describedby` to link with helper/error messages.                                     |
+| Validation        | Combines HTML5 validation with custom JavaScript rules for email and Philippine phone number formats.                                                 |
+| Custom Validators | Email validation excludes invalid domains; phone validation accepts local/international formats with normalization of spaces, dashes, and plus signs. |
+| UX Enhancements   | Validation state resets on modal show/hide or form reset; feedback provided via Bootstrap toasts instead of intrusive alerts.                         |
+| Accessibility     | Ensures keyboard navigation, screen reader support, and color contrast compliance per WCAG 2.1 standards.                                             |
 
 ---
 
 #### Global CSS Styles
 
-| Aspect            | Description                                                                                                        |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------ |
-| Root Variables    | Defines theme colors, fonts, border-radius, and transition durations for consistent site-wide branding.            |
-| Reset & Utility   | Implements universal box-sizing and typographic base resets for cross-browser consistency and layout stability.    |
-| Navigation Styles | Provides glassmorphic styles with blur effects, shadows, responsive logo scaling, and sticky positioning.          |
-| Responsive Design | Incorporates media queries optimizing font sizes and layout for mobile and tablet breakpoints.                     |
-| Footer Styling    | Uses layered background image with gradient overlay and CSS grids for flexible columnar layout on various devices. |
-| Accessibility     | Adds utility classes like `.visually-hidden` for content optimized for screen readers.                             |
+| Aspect            | Description                                                                                             |
+| ----------------- | ------------------------------------------------------------------------------------------------------- |
+| Root Variables    | Defines theme colors, fonts, border-radius, and transition durations for consistent branding.           |
+| Reset & Utility   | Universal box-sizing and typographic resets for cross-browser consistency.                              |
+| Navigation Styles | Glassmorphic effects, blur, shadows, responsive logo scaling via CSS `clamp()`, and sticky positioning. |
+| Responsive Design | Media queries optimize layout and typography for mobile and tablet breakpoints.                         |
+| Footer Styling    | Layered background image with gradient overlay and CSS grid layout for flexible responsiveness.         |
+| Accessibility     | Utility classes like `.visually-hidden` for screen reader-only content.                                 |
+| Required Field UX | Automatic red asterisks for required fields with helper text explaining their meaning.                  |
 
 ---
 
 #### Global JavaScript Scripts
 
-| Script                     | Purpose and Features                                                                                                                                                   |
-| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| bookingForm.js             | Manages booking form validation, integrating custom email and phone validators, Bootstrap modal control, and UX states.                                                |
-| footer-subscriptionForm.js | Validates newsletter subscription emails with dynamic inline feedback and resets validation on form reset.                                                             |
-| validators.js              | Contains reusable functions for email format validation, domain restrictions, and flexible Philippine phone number validation with normalization.                      |
-| toastHelper.js             | Provides a centralized `showToast` function leveraging Bootstrap toasts for consistent, non-blocking user notifications across forms (booking, subscription, contact). |
+| Script          | Purpose and Features                                                                                                                                  |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| bookingForm.js  | Manages booking form validation, modal control, and UX states with custom validators and toast feedback.                                              |
+| footer.js       | Validates newsletter subscription emails with inline feedback and resets validation on form reset.                                                    |
+| validators.js   | Reusable functions for email format validation, domain restrictions, and flexible Philippine phone number normalization.                              |
+| toastHelper.js  | Centralized `showToast()` function using Bootstrap toasts for consistent, non-blocking notifications across booking, subscription, and contact forms. |
+| top-menu-nav.js | Refactored logic to highlight active nav link using `data-page-id` from `<body>` and nav links, replacing filename-based detection.                   |
 
 ---
 
 ### Key Feature Enhancements
 
-| Area                      | Description                                                                                                                     | User Benefit                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| Accessibility             | Added `aria-describedby` attributes in booking form inputs linking form controls with helper/error messages for assistive tech. | Improved clarity and usability for screen reader users.                 |
-| Flexible Phone Validation | Enhanced phone input validation to permit spaces, dashes, and optional leading plus (`+`), normalizing input before validation. | Supports realistic user input formats, reducing validation frustration. |
-| Toast Notifications       | Replaced `alert()` popups with Bootstrap toast notifications via a shared toast helper for inline, graceful success feedback.   | Provides smooth, non-intrusive feedback enhancing UX continuity.        |
+| Area                      | Description                                                                                                     | User Benefit                                                           |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| Accessibility             | ARIA roles, `aria-describedby`, explicit labels, tablist semantics, modal landmarks, color contrast compliance. | Improved clarity and usability for screen reader and keyboard users.   |
+| Flexible Phone Validation | Accepts spaces, dashes, and optional leading plus (`+`); normalizes input before validation.                    | Supports realistic user input formats, reducing frustration.           |
+| Toast Notifications       | Replaced `alert()` popups with Bootstrap toasts via shared helper.                                              | Smooth, non-intrusive feedback across all forms.                       |
+| Navigation Logic          | Refactored active link detection using `data-page-id` attributes on `<body>` and nav links.                     | More reliable across routing setups and avoids brittle filename logic. |
+| Booking Flow UX           | Preselects suite in modal via `data-suite` attribute; resets validation state on modal open/close.              | Streamlined booking experience with contextual form behavior.          |
+| Responsive Logo           | Uses CSS `clamp()` for adaptive logo sizing across screen sizes.                                                | Maintains branding clarity on all devices.                             |
+| Required Field UX         | Adds automatic red asterisks and helper text for required fields.                                               | Improves form clarity and accessibility.                               |
+| Newsletter Modal          | Bootstrap-based popup modal with validation and user-friendly dismissal (permanent or timed reappearance).      | Engaging subscription flow with flexible user control.                 |
+| Dining Page Sliders       | Bootstrap 5 `carousel-fade`, lazy loading, extended image sets, autoplay pause/resume logic.                    | Elegant transitions, better performance, and energy efficiency.        |
 
 ---
 
 ### Summary Visualization
 
-| Component           | Accessibility                       | UX Improvements                  | Technical Highlights                | Design Approach                    |
-| ------------------- | ----------------------------------- | -------------------------------- | ----------------------------------- | ---------------------------------- |
-| Header & Navigation | Semantic roles, ARIA labels         | Responsive offcanvas, sticky nav | Icon integration, glassmorphic blur | Consistent branding, scalable UI   |
-| Booking Form Modal  | ARIA labels, `aria-describedby`     | Validation UX, toast feedback    | Modular JS validation, state resets | Bootstrap modal, clear feedback UI |
-| Global CSS Styles   | Screen reader support utilities     | Responsive typography and layout | CSS variables, resets               | Theming and aesthetic consistency  |
-| Global JavaScript   | Validation, notification modularity | Unified toast messaging system   | Reusable validators & toast helper  | Clean separation and modularity    |
+| Component           | Accessibility                                                                                                    | UX Improvements                                                                  | Technical Highlights                                                                              | Design Approach                                   |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
+| Header & Navigation | Semantic roles, ARIA labels, visually hidden current indicators, sticky nav landmarks, `data-page-id` logic      | Responsive offcanvas, dynamic active state, improved keyboard focus              | Refactored active link logic using `data-page-id`, responsive logo via CSS `clamp()`              | Consistent branding, scalable UI                  |
+| Booking Form Modal  | ARIA labels, `aria-describedby`, explicit `<label>` associations, accessible button labels, WCAG contrast checks | Toast feedback, flexible phone input, preselected suite booking, validation UX   | Modular JS validation, input normalization, Bootstrap modal integration, centralized toast helper | Clear feedback UI, accessible form structure      |
+| Global CSS Styles   | Screen reader support utilities, semantic tab structure, contrast compliance                                     | Responsive typography and layout, helper text for required fields                | CSS variables, resets, reusable utility classes, vertical centering for offcanvas                 | Theming and aesthetic consistency                 |
+| Global JavaScript   | Validation, notification modularity, ARIA role enhancements, tablist semantics                                   | Unified toast messaging system, input flexibility, modal state resets            | Reusable validators, toast helper, tab accessibility logic, visibility-aware carousel autoplay    | Clean separation and modularity                   |
+| Dining Page Sliders | ARIA labels for controls, lazy loading, tab visibility-aware autoplay                                            | Smooth fading transitions, richer image sets, energy-efficient autoplay behavior | Bootstrap 5 `carousel-fade`, lazy loading, IIFE autoplay logic                                    | Elegant transitions, performance-conscious design |
 
 ---
 
