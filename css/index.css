@@ -185,13 +185,14 @@
   font-family: var(--font-family-serif);
 }
 
-.index-service-card__title a {
+.index-service-card__title {
   color: var(--color-primary);
   text-decoration: none;
   transition: color var(--transition);
 }
-.index-service-card__title a:hover,
-.index-service-card__title a:focus {
+
+.index-service-card__title:hover,
+.index-service-card__title:focus {
   color: var(--color-primary-dark);
   outline: none;
 }
